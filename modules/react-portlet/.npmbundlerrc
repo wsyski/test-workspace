@@ -273,7 +273,7 @@
       "social-bookmarks-taglib": {
         "/": "*"
       },
-      "react-shared": {
+      "react-provider": {
         "/": "*"
       }
     },
@@ -361,7 +361,6 @@
     "source-map": true
   },
   "create-jar": {
-    "output-filename": "react-portlet.jar",
     "features": {
       "js-extender": true,
       "web-context": "/react-portlet",

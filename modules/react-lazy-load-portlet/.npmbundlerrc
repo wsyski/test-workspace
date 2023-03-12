@@ -273,7 +273,7 @@
       "social-bookmarks-taglib": {
         "/": "*"
       },
-      "react-shared": {
+      "react-provider": {
         "/": "*"
       }
     },
