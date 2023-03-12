@@ -1,0 +1,13 @@
+{
+  "name": "react-provider",
+  "version": "1.0.0",
+  "description": "react-provider",
+  "dependencies": {
+    "@liferay/portal-7.4": "*"
+  },
+  "scripts": {
+    "build": "liferay build",
+    "clean": "liferay clean",
+    "deploy": "liferay deploy"
+  }
+}
