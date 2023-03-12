@@ -1,0 +1,20 @@
+{
+  "config": {
+    "imports": {
+      "@liferay/frontend-js-react-web": {
+        "/": "*",
+        "react": "*",
+        "react-dom": "*"
+      }
+    }
+  },
+  "create-jar": {
+    "features": {
+      "js-extender": false,
+      "web-context": "/react-provider"
+    }
+  },
+  "dump-report": true,
+  "max-parallel-files": 128,
+  "verbose": true
+}

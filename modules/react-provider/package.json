@@ -1,7 +1,7 @@
 {
-  "name": "react-shared",
+  "name": "react-provider",
   "version": "1.0.0",
-  "description": "React Shared Module",
+  "description": "React Provider",
   "license": "UNLICENSED",
   "dependencies": {
     "@liferay/portal-7.4": "*"

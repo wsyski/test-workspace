@@ -1,3 +1,0 @@
-# react-shared
-
-react-shared
