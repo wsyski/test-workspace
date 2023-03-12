@@ -1,7 +1,8 @@
 {
   "name": "react-portlet",
   "version": "1.0.0",
-  "description": "react-portlet",
+  "description": "React Portlet",
+  "license": "UNLICENSED",
   "dependencies": {
     "@liferay/portal-7.4": "*"
   },
