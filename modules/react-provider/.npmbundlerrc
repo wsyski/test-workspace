@@ -1,13 +1,4 @@
 {
-  "config": {
-    "imports": {
-      "@liferay/frontend-js-react-web": {
-        "/": "*",
-        "react": "*",
-        "react-dom": "*"
-      }
-    }
-  },
   "create-jar": {
     "features": {
       "js-extender": false,
