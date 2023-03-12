@@ -2,8 +2,8 @@
     "private": true,
     "workspaces": {
         "packages": [
-            "modules/react-provider",
-            "modules/react-portlet"
+            "modules/react-portlet",
+            "modules/react-shared"
         ]
     }
 }
