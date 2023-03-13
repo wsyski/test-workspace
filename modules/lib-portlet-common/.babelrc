@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": ["@babel/plugin-proposal-nullish-coalescing-operator"],
+  "ignore": [
+    "jest.config.js",
+    "src/setupTests.js",
+    "**/__mocks__/*",
+    "**/__tests__/*",
+    "**/test/*",
+    "**/*.test.js"
+  ]
+}

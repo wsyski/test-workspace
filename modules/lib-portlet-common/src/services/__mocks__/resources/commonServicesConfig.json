@@ -1,0 +1,14 @@
+{
+  "calendarApiEndpoint" : "https://test.axiell.io/api/calendar-event/latest/api",
+  "calendarApiKey" : "3e944650-ab89-40a4-95ac-3a1151b71b85",
+  "calendarCustomerId" : "5c41e81c85879d080306a45b",
+  "calendarDefaultAllowedAttendees" : 1,
+  "calendarLocationVocabularyId" : 0,
+  "calendarTargetAudienceVocabularyId" : 0,
+  "federatedSearchApiEndpoint" : "http://localhost:9599",
+  "federatedSearchCustomerId" : "5da0951785879d0dd1dd45e9",
+  "openingHoursApiEndpoint" : "https://test.axiell.io/api/openinghours/latest",
+  "openingHoursCustomerId" : "613afbb7a6c817213ab35c63",
+  "transactionApiEndpoint" : "https://dev.axiell.io/api/transaction/latest",
+  "transactionTenantId" : "61f16aa63915a60207f846ad"
+}

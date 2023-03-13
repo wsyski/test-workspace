@@ -1,0 +1,86 @@
+import ClayButton from '@clayui/button';
+import classNames from 'classnames';
+import React, {PropsWithChildren, useEffect, useState} from 'react';
+import {WithTranslation, withTranslation} from 'react-i18next';
+
+import MiscUtil from "../utils/MiscUtil";
+
+
+interface Props extends WithTranslation {
+	children: string;
+	maxCharacters?: number;
+	ellipsis?: string;
+	buttonClassName?: string | undefined | (string | undefined)[];
+	buttonWrapperClassName?: string | undefined | (string | undefined)[];
+	className?: string | undefined | (string | undefined)[]
+}
+
+const MAX_CHARACTERS_DEFAULT = 300;
+
+export const ShowMoreTextWithT: React.FC<PropsWithChildren<Props>> = ({
+	buttonClassName,
+	buttonWrapperClassName,
+	children,
+	className,
+	ellipsis = '\u2026',
+	maxCharacters = MAX_CHARACTERS_DEFAULT,
+	t,
+}) => {
+	const [isShowAll, setShowAll] = useState(false);
+	const [text, setText] = useState<string>('');
+
+	const isShort = children.length <= maxCharacters;
+	useEffect(() => {
+		if (maxCharacters) {
+			if (isShowAll || isShort) {
+				setText(children);
+			} else {
+				for (let i = maxCharacters; i >= 0; i--) {
+					if (children.charAt(i) === ' ') {
+						setText(children.substring(0, i));
+						break;
+					}
+				}
+			}
+		}
+	}, [children, isShowAll, isShort, maxCharacters, setText]);
+
+	const handleClick = () => {
+		setShowAll((v) => !v);
+	};
+
+	const buttonLabel = isShowAll ? t('txtShowLess') : t('txtShowMore');
+
+	const buttonWrapperId = 'id_' + MiscUtil.randomString();
+	const buttonWrapperAttributes = {
+		'aria-expanded': isShort ? undefined : isShowAll,
+	};
+
+	return (
+		<span className={classNames(className)}>
+			{text}
+
+			{!isShort && (
+				<span
+					className={classNames(buttonWrapperClassName, "arena-ellipsis-button-wrapper")}
+					id={buttonWrapperId}
+					{...buttonWrapperAttributes}
+				>
+					{!isShowAll && ellipsis}
+
+					<ClayButton
+						aria-controls={buttonWrapperId}
+						className={classNames(buttonClassName, 'arena-ellipsis-button')}
+						displayType="unstyled"
+						onClick={handleClick}
+						type="button"
+					>
+						{buttonLabel}
+					</ClayButton>
+				</span>
+			)}
+		</span>
+	);
+};
+
+export default withTranslation()(ShowMoreTextWithT);
