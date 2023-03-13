@@ -1,4 +1,5 @@
-import {formatDate, parseDate} from '@clayui/date-picker/lib/Helpers';
+import { default as formatDate } from 'date-fns/format';
+import { default as parseDate } from 'date-fns/parse';
 import {formatISO, parseISO} from 'date-fns';
 import i18next, {i18n} from 'i18next';
 import ChainedBackend from 'i18next-chained-backend';
@@ -219,12 +220,7 @@ export default class I18nUtil {
 	static date2String(date: Date | undefined): string | undefined {
 		if (date) {
 			const localizationParams = I18nUtil.getLocalizationParams();
-      try {
-				return formatDate(date, localizationParams.dateFormat);
-			}
-			catch(ex) {
-				console.error(ex.message);
-			}
+			return formatDate(date, localizationParams.dateFormat);
 		}
 	}
 

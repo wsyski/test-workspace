@@ -1,11 +1,22 @@
-import {TestUtil} from '@arena/lib-portlet-test';
 import {cleanup} from '@testing-library/react';
-import Axios from 'axios';
+import Axios, {AxiosResponse} from 'axios';
 
 import {CommonServicesConfig} from '../../index';
 import LiferayUtil from '../../utils/LiferayUtil';
 import CommonServicesConfigService from '../CommonServicesConfigService';
 import commonServicesConfig from '../__mocks__/resources/commonServicesConfig.json';
+
+const getAxiosResponse = <T>(data: T): AxiosResponse<T> => {
+	const axiosResponse: AxiosResponse = {
+	config: {},
+	data,
+	headers: {},
+	status: 200,
+	statusText: 'OK',
+};
+
+return axiosResponse;
+}
 
 jest.mock('axios');
 const axiosMock = Axios as jest.Mocked<typeof Axios>;
@@ -31,7 +42,7 @@ describe('CommonServicesConfigService', () => {
 
 	test('getConfig', async () => {
 		axiosMock.get.mockResolvedValue(
-			TestUtil.getAxiosResponse(commonServicesConfig)
+			getAxiosResponse(commonServicesConfig)
 		);
 		const CommonServicesConfig: CommonServicesConfig =
 			await CommonServicesConfigService.getConfig();
