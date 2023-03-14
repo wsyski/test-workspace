@@ -41,7 +41,7 @@ const Permalink: React.FC<Props> = ({labelCopied, labelCopy, renderAnchor }: Pro
       {anchor}
 
       <ClayButtonWithIcon
-        aria-label={label}
+        aria-label={label ? label : ""}
         displayType="unstyled"
         onClick={onClickCopy}
         small={true}

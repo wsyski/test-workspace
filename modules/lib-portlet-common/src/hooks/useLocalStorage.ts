@@ -1,8 +1,4 @@
-import React, {useCallback, useContext, useState} from 'react';
-
-import AlertActionsContext from '../contexts/AlertActionsContext';
-import {AlertActions} from '../index';
-import AlertUtil from '../utils/AlertUtil';
+import React, {useCallback, useState} from 'react';
 
 const useLocalStorage = <T>(
 	key: string,
@@ -17,24 +13,16 @@ const useLocalStorage = <T>(
 			return initialValue;
 		}
 	});
-	const alertActionsRef =
-		useContext<React.RefObject<AlertActions>>(AlertActionsContext);
 
 	const setValue: React.Dispatch<React.SetStateAction<T>> = useCallback(
 		(value) => {
-			try {
 				const valueToStore =
 					value instanceof Function ? value(storedValue) : value;
 				setStoredValue(valueToStore);
 				window.localStorage.setItem(key, JSON.stringify(valueToStore));
-			} catch (ex) {
-				alertActionsRef.current &&
-					alertActionsRef.current.addAlert(
-						AlertUtil.createAlert(ex.message, 'danger')
-					);
-			}
+
 		},
-		[alertActionsRef, key, storedValue]
+		[key, storedValue]
 	);
 
 	return [storedValue, setValue];
