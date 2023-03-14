@@ -56,9 +56,10 @@
     "typescript": "^4.3.5"
   },
   "scripts": {
-    "clean": "node ../../scripts/clean.js",
     "deploy": "true",
     "publish": "true",
+    "clean": "rimraf dist",
+    "build": "npm run clean && rollup -c",
     "test": "jest --verbose",
     "tsc": "tsc"
   },
