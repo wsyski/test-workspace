@@ -7,7 +7,6 @@ import ArenaIcon, {
 	ARENA_ICON_SPRITEMAP,
 	ArenaIconSpriteContext,
 } from './components/ArenaIcon';
-import ClayPanelAuto from './components/ClayPanelAuto';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingIndicator from './components/LoadingIndicator';
 import Permalink from './components/Permalink';
@@ -164,7 +163,6 @@ export {
 	LoadingIndicator,
 	MiscUtil,
 	Permalink,
-	ClayPanelAuto,
 	RoutingUtil,
 	ServiceUtil,
 	ShowMoreList,
