@@ -4,6 +4,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import del from 'rollup-plugin-delete';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import externals from 'rollup-plugin-node-externals';
 import typescript from 'rollup-plugin-typescript2';
 import ttypescript from 'ttypescript';
 import pkg from './package.json';
@@ -34,7 +35,8 @@ export default {
         './src',
     ],
     plugins: [
-        peerDepsExternal(),
+        externals(),
+        //peerDepsExternal(),
         typescript({
             typescript: ttypescript,
             tsconfig: './tsconfig.json',
@@ -46,7 +48,7 @@ export default {
             exclude: 'node_modules/**',
             extensions: ['.ts', '.tsx'],
         }),
-        terser(),
+        // terser(),
         del({ targets: 'dist/*' }),
     ],
 };
