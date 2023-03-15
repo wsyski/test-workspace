@@ -14,16 +14,18 @@ export default {
         {
             format: 'cjs',
             dir: 'dist/cjs',
-            preserveModules: true,
-            preserveModulesRoot: 'src',
-            exports: 'named',
+            sourcemap: true
+            // preserveModules: true,
+            // preserveModulesRoot: 'src',
+            // exports: 'named'
         },
         {
             format: 'es',
             dir: 'dist/esm',
-            preserveModules: true,
-            preserveModulesRoot: 'src',
-            exports: 'named',
+            sourcemap: true
+            // preserveModules: true,
+            // preserveModulesRoot: 'src',
+            // exports: 'named',
         },
     ],
     external: [
