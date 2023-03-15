@@ -7,12 +7,13 @@ import MiscUtil from "../utils/MiscUtil";
 
 
 interface Props extends WithTranslation {
-	children: string;
-	maxCharacters?: number;
-	ellipsis?: string;
 	buttonClassName?: string | undefined | (string | undefined)[];
 	buttonWrapperClassName?: string | undefined | (string | undefined)[];
+	children: string;
 	className?: string | undefined | (string | undefined)[]
+	ellipsis?: string;
+	isTruncate?: boolean;
+	maxCharacters?: number;
 }
 
 const MAX_CHARACTERS_DEFAULT = 300;
@@ -23,6 +24,7 @@ export const ShowMoreTextWithT: React.FC<PropsWithChildren<Props>> = ({
 	children,
 	className,
 	ellipsis = '\u2026',
+	isTruncate = false,
 	maxCharacters = MAX_CHARACTERS_DEFAULT,
 	t,
 }) => {
@@ -68,7 +70,7 @@ export const ShowMoreTextWithT: React.FC<PropsWithChildren<Props>> = ({
 				>
 					{!isShowAll && ellipsis}
 
-					<ClayButton
+					{!isTruncate && <ClayButton
 						aria-controls={buttonWrapperId}
 						className={classNames(buttonClassName, 'arena-ellipsis-button')}
 						displayType="unstyled"
@@ -76,7 +78,7 @@ export const ShowMoreTextWithT: React.FC<PropsWithChildren<Props>> = ({
 						type="button"
 					>
 						{buttonLabel}
-					</ClayButton>
+					</ClayButton>}
 				</span>
 			)}
 		</span>
