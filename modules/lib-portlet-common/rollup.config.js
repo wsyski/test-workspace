@@ -1,12 +1,11 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from "@rollup/plugin-commonjs";
-import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import terser from '@rollup/plugin-terser';
 import analyze from 'rollup-plugin-analyzer';
 
 import pkg from './package.json' assert { type: 'json' };
+const babelRuntimeVersion = pkg.devDependencies['@babel/runtime'].replace(/^[^0-9]*/, '');
 
 export default [
     {
@@ -30,20 +29,22 @@ export default [
         ],
         plugins: [
             typescript({ tsconfig: "./tsconfig.json" }),
-            peerDepsExternal(),
-            // resolve(),
             commonjs(),
             babel({
                 babelHelpers: 'runtime',
-                exclude: 'node_modules/**',
-                extensions: ['.ts', '.tsx'],
+                exclude: /node_modules/,
+                plugins: [['@babel/plugin-transform-runtime', { version: babelRuntimeVersion }], ["@babel/plugin-proposal-nullish-coalescing-operator"]],
+                presets: [
+                    ['@babel/preset-env', { targets: 'defaults' }],
+                    ['@babel/preset-react', { runtime: 'automatic' }],
+                ],
             }),
             (process.env.NODE_ENV === 'production' && terser()),
-            analyze({
+            (process.env.NODE_ENV === 'production' && analyze({
                 hideDeps: true,
                 limit: 0,
                 summaryOnly: true,
-            })
+            }))
         ],
     }
 ];
