@@ -1,10 +1,8 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import del from 'rollup-plugin-delete';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import externals from 'rollup-plugin-node-externals';
+import replace from 'rollup-plugin-replace';
 import typescript from 'rollup-plugin-typescript2';
 import ttypescript from 'ttypescript';
 import pkg from './package.json';
@@ -16,39 +14,35 @@ export default {
             format: 'cjs',
             dir: 'dist/cjs',
             sourcemap: true
-            // preserveModules: true,
-            // preserveModulesRoot: 'src',
-            // exports: 'named'
         },
         {
             format: 'es',
             dir: 'dist/esm',
             sourcemap: true
-            // preserveModules: true,
-            // preserveModulesRoot: 'src',
-            // exports: 'named',
         },
     ],
     external: [
         ...Object.keys(pkg.dependencies || {}),
+        ...Object.keys(pkg.devDependencies || {}),
         ...Object.keys(pkg.peerDependencies || {}),
-        './src',
+        /node_modules/
     ],
     plugins: [
-        externals(),
-        //peerDepsExternal(),
         typescript({
             typescript: ttypescript,
             tsconfig: './tsconfig.json',
         }),
-        nodeResolve(),
         commonjs(),
         babel({
             babelHelpers: 'runtime',
             exclude: 'node_modules/**',
             extensions: ['.ts', '.tsx'],
         }),
-        // terser(),
+        replace({
+            ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+        }),
+        (process.env.NODE_ENV === 'production' && terser()),
         del({ targets: 'dist/*' }),
     ],
 };
