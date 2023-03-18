@@ -62,9 +62,10 @@
   },
   "scripts": {
     "deploy": "true",
-    "publish": "true",
+    "deploy:prod": "true",
     "clean": "rimraf dist",
-    "build": "run-s clean && cross-env NODE_ENV=development rollup -c",
+    "build": "rollup -c",
+    "build:prod": "cross-env NODE_ENV=production rollup -c",
     "test": "jest --verbose",
     "tsc": "tsc"
   },
