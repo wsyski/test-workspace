@@ -2,13 +2,15 @@
   "config": {
     "imports": {
       "react-provider": {
-        "/": "*"
+        "/": "*",
+        "@babel/runtime": "*"
       }
     },
     "strictGlobalDependencies": true
   },
   "exclude": {
-    "react-provider": true
+    "react-provider": true,
+    "@babel/runtime": true
   },
   "create-jar": {
     "features": {

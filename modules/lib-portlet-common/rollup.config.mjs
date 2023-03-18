@@ -32,7 +32,7 @@ export default [
             babel({
                 babelHelpers: 'runtime',
                 exclude: /node_modules/,
-                plugins: [['@babel/plugin-transform-runtime', { version: babelRuntimeVersion }], ["@babel/plugin-proposal-nullish-coalescing-operator"]],
+                plugins: [['@babel/plugin-transform-runtime', { version: babelRuntimeVersion }], ["@babel/plugin-proposal-nullish-coalescing-operator"], ["@babel/plugin-proposal-class-properties"]],
                 presets: [
                     ['@babel/preset-env', { targets: 'defaults' }],
                     ['@babel/preset-react', { runtime: 'automatic' }],
