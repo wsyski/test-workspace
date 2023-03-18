@@ -2,7 +2,6 @@ import babel from '@rollup/plugin-babel';
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import terser from '@rollup/plugin-terser';
-import analyze from 'rollup-plugin-analyzer';
 
 import pkg from './package.json' assert { type: 'json' };
 const babelRuntimeVersion = pkg.devDependencies['@babel/runtime'].replace(/^[^0-9]*/, '');
@@ -39,12 +38,7 @@ export default [
                     ['@babel/preset-react', { runtime: 'automatic' }],
                 ],
             }),
-            (process.env.NODE_ENV === 'production' && terser()),
-            (process.env.NODE_ENV === 'production' && analyze({
-                hideDeps: true,
-                limit: 0,
-                summaryOnly: true,
-            }))
+            (process.env.NODE_ENV === 'production' && terser())
         ],
     }
 ];
