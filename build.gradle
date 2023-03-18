@@ -1,1 +1,7 @@
-// Check GETTING_STARTED.markdown for information regarding usage.
+allprojects {
+    plugins.withId("com.liferay.node") {
+        node.download = false
+        node.global = true
+        node.useNpm = false
+    }
+}
