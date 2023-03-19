@@ -2,9 +2,9 @@
     "private": true,
     "workspaces": {
         "packages": [
-            "modules/portal",
             "modules/lib-portlet-common",
             "modules/react-provider",
+            "modules/portal",
             "modules/react-lazy-load-portlet",
             "modules/react-portlet"
         ]
