@@ -19,8 +19,6 @@
 		"jest.config.js",
 		"src/setupTests.js",
 		"**/__mocks__/*",
-		"**/__tests__/*",
-		"**/test/*",
-		"**/*.test.js"
+		"**/__tests__/*"
 	]
 }
