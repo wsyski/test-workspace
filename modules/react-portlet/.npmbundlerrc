@@ -10,6 +10,7 @@
     "strictGlobalDependencies": true
   },
   "exclude": {
+    "*": ["**/__mocks__/**/*", "**/__tests__/**/*"],
     "@arena/lib-portlet-common": true,
     "@babel/runtime": true,
     "react-provider": true
