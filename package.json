@@ -3,9 +3,9 @@
     "workspaces": {
         "packages": [
             "modules/lib-portlet-common",
+            "modules/react-lazy-load-portlet",
             "modules/react-provider",
             "modules/portal",
-            "modules/react-lazy-load-portlet",
             "modules/react-portlet"
         ]
     }
