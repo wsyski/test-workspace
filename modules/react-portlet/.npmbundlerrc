@@ -3,14 +3,16 @@
     "imports": {
       "react-provider": {
         "/": "*",
+        "@arena/lib-portlet-common": "*",
         "@babel/runtime": "*"
       }
     },
     "strictGlobalDependencies": true
   },
   "exclude": {
-    "react-provider": true,
-    "@babel/runtime": true
+    "@arena/lib-portlet-common": true,
+    "@babel/runtime": true,
+    "react-provider": true
   },
   "create-jar": {
     "features": {

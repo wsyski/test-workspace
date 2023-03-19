@@ -4,6 +4,7 @@
   "description": "React Provider",
   "license": "UNLICENSED",
   "dependencies": {
+    "@arena/lib-portlet-common": "1.0.0",
     "@liferay/portal-7.4": "*",
     "@babel/runtime": "^7.21.0"
   },
