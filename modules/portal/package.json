@@ -1,0 +1,14 @@
+{
+	"dependencies": {
+		"@arena/lib-portlet-common": "1.0.0",
+		"react-provider": "1.0.0"
+
+	},
+	"description": "Target platform for Arena Portal",
+	"main": "config.json",
+	"name": "@arena/portal",
+	"scripts": {
+		"build": "true"
+	},
+	"version": "1.0.0"
+}
