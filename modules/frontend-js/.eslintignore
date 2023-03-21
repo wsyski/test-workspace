@@ -1,0 +1,6 @@
+build/
+dist/
+out-tsc/
+node_modules/
+.snapshots/
+*.min.js
