@@ -81,6 +81,16 @@
   "dependencies": {
   },
   "resolutions": {
+    "@babel/runtime": "7.21.0",
+    "@types/react": "16.9.56",
+    "@types/react-dom": "16.9.14",
+    "coa": "2.0.2",
+    "cheerio": "1.0.0-rc.10",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-i18next": "11.15.7",
+    "react-test-renderer": "16.12.0",
+    "ansis" : "1.5.1"
   },
   "scripts": {
     "workspace-install": "yarn install",
