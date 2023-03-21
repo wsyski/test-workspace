@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "React Provider",
   "license": "UNLICENSED",
+
+  "devDependencies": {
+    "@liferay/portal-7.4": "*",
+    "cross-env": "^7.0.3"
+  },
   "dependencies": {
     "@arena/lib-portlet-common": "1.0.0",
     "@babel/runtime": "^7.21.0",
@@ -17,7 +22,9 @@
   },
   "scripts": {
     "build": "liferay build",
+    "build:prod": "cross-env NODE_ENV=production liferay build",
     "clean": "liferay clean",
-    "deploy": "liferay deploy"
+    "deploy": "liferay deploy",
+    "deploy:prod": "cross-env NODE_ENV=production liferay deploy"
   }
 }
