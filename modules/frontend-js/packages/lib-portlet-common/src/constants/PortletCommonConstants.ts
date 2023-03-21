@@ -7,7 +7,7 @@ export const HEADER_AUTHORIZATION = 'Authorization';
 
 export const ALERT_ORIGIN_DEFAULT = 'global';
 export const ERRORS_PREFIX = 'errors.';
-export const PROJECT_VERSION = '5.3.0';
+export const PROJECT_VERSION = '1.0.0';
 
 export const LOCALIZATION_PARAMS_DEFAULT = {
 	dateFormat: 'yyyy-MM-dd',

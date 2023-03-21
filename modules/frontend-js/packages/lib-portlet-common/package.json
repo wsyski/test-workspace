@@ -10,7 +10,6 @@
     "yarn": "1.x"
   },
   "peerDependencies": {
-    "@arena/lib-portlet-common": "*",
     "@arena/portal": "*",
     "@liferay/portal-7.4": "*"
   },
