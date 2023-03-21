@@ -20,6 +20,6 @@
       "dom.iterable",
       "esnext"
     ],
-    "resolveJsonModule": true,
+    "resolveJsonModule": true
   }
 }
