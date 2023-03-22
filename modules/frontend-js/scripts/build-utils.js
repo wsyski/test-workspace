@@ -8,7 +8,7 @@ module.exports = (function () {
 	const path = require('path');
 	const propertiesReader = require('properties-reader');
 	const gradleProperties = propertiesReader(
-		path.resolve(__dirname, '../', 'gradle.properties')
+		path.resolve(__dirname, '../../..', 'gradle.properties')
 	);
 	const pkgProperties = require(process.cwd() + '/package.json');
 	const mavenArtifactName = pkgProperties.name.replace(/@.*\//, '');

@@ -12,7 +12,11 @@
         "i18next-xhr-backend": "*",
         "react-i18next": "*",
         "react-router": "*",
-        "react-router-dom": "*"
+        "react-router-dom": "*",
+        "yup": "*",
+        "date-fns": "*",
+        "react-fast-compare": "*",
+        "warning": "*"
       }
     },
     "strictGlobalDependencies": true
@@ -29,7 +33,11 @@
     "i18next-xhr-backend": true,
     "react-i18next": true,
     "react-router": true,
-    "react-router-dom": true
+    "react-router-dom": true,
+    "yup": true,
+    "date-fns": true,
+    "react-fast-compare": true,
+    "warning": true
   },
   "create-jar": {
     "features": {
