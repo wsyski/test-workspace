@@ -41,8 +41,8 @@
   "scripts": {
     "scss": "gulp scss",
     "scss:watch": "gulp scss:watch",
-    "build": "run-s tsc && cross-env NODE_ENV=development babel --source-maps -d build out-tsc && run-s scss copy-assets && cross-env NODE_ENV=development liferay build",
-    "build:prod": "run-s tsc && cross-env NODE_ENV=production babel --source-maps -d build out-tsc && run-s scss copy-assets && cross-env NODE_ENV=production liferay build",
+    "build": "run-s tsc && cross-env NODE_ENV=development babel --source-maps -d build out-tsc && run-s scss copy-assets && cross-env NODE_ENV=development liferay-npm-bundler",
+    "build:prod": "run-s tsc && cross-env NODE_ENV=production babel --source-maps -d build out-tsc && run-s scss copy-assets && cross-env NODE_ENV=production liferay-npm-bundler",
     "copy-assets": "cpx \"./assets/**\" build",
     "clean": "liferay clean",
     "deploy": "liferay deploy",

@@ -7,9 +7,7 @@ import path from 'path';
 import pkg from './package.json' assert { type: 'json' };
 const babelRuntimeVersion = pkg.devDependencies['@babel/runtime'].replace(/^[^0-9]*/, '');
 const outputOptions = {
-    exports: 'named',
-    preserveModules: false,
-    preserveModulesRoot: 'src',
+    interop: 'auto',
     sourcemap: true,
     banner: `/*
  * Arena portlet common library
