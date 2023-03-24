@@ -3,7 +3,7 @@
 
 	function ThemeDisplay() {
 		let _languageId = 'en_US';
-		let _scopeGroupId = 41582;
+		let _scopeGroupId = 39847;
 
 		function getLanguageId() {
 			return _languageId;
@@ -46,15 +46,15 @@
 		}
 
 		return {
-			getLayoutURL,
-			getLayoutRelativeURL,
 			getLanguageId,
-			setLanguageId,
+			getLayoutRelativeURL,
+			getLayoutURL,
 			getPathContext,
 			getPathThemeImages,
 			getPortalURL,
 			getScopeGroupId,
 			isSignedIn,
+			setLanguageId,
 			setScopeGroupId,
 		};
 	}
@@ -151,8 +151,8 @@
 
 		return {
 			setParameter,
-			setResourceId,
 			setPortletId,
+			setResourceId,
 			toString,
 		};
 	}

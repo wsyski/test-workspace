@@ -5,8 +5,7 @@
   "license": "UNLICENSED",
 
   "devDependencies": {
-    "@liferay/portal-7.4": "*",
-    "cross-env": "^7.0.3"
+    "@liferay/portal-7.4": "*"
   },
   "dependencies": {
     "@arena/lib-portlet-common": "1.0.0",

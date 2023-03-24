@@ -1,0 +1,18 @@
+{
+    "name": "@arena/lib-liferay-mock",
+    "version": "5.4.0",
+    "description": "Liferay Mock",
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "clean": "true",
+        "deploy": "true",
+        "publish": "true",
+        "build": "true",
+        "test": "true"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}
