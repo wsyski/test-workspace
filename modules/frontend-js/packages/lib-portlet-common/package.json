@@ -14,12 +14,12 @@
   },
   "peerDependencies": {
     "@arena/portal": "*",
-    "@babel/runtime": "^7.21.0",
+    "@babel/runtime": "7.21.0",
     "@liferay/portal-7.4": "*"
   },
   "devDependencies": {
-    "@arena/lib-portlet-common": "*",
     "@arena/portal": "*",
+    "@babel/runtime": "7.21.0",
     "@liferay/portal-7.4": "*",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.7",
@@ -34,6 +34,7 @@
     "deploy": "true",
     "deploy:prod": "true",
     "clean": "rimraf dist",
+    "build:microbundle": "microbundle-crl --no-compress --sourcemap --format modern,cjs",
     "build": "rollup -c",
     "build:prod": "cross-env NODE_ENV=production rollup -c",
     "test": "jest --verbose",

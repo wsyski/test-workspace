@@ -4,7 +4,6 @@
 	"license": "UNLICENSED",
 	"private": true,
 	"dependencies": {
-		"@babel/runtime": "^7.21.0",
 		"axios": "0.24.0",
 		"i18next": "22.4.11",
 		"i18next-chained-backend": "3.0.2",
