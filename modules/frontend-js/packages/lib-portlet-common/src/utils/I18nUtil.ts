@@ -220,8 +220,12 @@ export default class I18nUtil {
 	static date2String(date: Date | undefined): string | undefined {
 		if (date) {
 			const localizationParams = I18nUtil.getLocalizationParams();
-
-			return formatDate(date, localizationParams.dateFormat);
+      try {
+				return formatDate(date, localizationParams.dateFormat);
+			}
+			catch(ex) {
+				console.error(ex.message);
+			}
 		}
 	}
 

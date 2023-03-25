@@ -1,6 +1,6 @@
-export var PORTLET_NAMESPACE_DEFAULT = '_portlet_namespace_';
+export const PORTLET_NAMESPACE_DEFAULT = '_portlet_namespace_';
 
-export var LIFERAY_PARAMS_DEFAULT = {
+export const LIFERAY_PARAMS_DEFAULT = {
 	configuration: {
 		portletInstance: {},
 		system: {},
@@ -10,7 +10,7 @@ export var LIFERAY_PARAMS_DEFAULT = {
 	portletNamespace: PORTLET_NAMESPACE_DEFAULT,
 };
 
-var LiferayUtil = function () {
+const LiferayUtil = function () {
     function LiferayUtil() {
     }
 

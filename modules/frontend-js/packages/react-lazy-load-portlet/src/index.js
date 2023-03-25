@@ -5,20 +5,20 @@ import AppComponent from "./AppComponent";
 import LiferayUtil, {LIFERAY_PARAMS_DEFAULT} from "./LiferayUtil";
 
 
-var DRINK = 'drink';
+const DRINK = 'drink';
 
-var PORTLET_INSTANCE_DEFAULT = {
+const PORTLET_INSTANCE_DEFAULT = {
     [DRINK]: 'orange',
 };
 
 export default function main(liferayParams) {
-    var liferayParamsWithDefaults = LiferayUtil.setLiferayParamsDefaults(
+    const liferayParamsWithDefaults = LiferayUtil.setLiferayParamsDefaults(
         liferayParams,
         PORTLET_INSTANCE_DEFAULT,
         undefined
     );
-    var portletElement = document.getElementById(liferayParamsWithDefaults.portletElementId);
-    var markup = React.createElement(AppComponent, {...liferayParamsWithDefaults});
+    const portletElement = document.getElementById(liferayParamsWithDefaults.portletElementId);
+    const markup = React.createElement(AppComponent, {...liferayParamsWithDefaults});
     ReactDOM.render(LiferayUtil.isPortal() ? (
             <React.Fragment>{markup}</React.Fragment>
         ) : (

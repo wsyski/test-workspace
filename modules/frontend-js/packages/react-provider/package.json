@@ -8,9 +8,8 @@
     "@liferay/portal-7.4": "*"
   },
   "dependencies": {
-    "@arena/lib-portlet-common": "1.0.0",
-    "@arena/portal": "1.0.0",
-    "@babel/runtime": "^7.21.0"
+    "@arena/lib-portlet-common": "file:../../arena-lib-portlet-common-v5.4.0.tgz",
+    "@arena/portal": "1.0.0"
   },
   "scripts": {
     "build": "liferay build",

@@ -35,7 +35,7 @@ const AlertModalConfirmWithT: React.FC<Props> = ({
 
 			<ClayModal.Footer
 				first={
-					<ClayButton onClick={onClose} title={t('btnOK.title')}>
+					<ClayButton onClick={onClose} title={t('btnOK.title')!}>
 						{t('btnOK.label')}
 					</ClayButton>
 				}
