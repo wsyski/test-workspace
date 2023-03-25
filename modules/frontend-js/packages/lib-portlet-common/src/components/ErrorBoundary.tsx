@@ -3,15 +3,15 @@ import {WithTranslation, withTranslation} from 'react-i18next';
 
 import AlertActionsContext from '../contexts/AlertActionsContext';
 
-export interface Props {
+interface Props extends WithTranslation {
 	children: ReactNode;
 }
 
-export interface State {
+interface State {
 	hasError: boolean;
 }
 
-export class ErrorBoundaryWithT extends Component<Props & WithTranslation, State> {
+class ErrorBoundaryWithT extends Component<Props, State> {
 	static contextType = AlertActionsContext;
 	context!: React.ContextType<typeof AlertActionsContext>;
 
