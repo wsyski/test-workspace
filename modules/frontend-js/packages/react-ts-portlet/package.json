@@ -45,7 +45,8 @@
   },
   "scripts": {
     "sass": "sass src/css/styles.scss src/css/styles.css --source-map",
-    "build": "run-s build-ts && cross-env NODE_ENV=production liferay build",
+    "copy-assets": "cpx \"./assets/**\" build",
+    "build": "run-s build-ts && run-s copy-assets && cross-env NODE_ENV=production liferay build",
     "clean": "liferay clean",
     "deploy": "cross-env NODE_ENV=production liferay deploy",
     "build-ts": "tsc -b tsconfig.prod.json",
