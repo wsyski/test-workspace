@@ -10,13 +10,30 @@
     "@arena/portal": "1.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.5",
+    "@testing-library/jest-dom": "~5.16.4",
+    "@testing-library/react": "~12.1.5",
+    "@testing-library/user-event": "~12.8.3",
+    "@types/enzyme": "~3.10.12",
+    "@types/enzyme-adapter-react-16": "~1.0.6",
+    "@types/node": "^16.11.27",
+    "@types/react-test-renderer": "~16.9.3",
+    "@types/react": "16.9.56",
+    "@types/react-dom": "16.9.14",
+    "@types/react-redux": "7.1.25",
+    "@types/react-router": "5.1.18",
+    "@types/react-router-dom": "5.3.3",
+    "@types/jest": "~27.5.1",
+    "@types/warning": "~3.0.0",
+    "enzyme": "~3.11.0",
+    "enzyme-adapter-react-16": "~1.15.6",
+    "enzyme-to-json": "~3.6.1",
+    "event-source-polyfill": "~1.0.25",
+    "jest": "~27.5.1",
+    "jest-environment-jsdom": "~27.5.1",
     "@types/lodash": "^4.14.119",
-    "@types/react": "^16.9.17",
-    "@types/react-dom": "^16.9.4",
-    "@types/warning": "^3.0.0",
     "@types/yup": "^0.24.9",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "ts-jest": "^27.1.5"
   },
   "portlet": {
     "com.liferay.portlet.display-category": "category.sample",
@@ -31,7 +48,8 @@
     "build": "run-s build-ts && liferay build",
     "clean": "liferay clean",
     "deploy": "liferay deploy",
-    "build-ts": "tsc -b tsconfig.prod.json"
+    "build-ts": "tsc -b tsconfig.prod.json",
+    "test": "jest --verbose"
   },
   "browserslist": {
     "production": [
