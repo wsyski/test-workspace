@@ -45,9 +45,9 @@
   },
   "scripts": {
     "sass": "sass src/css/styles.scss src/css/styles.css --source-map",
-    "build": "run-s build-ts && liferay build",
+    "build": "run-s build-ts && cross-env NODE_ENV=production liferay build",
     "clean": "liferay clean",
-    "deploy": "liferay deploy",
+    "deploy": "cross-env NODE_ENV=production liferay deploy",
     "build-ts": "tsc -b tsconfig.prod.json",
     "test": "jest --verbose"
   },
