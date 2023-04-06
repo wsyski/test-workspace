@@ -8,6 +8,12 @@
   },
   "devDependencies": {
     "@liferay/eslint-plugin": "~1.4.0",
+    "@babel/cli": "~7.20.7",
+    "@babel/core": "~7.20.12",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "~7.18.6",
+    "@babel/preset-env": "~7.20.2",
+    "@babel/preset-react": "~7.18.6",
+    "@babel/plugin-transform-runtime": "~7.18.10",
     "babel-eslint": "~10.1.0",
     "basename": "^0.1.2",
     "child_process": "^1.0.2",
