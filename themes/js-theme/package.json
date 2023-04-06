@@ -20,7 +20,6 @@
 		"liferay-font-awesome": "~3.4.2"
 	},
 	"scripts": {
-		"init": "gulp init",
 		"build": "gulp build",
 		"deploy": "gulp deploy",
 		"extend": "gulp extend",
