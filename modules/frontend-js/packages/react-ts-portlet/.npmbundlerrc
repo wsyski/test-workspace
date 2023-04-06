@@ -13,9 +13,7 @@
         "react-i18next": "*",
         "react-router": "*",
         "react-router-dom": "*",
-        "react-transition-group": "*",
         "yup": "*",
-        "date-fns": "*",
         "react-fast-compare": "*",
         "warning": "*"
       }
@@ -35,9 +33,7 @@
     "react-i18next": true,
     "react-router": true,
     "react-router-dom": true,
-    "react-transition-group": true,
     "yup": true,
-    "date-fns": true,
     "react-fast-compare": true,
     "warning": true
   },

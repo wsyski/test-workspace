@@ -17,7 +17,7 @@
 		"liferay-frontend-theme-styled": "6.0.54",
 		"liferay-frontend-theme-unstyled": "6.0.45",
 		"liferay-theme-tasks": "^11.5.0",
-		"liferay-font-awesome": "~3.4.2"
+		"liferay-font-awesome": "^3.5.2"
 	},
 	"scripts": {
 		"build": "gulp build",

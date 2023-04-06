@@ -12,9 +12,7 @@
 		"react-i18next": "^11.18.6",
 		"react-router": "^5.2.1",
 		"react-router-dom": "^5.2.1",
-		"react-transition-group": "^4.4.5",
 		"yup": "1.0.2",
-		"date-fns": "2.29.3",
 		"react-fast-compare": "3.2.1",
 		"warning": "4.0.3"
 	},
