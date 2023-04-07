@@ -15,9 +15,8 @@
     "build": "liferay build",
     "build:prod": "cross-env NODE_ENV=production liferay build",
     "clean": "liferay clean",
-    "deploy": "liferay deploy",
-    "deploy:prod": "cross-env NODE_ENV=production liferay deploy",
-    "publish": "true",
+    "deploy": "gulp deploy",
+    "publish": "gulp publish",
     "test": "true"
   }
 }

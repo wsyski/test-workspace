@@ -48,7 +48,8 @@
     "copy-assets": "cpx \"./assets/**\" build",
     "build": "run-s build-ts && run-s copy-assets && cross-env NODE_ENV=production liferay build",
     "clean": "liferay clean",
-    "deploy": "cross-env NODE_ENV=production liferay deploy",
+    "deploy": "gulp deploy",
+    "publish": "gulp publish",
     "build-ts": "tsc -b tsconfig.prod.json",
     "test": "jest --verbose"
   },

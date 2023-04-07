@@ -24,10 +24,9 @@
     "build": "liferay build",
     "build:prod": "cross-env NODE_ENV=production liferay build",
     "clean": "liferay clean",
-    "deploy": "liferay deploy",
-    "deploy:prod": "cross-env NODE_ENV=production liferay deploy",
+    "deploy": "gulp deploy",
+    "publish": "gulp publish",
     "start": "react-scripts start",
-    "publish": "true",
     "test": "true"
   },
   "browserslist": {
