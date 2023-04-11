@@ -45,8 +45,8 @@
   },
   "scripts": {
     "sass": "sass assets/css/styles.scss assets/css/styles.css --source-map",
-    "copy-assets": "cpx \"./assets/**\" build",
-    "build": "run-s build-ts sass copy-assets && cross-env NODE_ENV=production liferay build",
+    "copy-assets": "cpx \"./assets/**\" build && cpx src/index.js build",
+    "build": "run-s build-ts sass copy-assets && cross-env NODE_ENV=production liferay-npm-bundler",
     "clean": "liferay clean",
     "deploy": "gulp deploy",
     "publish": "gulp publish",
