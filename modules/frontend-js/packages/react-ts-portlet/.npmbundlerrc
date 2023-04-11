@@ -45,7 +45,6 @@
       "configuration": "features/configuration.json"
     }
   },
-  "sources": ["src"],
   "rules": [
     {
       "test": "\\.json$",
