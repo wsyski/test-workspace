@@ -45,28 +45,15 @@
       "configuration": "features/configuration.json"
     }
   },
-  "sources": ["src", "assets"],
+  "sources": ["src"],
   "rules": [
-    {
-      "test": "\\.css$",
-      "use": ["css-loader"]
-    },
-    {
-      "exclude": "node_modules",
-      "test": ".*/[^_][^/]+\\.scss$",
-      "use": [
-        {
-          "loader": "css-loader",
-          "options": {
-            "emitCssFile": false,
-            "extension": ".css"
-          }
-        }
-      ]
-    },
     {
       "test": "\\.json$",
       "use": ["json-loader"]
+    },
+    {
+      "test": "\\.css$",
+      "use": ["css-loader"]
     }
   ],
   "dump-report": true,
