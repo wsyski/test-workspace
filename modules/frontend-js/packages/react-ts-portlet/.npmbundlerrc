@@ -45,6 +45,30 @@
       "configuration": "features/configuration.json"
     }
   },
+  "sources": ["src", "assets"],
+  "rules": [
+    {
+      "test": "\\.css$",
+      "use": ["css-loader"]
+    },
+    {
+      "exclude": "node_modules",
+      "test": ".*/[^_][^/]+\\.scss$",
+      "use": [
+        {
+          "loader": "css-loader",
+          "options": {
+            "emitCssFile": false,
+            "extension": ".css"
+          }
+        }
+      ]
+    },
+    {
+      "test": "\\.json$",
+      "use": ["json-loader"]
+    }
+  ],
   "dump-report": true,
   "max-parallel-files": 128,
   "verbose": true

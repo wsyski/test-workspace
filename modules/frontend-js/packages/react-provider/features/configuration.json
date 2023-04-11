@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/liferay/liferay-frontend-projects/master/maintenance/projects/js-toolkit/resources/schemas/configuration.schema.json",
   "system": {
-    "category": "react-provider",
+    "category": "sample",
     "name": "react-provider",
     "fields": {
       "fruit": {
