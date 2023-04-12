@@ -45,12 +45,11 @@
   },
   "scripts": {
     "sass": "sass assets/css/styles.scss assets/css/styles.css --source-map",
-    "copy-assets": "cpx \"./assets/**\" build && cpx src/index.js build",
-    "build": "run-s build-ts sass copy-assets && cross-env NODE_ENV=production liferay-npm-bundler",
-    "clean": "liferay clean",
+    "build": "run-s build:tsc && cross-env NODE_ENV=production liferay-npm-bundler",
+    "clean": "rimraf out-tsc && liferay clean",
     "deploy": "gulp deploy",
     "publish": "gulp publish",
-    "build-ts": "tsc -b tsconfig.prod.json",
+    "build:tsc": "tsc -b tsconfig.prod.json",
     "test": "jest --verbose"
   },
   "browserslist": {

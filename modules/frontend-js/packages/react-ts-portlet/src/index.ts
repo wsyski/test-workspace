@@ -1,4 +1,4 @@
-import { I18nUtil, LIFERAY_PARAMS_DEFAULT, LiferayUtil } from "@arena/lib-portlet-common";
+import {I18nUtil, LIFERAY_PARAMS_DEFAULT, LiferayParams, LiferayUtil} from "@arena/lib-portlet-common";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { I18nextProvider } from 'react-i18next';
@@ -10,7 +10,7 @@ const isPortal = () => {
     return process.env.NODE_ENV !== 'development';
 }
 
-const index = (liferayParams) => {
+const index = (liferayParams: LiferayParams) => {
     const liferayParamsWithDefaults = LiferayUtil.setLiferayParamsDefaults(liferayParams, PORTLET_INSTANCE_DEFAULT);
     const i18nInstance = I18nUtil.init(liferayParamsWithDefaults.contextPath);
     const portletElement = document.getElementById(liferayParamsWithDefaults.portletElementId);
@@ -18,16 +18,10 @@ const index = (liferayParams) => {
         liferayParams: liferayParamsWithDefaults,
     }));
     ReactDOM.render(isPortal() ? React.createElement(React.Fragment, null, markup)  : React.createElement(React.StrictMode, null, markup), document.getElementById(liferayParamsWithDefaults.portletElementId));
-
-    if (isPortal()) {
-        Liferay.once('destroyPortlet', () => {
-            ReactDOM.unmountComponentAtNode(portletElement);
-        });
-    }
 };
 
 if (!isPortal()) {
-    main(LIFERAY_PARAMS_DEFAULT);
+    index(LIFERAY_PARAMS_DEFAULT);
 }
 
 export default index;

@@ -19,7 +19,11 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "es2018"
+    ],
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./types"
     ],
     "resolveJsonModule": true
   }
