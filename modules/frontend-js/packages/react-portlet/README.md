@@ -1,3 +1,0 @@
-# react-portlet
-
-React Portlet
