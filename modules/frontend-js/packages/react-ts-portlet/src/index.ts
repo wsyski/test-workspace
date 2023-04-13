@@ -13,7 +13,6 @@ const isPortal = () => {
 const index = (liferayParams: LiferayParams) => {
     const liferayParamsWithDefaults = LiferayUtil.setLiferayParamsDefaults(liferayParams, PORTLET_INSTANCE_DEFAULT);
     const i18nInstance = I18nUtil.init(liferayParamsWithDefaults.contextPath);
-    const portletElement = document.getElementById(liferayParamsWithDefaults.portletElementId);
     const markup = React.createElement(I18nextProvider, { i18n: i18nInstance }, React.createElement(AppContainer, {
         liferayParams: liferayParamsWithDefaults,
     }));
