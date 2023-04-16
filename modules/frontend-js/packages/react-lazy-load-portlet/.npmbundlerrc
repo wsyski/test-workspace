@@ -14,8 +14,7 @@
         "react-router": "*",
         "react-router-dom": "*"
       }
-    },
-    "strictGlobalDependencies": true
+    }
   },
   "exclude": {
     "*": ["**/__mocks__/**/*", "**/__tests__/**/*"],
@@ -50,7 +49,7 @@
   "create-jar": {
     "features": {
       "js-extender": true,
-      "web-context": "/react-ts-portlet",
+      "web-context": "/react-lazy-load-portlet",
       "localization": "features/localization/Language",
       "configuration": "features/configuration.json"
     }

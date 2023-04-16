@@ -1,16 +1,41 @@
 {
   "name": "react-lazy-load-portlet",
   "version": "1.0.0",
-  "description": "React Lazy Load Portlet",
+  "description": "React lazy load portlet",
   "license": "UNLICENSED",
   "main": "index.js",
   "dependencies": {
+    "@arena/lib-portlet-common": "file:../../arena-lib-portlet-common-v5.4.0.tgz",
     "@liferay/portal-7.4": "*",
+    "@arena/portal": "1.0.0",
     "react-feather": "^1.1.6",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "react-scripts": "^5.0.1"
+    "@testing-library/jest-dom": "~5.16.4",
+    "@testing-library/react": "~12.1.5",
+    "@testing-library/user-event": "~12.8.3",
+    "@types/enzyme": "~3.10.12",
+    "@types/enzyme-adapter-react-16": "~1.0.6",
+    "@types/node": "^16.11.27",
+    "@types/react-test-renderer": "~16.9.3",
+    "@types/react": "16.9.56",
+    "@types/react-dom": "16.9.14",
+    "@types/react-redux": "7.1.25",
+    "@types/react-router": "5.1.18",
+    "@types/react-router-dom": "5.3.3",
+    "@types/jest": "~27.5.1",
+    "@types/warning": "~3.0.0",
+    "enzyme": "~3.11.0",
+    "enzyme-adapter-react-16": "~1.15.6",
+    "enzyme-to-json": "~3.6.1",
+    "event-source-polyfill": "~1.0.25",
+    "jest": "~27.5.1",
+    "jest-environment-jsdom": "~27.5.1",
+    "@types/lodash": "^4.14.119",
+    "@types/yup": "^0.24.9",
+    "react-scripts": "^5.0.1",
+    "ts-jest": "^27.1.5"
   },
   "portlet": {
     "com.liferay.portlet.display-category": "category.sample",
@@ -21,7 +46,9 @@
     "javax.portlet.resource-bundle": "content.Language"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production liferay build",
+    "sass": "sass assets/css/styles.scss assets/css/styles.css --source-map",
+    "babel": "cross-env NODE_ENV=production babel --source-maps -d build src",
+    "build": "run-s sass && run-s babel && cross-env NODE_ENV=production liferay-npm-bundler",
     "clean": "liferay clean",
     "deploy": "gulp deploy",
     "publish": "gulp publish",

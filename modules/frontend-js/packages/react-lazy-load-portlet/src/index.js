@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import AppComponent from "./AppComponent";
-import LiferayUtil, {LIFERAY_PARAMS_DEFAULT} from "./LiferayUtil";
+import LiferayUtil from "./LiferayUtil";
 
 
 const DRINK = 'drink';
@@ -26,13 +26,8 @@ export default function main(liferayParams) {
         ),
         portletElement
     );
-    if (LiferayUtil.isPortal()) {
-        Liferay.once('destroyPortlet', () => {
-            ReactDOM.unmountComponentAtNode(portletElement);
-        });
-    }
 };
 
 if (!LiferayUtil.isPortal()) {
-    main(LIFERAY_PARAMS_DEFAULT);
+    main(LiferayUtil.LIFERAY_PARAMS_DEFAULT);
 }
