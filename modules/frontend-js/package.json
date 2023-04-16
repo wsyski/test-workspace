@@ -33,8 +33,10 @@
   "resolutions": {
     "@types/react": "16.9.56",
     "@types/react-dom": "16.9.14",
+    "@types/react-router-dom": "5.3.3",
     "react": "16.12.0",
     "react-dom": "16.12.0",
+    "react-i18next": "11.15.7",
     "react-test-renderer": "16.12.0",
     "ansis": "1.5.1"
   },
