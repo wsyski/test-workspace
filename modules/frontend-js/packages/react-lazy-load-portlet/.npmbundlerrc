@@ -31,6 +31,22 @@
     "react-router": true,
     "react-router-dom": true
   },
+  "rules": [
+    {
+      "test": "\\.json$",
+      "use": ["json-loader"]
+    },
+    {
+      "test": "\\.css$",
+      "use": ["css-loader"]
+    },
+    {
+      "test": "^assets/",
+      "exclude": ["node_modules","\\.scss$"],
+      "use": ["copy-loader"]
+    }
+  ],
+  "sources": ["src", "assets"],
   "create-jar": {
     "features": {
       "js-extender": true,

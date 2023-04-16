@@ -1,7 +1,7 @@
 {
   "extends": "../../tsconfig.declarations.json",
   "compilerOptions": {
-    "module": "es6",
+    "module": "esnext",
     "noEmit": true
   },
   "include": [

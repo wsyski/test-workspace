@@ -15,7 +15,7 @@ const LiferayUtil = function () {
     }
 
     LiferayUtil.isPortal = function isPortal() {
-        return typeof window.Liferay.once !== 'undefined';
+        return typeof window.Liferay?.FeatureFlags !== 'undefined';
     };
 
     LiferayUtil.setLiferayParamsDefaults = function setLiferayParamsDefaults(

@@ -45,12 +45,13 @@
   },
   "scripts": {
     "sass": "sass assets/css/styles.scss assets/css/styles.css --source-map",
-    "build": "run-s build:tsc && cross-env NODE_ENV=production liferay-npm-bundler",
+    "build": "run-p tsc sass && run-s babel && cross-env NODE_ENV=production liferay-npm-bundler",
     "clean": "rimraf out-tsc && liferay clean",
     "deploy": "gulp deploy",
-    "publish": "gulp publish",
-    "build:tsc": "tsc -b tsconfig.prod.json",
-    "test": "jest --verbose"
+    "tsc": "tsc -b tsconfig.prod.json",
+    "babel": "cross-env NODE_ENV=production babel --source-maps -d build out-tsc",
+    "test": "jest --verbose",
+    "start": "react-scripts start"
   },
   "browserslist": {
     "production": [

@@ -2,8 +2,7 @@
     "extends": "../../tsconfig.declarations.json",
     "compilerOptions": {
         "noEmit": false,
-        "outDir":  "out-tsc",
-        "target": "es5"
+        "outDir":  "out-tsc"
     },
     "include": [
         "src/**/*.ts",

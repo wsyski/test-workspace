@@ -17,11 +17,10 @@
         "react-fast-compare": "*",
         "warning": "*"
       }
-    },
-    "strictGlobalDependencies": true
+    }
   },
   "exclude": {
-    "*": ["**/__mocks__/**/*", "**/__tests__/**/*"],
+    "*": ["**/__mocks__/**/*", "**/__tests__/**/*", "**/*.ts", "**/*.tsx"],
     "react-provider": true,
     "@arena/lib-portlet-common": true,
     "@babel/runtime": true,
@@ -37,14 +36,6 @@
     "react-fast-compare": true,
     "warning": true
   },
-  "create-jar": {
-    "features": {
-      "js-extender": true,
-      "web-context": "/react-ts-portlet",
-      "localization": "features/localization/Language",
-      "configuration": "features/configuration.json"
-    }
-  },
   "rules": [
     {
       "test": "\\.json$",
@@ -55,30 +46,21 @@
       "use": ["css-loader"]
     },
     {
-      "test": "\\.scss$",
-      "exclude": "node_modules",
-      "use": ["sass-loader", "css-loader"]
-    },
-    {
       "test": "^assets/",
-      "exclude": "node_modules",
+      "exclude": ["node_modules","\\.scss$"],
       "use": ["copy-loader"]
-    },
-    {
-      "test": "\\.js$",
-      "exclude": "node_modules",
-      "use": [
-        {
-          "loader": "babel-loader",
-          "options": {
-            "presets": ["babel-preset-liferay-standard"]
-          }
-        }
-      ]
     }
   ],
+  "sources": ["out-tsc", "assets"],
+  "create-jar": {
+    "features": {
+      "js-extender": true,
+      "web-context": "/react-ts-portlet",
+      "localization": "features/localization/Language",
+      "configuration": "features/configuration.json"
+    }
+  },
   "dump-report": true,
   "max-parallel-files": 128,
-  "verbose": true,
-  "sources": ["out-tsc", "assets"]
+  "verbose": true
 }

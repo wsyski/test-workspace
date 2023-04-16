@@ -21,8 +21,7 @@
     "javax.portlet.resource-bundle": "content.Language"
   },
   "scripts": {
-    "build": "liferay build",
-    "build:prod": "cross-env NODE_ENV=production liferay build",
+    "build": "cross-env NODE_ENV=production liferay build",
     "clean": "liferay clean",
     "deploy": "gulp deploy",
     "publish": "gulp publish",
