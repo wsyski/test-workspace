@@ -5,7 +5,7 @@ import terser from '@rollup/plugin-terser';
 import path from 'path';
 
 import pkg from './package.json' assert { type: 'json' };
-const babelRuntimeVersion = pkg.peerDependencies['@babel/runtime'].replace(/^[^0-9]*/, '');
+const babelRuntimeVersion = pkg.devDependencies['@babel/runtime'].replace(/^[^0-9]*/, '');
 const outputOptions = {
     interop: 'auto',
     sourcemap: true,

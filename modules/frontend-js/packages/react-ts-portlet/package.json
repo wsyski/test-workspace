@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "main": "index.js",
   "dependencies": {
-    "@arena/lib-portlet-common": "file:../../arena-lib-portlet-common-v5.4.0.tgz",
+    "@arena/lib-portlet-common": "1.0.0",
     "@liferay/portal-7.4": "*",
     "@arena/portal": "1.0.0"
   },
