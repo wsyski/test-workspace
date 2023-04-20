@@ -35,7 +35,7 @@ const AlertModalConfirmCancelWithT: React.FC<Props> = ({
                 className="modal-dialog-centered"
                 observer={observer}
                 spritemap={LiferayUtil.getClaySpritemap()}
-                status={alert.displayType}
+                status={alert.displayType === 'secondary' ? undefined : alert.displayType}
             >
 
                 <ClayModal.Header aria-live="polite">{title}</ClayModal.Header>

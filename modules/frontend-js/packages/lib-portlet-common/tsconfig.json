@@ -1,8 +1,10 @@
 {
   "extends": "../../tsconfig.declarations.json",
   "compilerOptions": {
-    "noEmit": true,
-    "module": "esnext"
+    "noEmit": false,
+    "module": "esnext",
+    "declaration": true,
+    "declarationDir": "dist"
   },
   "include": [
     "src/**/*.ts",

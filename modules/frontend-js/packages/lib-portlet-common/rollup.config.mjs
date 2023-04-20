@@ -20,7 +20,7 @@ const input = 'src/index.ts';
 const external = [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})];
 
 const getPlugins = (format = 'esm') => {
-    const typescriptOptions = format === 'esm' ? { declaration: true, declarationDir: path.dirname(pkg.module) } : {};
+    const typescriptOptions = format === 'esm' ? { declaration: true, declarationDir: path.dirname(pkg.module) } : {declaration: true, declarationDir: path.dirname(pkg.main)};
 
     return [
         typescript({ tsconfig: "./tsconfig.json", ...typescriptOptions}),
