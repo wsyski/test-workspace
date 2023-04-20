@@ -38,7 +38,7 @@ const getPlugins = (format = 'esm') => {
 
 const getOutput = (format = 'esm') => {
     return {
-        dir: 'dist/',
+        dir: 'dist/'+format,
         format,
         ...outputOptions
     };
@@ -46,14 +46,12 @@ const getOutput = (format = 'esm') => {
 
 export default [
     // cjs configuration
-    /*
     {
         input,
         output: getOutput('cjs'),
         plugins: getPlugins('cjs'),
         external,
     },
-    */
     // esm configuration
     {
         input,
