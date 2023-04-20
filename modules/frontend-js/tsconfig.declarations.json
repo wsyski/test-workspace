@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "sourceMap": false,
+    "sourceMap": true,
     "inlineSources": true,
-    "inlineSourceMap": true,
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,

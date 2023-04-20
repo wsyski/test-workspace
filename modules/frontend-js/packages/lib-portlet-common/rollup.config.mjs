@@ -1,6 +1,6 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from "@rollup/plugin-commonjs";
-import typescript from "@rollup/plugin-typescript";
+import resolve from "@rollup/plugin-node-resolve";
 import terser from '@rollup/plugin-terser';
 import path from 'path';
 
@@ -16,14 +16,12 @@ const outputOptions = {
  * @license MIT
  */`,
 };
-const input = 'src/index.ts';
+const input = 'out-tsc/index.js';
 const external = [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})];
 
 const getPlugins = (format = 'esm') => {
-    const typescriptOptions = format === 'esm' ? { declaration: true, declarationDir: path.dirname(pkg.module) } : {declaration: true, declarationDir: path.dirname(pkg.main)};
 
     return [
-        typescript({ tsconfig: "./tsconfig.json", ...typescriptOptions}),
         commonjs(),
         babel({
             babelHelpers: 'runtime',
@@ -40,7 +38,7 @@ const getPlugins = (format = 'esm') => {
 
 const getOutput = (format = 'esm') => {
     return {
-        dir: 'dist/' + format,
+        dir: 'dist/',
         format,
         ...outputOptions
     };
@@ -48,12 +46,14 @@ const getOutput = (format = 'esm') => {
 
 export default [
     // cjs configuration
+    /*
     {
         input,
         output: getOutput('cjs'),
         plugins: getPlugins('cjs'),
         external,
     },
+    */
     // esm configuration
     {
         input,
