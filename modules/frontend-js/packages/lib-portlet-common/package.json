@@ -14,12 +14,7 @@
   },
   "dependencies": {
     "@arena/portal": "*",
-    "@liferay/portal-7.4": "*",
-    "i18next": "^22.4.13",
-    "i18next-chained-backend": "^4.2.0",
-    "i18next-localstorage-backend": "^4.1.0",
-    "i18next-xhr-backend": "^3.2.2",
-    "react-i18next": "~10.13.2"
+    "@liferay/portal-7.4": "*"
   },
   "devDependencies": {
     "@babel/runtime": "^7.21.0",

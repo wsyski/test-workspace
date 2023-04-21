@@ -4,12 +4,10 @@
   "description": "React Provider",
   "license": "UNLICENSED",
 
-  "devDependencies": {
-    "@liferay/portal-7.4": "*"
-  },
   "dependencies": {
     "@arena/lib-portlet-common": "1.0.0",
-    "@arena/portal": "1.0.0"
+    "@arena/portal": "1.0.0",
+    "@liferay/portal-7.4": "*"
   },
   "scripts": {
     "build": "liferay build",
