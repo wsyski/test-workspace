@@ -5,7 +5,6 @@ import terser from '@rollup/plugin-terser';
 import path from 'path';
 
 import pkg from './package.json' assert { type: 'json' };
-const babelRuntimeVersion = pkg.devDependencies['@babel/runtime'].replace(/^[^0-9]*/, '');
 const outputOptions = {
     interop: 'auto',
     sourcemap: true,
@@ -26,10 +25,10 @@ const getPlugins = (format = 'esm') => {
         babel({
             babelHelpers: 'runtime',
             exclude: /node_modules/,
-            plugins: [['@babel/plugin-transform-runtime', { version: babelRuntimeVersion }], ["@babel/plugin-proposal-nullish-coalescing-operator"], ["@babel/plugin-proposal-class-properties"]],
+            plugins: [['@babel/plugin-transform-runtime'], ["@babel/plugin-proposal-nullish-coalescing-operator"], ["@babel/plugin-proposal-class-properties"]],
             presets: [
-                ['@babel/preset-env', { targets: 'defaults' }],
-                ['@babel/preset-react', { runtime: 'automatic' }],
+                ['@babel/preset-env'],
+                ['@babel/preset-react'],
             ],
         }),
         (process.env.NODE_ENV === 'production' && terser())

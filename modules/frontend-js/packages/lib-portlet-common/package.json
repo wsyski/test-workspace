@@ -17,14 +17,6 @@
     "@liferay/portal-7.4": "*"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.21.0",
-    "@babel/plugin-transform-runtime": "^7.21.0",
-    "@babel/preset-env": "^7.21.4",
-    "@babel/preset-react": "^7.18.6",
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-commonjs": "^24.1.0",
-    "@rollup/plugin-node-resolve": "^15.0.2",
-    "@rollup/plugin-terser": "^0.4.1",
     "@testing-library/jest-dom": "~5.16.4",
     "@testing-library/react": "~12.1.5",
     "@testing-library/user-event": "~12.8.3",
@@ -46,10 +38,8 @@
     "jest": "~27.5.1",
     "jest-environment-jsdom": "~27.5.1",
     "react-test-renderer": "16.12.0",
-    "rollup": "^3.18.0",
-    "ts-jest": "^27.1.5",
-    "typescript": "~4.1.6"
-  },
+    "ts-jest": "^27.1.5"
+   },
   "scripts": {
     "deploy": "true",
     "clean": "rimraf dist && rimraf out-tsc",
