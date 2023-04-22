@@ -17,29 +17,12 @@
     "@liferay/portal-7.4": "*"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "~5.16.4",
-    "@testing-library/react": "~12.1.5",
-    "@testing-library/user-event": "~12.8.3",
     "@types/enzyme": "~3.10.12",
     "@types/enzyme-adapter-react-16": "~1.0.6",
-    "@types/jest": "~27.5.1",
-    "@types/node": "^16.11.27",
-    "@types/react": "16.9.56",
-    "@types/react-dom": "16.9.14",
-    "@types/react-redux": "7.1.25",
-    "@types/react-router": "5.1.18",
     "@types/react-router-dom": "5.3.3",
     "@types/react-test-renderer": "~16.9.3",
-    "@types/warning": "~3.0.0",
-    "enzyme": "~3.11.0",
-    "enzyme-adapter-react-16": "~1.15.6",
-    "enzyme-to-json": "~3.6.1",
-    "event-source-polyfill": "~1.0.25",
-    "jest": "~27.5.1",
-    "jest-environment-jsdom": "~27.5.1",
-    "react-test-renderer": "16.12.0",
-    "ts-jest": "^27.1.5"
-   },
+    "@types/testing-library__react-hooks": "~3.4.1"
+  },
   "scripts": {
     "deploy": "true",
     "clean": "rimraf dist && rimraf out-tsc",
