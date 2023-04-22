@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 scriptDir=$(cd `dirname $0` && pwd)
 echo "scriptDir: ${scriptDir}"
-rm -f ${scriptDir}/../.yarnrc
 rm -rf ${scriptDir}/../node_modules_cache
+find ${scriptDir}/.. -name .yarnrc -exec rm -rf {} \;
 find ${scriptDir}/.. -name build -exec rm -rf {} \;
 find ${scriptDir}/.. -name dist -exec rm -rf {} \;
 find ${scriptDir}/.. -name out -exec rm -rf {} \;

@@ -1,6 +1,4 @@
-import {formatISO, parseISO} from 'date-fns';
-import { default as formatDate } from 'date-fns/format';
-import { default as parseDate } from 'date-fns/parse';
+import {format, formatISO, parse, parseISO} from 'date-fns';
 import i18next, {i18n} from 'i18next';
 import ChainedBackend from 'i18next-chained-backend';
 import LocalStorageBackend from 'i18next-localstorage-backend';
@@ -221,7 +219,7 @@ export default class I18nUtil {
 		if (date) {
 			const localizationParams = I18nUtil.getLocalizationParams();
       try {
-				return formatDate(date, localizationParams.dateFormat);
+				return format(date, localizationParams.dateFormat);
 			}
 			catch(ex) {
 				console.error(ex.message);
@@ -233,7 +231,7 @@ export default class I18nUtil {
 		if (s) {
 			const localizationParams = I18nUtil.getLocalizationParams();
 
-			return parseDate(s, localizationParams.dateFormat, new Date());
+			return parse(s, localizationParams.dateFormat, new Date());
 		}
 	}
 
