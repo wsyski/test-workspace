@@ -1,14 +1,19 @@
 import {cleanup} from '@testing-library/react';
-import Axios, {AxiosResponse} from 'axios';
+import Axios, {AxiosResponse, AxiosHeaders} from 'axios';
 
 import {CommonServicesConfig} from '../../index';
 import LiferayUtil from '../../utils/LiferayUtil';
 import CommonServicesConfigService from '../CommonServicesConfigService';
 import commonServicesConfig from '../__mocks__/resources/commonServicesConfig.json';
+import ServiceUtil from "../../utils/ServiceUtil";
+
+jest.mock('axios');
+const axiosMock = Axios as jest.Mocked<typeof Axios>;
 
 const getAxiosResponse = <T>(data: T): AxiosResponse<T> => {
 	const axiosResponse: AxiosResponse = {
-	config: {},
+	config: {...ServiceUtil.getRequestConfig({}),
+		headers: new AxiosHeaders()},
 	data,
 	headers: {},
 	status: 200,
@@ -17,9 +22,6 @@ const getAxiosResponse = <T>(data: T): AxiosResponse<T> => {
 
 return axiosResponse;
 }
-
-jest.mock('axios');
-const axiosMock = Axios as jest.Mocked<typeof Axios>;
 
 describe('CommonServicesConfigService', () => {
 	beforeEach(() => {

@@ -5,9 +5,9 @@
   "license": "UNLICENSED",
   "main": "index.js",
   "dependencies": {
-    "@arena/lib-portlet-common": "1.0.0",
+    "@arena/lib-portlet-common": "*",
     "@liferay/portal-7.4": "*",
-    "@arena/portal": "1.0.0",
+    "@arena/portal": "*",
     "react-feather": "^1.1.6",
     "styled-components": "^5.3.6"
   },
