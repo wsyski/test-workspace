@@ -67,7 +67,7 @@
   "scripts": {
     "workspace-install": "yarn install",
     "build": "yarn run format && yarn workspaces run build",
-    "build:libs": "yarn workspace @arena/lib-portlet-common build",
+    "build:libs": "yarn workspace @arena/lib-liferay-mock build && yarn workspace @arena/portal build && yarn workspace @arena/lib-portlet-common build",
     "clean": "yarn workspaces run clean",
     "deploy": "yarn workspaces run deploy",
     "format": "eslint packages/**/{src,test/src}/**/*.{ts,tsx} --fix",
