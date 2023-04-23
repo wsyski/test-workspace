@@ -10,9 +10,5 @@
         "publish": "true",
         "build": "true",
         "test": "true"
-    },
-    "dependencies": {
-    },
-    "devDependencies": {
     }
 }
