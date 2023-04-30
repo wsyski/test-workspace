@@ -7,7 +7,7 @@ packageRunBuildLibs {
 }
 
 packageRunTest {
-    dependsOn([packageRunBuildLibs])
+    dependsOn([packageRunBuildLibs, packageRunFormat])
 }
 
 deploy {
