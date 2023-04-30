@@ -45,11 +45,6 @@
       "dependsOn": [
         "^test"
       ]
-    },
-    "init": {
-      "dependsOn": [
-        "^init"
-      ]
     }
   },
   "defaultBase": "main"
