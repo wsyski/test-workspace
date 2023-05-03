@@ -18,6 +18,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/runtime": "^7.21.0",
     "@liferay/eslint-plugin": "~1.2.0",
+    "@nrwl/nx-cloud": "~16.0.5",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
@@ -26,13 +27,13 @@
     "@testing-library/react": "~12.1.5",
     "@testing-library/user-event": "~12.8.3",
     "@types/jest": "~28.1.8",
+    "@types/lodash": "^4.14.119",
     "@types/node": "^16.11.27",
     "@types/react": "16.9.56",
     "@types/react-dom": "16.9.14",
     "@types/react-redux": "7.1.25",
     "@types/react-router": "5.1.18",
     "@types/warning": "~3.0.0",
-    "@types/lodash": "^4.14.119",
     "@types/yup": "^0.24.9",
     "@typescript-eslint/eslint-plugin": "~4.33.0",
     "@typescript-eslint/parser": "~4.33.0",
@@ -49,13 +50,12 @@
     "jest": "~28.1.3",
     "jest-environment-jsdom": "~28.1.3",
     "npm-run-all": "^4.1.5",
+    "nx": "~16.0.3",
     "react-test-renderer": "16.12.0",
     "rimraf": "^5.0.0",
     "rollup": "^3.18.0",
     "ts-jest": "~28.0.8",
-    "typescript": "~4.4.4",
-    "nx": "~15.9.2",
-    "@nrwl/nx-cloud": "~16.0.1"
+    "typescript": "~4.4.4"
   },
   "resolutions": {
     "@types/react": "16.9.56",
@@ -75,6 +75,7 @@
     "deploy": "nx run-many -t deploy",
     "format": "eslint packages/**/{src,test/src}/**/*.{ts,tsx} --fix",
     "publish": "nx run-many -t publish",
+    "reset:nx": "nx reset",
     "test": "nx run-many -t test --verbose"
   },
   "workspaces": {
