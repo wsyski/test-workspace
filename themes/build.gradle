@@ -1,0 +1,4 @@
+publish {
+    subprojects.each { dependsOn("${it.name}:packageRunPublish") }
+}
+

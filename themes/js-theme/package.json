@@ -26,6 +26,7 @@
 		"kickstart": "gulp kickstart",
 		"status": "gulp status",
 		"upgrade": "gulp upgrade",
+		"publish": "gulp publish",
 		"watch": "gulp watch"
 	}
 }
