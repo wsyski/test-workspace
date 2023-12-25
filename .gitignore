@@ -12,4 +12,3 @@ gradle-local.properties
 .gradle
 **/*.css
 **/*.map
-**/liferay-theme.json

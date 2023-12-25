@@ -1,6 +1,6 @@
 {
     "engines": {
-        "node": "=16",
+        "node": ">=16",
         "yarn": "1.x"
     },
     "private": true,
@@ -15,8 +15,8 @@
     },
     "workspaces": {
         "packages": [
-            "modules/frontend-js",
-            "themes/js-theme"
+            "themes/js-theme",
+            "modules/frontend-js"
         ],
         "nohoist": [
             "**/frontend-js",

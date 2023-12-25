@@ -6,6 +6,66 @@ allprojects {
     }
 }
 
+allprojects {
+    plugins.withId("com.liferay.node") {
+        node.download = false
+        node.global = true
+        node.useNpm = false
+    }
+}
+
+subprojects { subproject ->
+    if (!subproject.name.startsWith('frontend-js')) {
+        plugins.withId("java") {
+            sourceCompatibility = "${javaSourceCompatibility}"
+            dependencies {
+                compileOnly group: "org.projectlombok", name: "lombok", version: "${rootProject.getProperty('org.projectlombok.lombok.version')}"
+                annotationProcessor "org.projectlombok:lombok:${rootProject.getProperty('org.projectlombok.lombok.version')}"
+                compileOnly group: "com.liferay.portal", name: "release.portal.api"
+
+                testCompileOnly group: "org.projectlombok", name: "lombok", version: "${rootProject.getProperty('org.projectlombok.lombok.version')}"
+                testAnnotationProcessor "org.projectlombok:lombok:${rootProject.getProperty('org.projectlombok.lombok.version')}"
+                testImplementation group: "com.liferay.portal", name: "release.portal.api"
+                testImplementation group: "org.hamcrest", name: "hamcrest", version:  "${rootProject.getProperty('org.hamcrest.hamcrest.version')}"
+                testImplementation group: 'junit', name: 'junit'
+            }
+        }
+
+        apply plugin: 'maven-publish'
+        publishing {
+            repositories {
+                mavenLocal()
+                maven {
+                    credentials {
+                        username "${repositoryUser}"
+                        password "${repositoryPassword}"
+                    }
+                    def snapshotRepoId = "${repositorySnapshotRepoId}"
+                    def releaseRepoId = "${repositoryReleaseRepoId}"
+                    def mavenVersion = "${mavenVersion}"
+                    def baseUrl = 'http://' + "${repositoryHost}" + "${repositoryPath}" + '/'
+                    url = mavenVersion.endsWith('SNAPSHOT') ? baseUrl + snapshotRepoId : baseUrl + releaseRepoId
+                    allowInsecureProtocol = true
+                }
+            }
+        }
+
+        repositories {
+            mavenLocal()
+            maven {
+                url "${gradleRepositoryUrl}"
+            }
+            maven {
+                url "${liferayRepositoryUrl}"
+            }
+            maven {
+                url "http://" + "${repositoryHost}" + "${repositoryPath}" + '/' + "${repositoryAllRepoId}"
+                allowInsecureProtocol = true
+            }
+        }
+    }
+}
+
 task yarnInstallCmd(type: Exec) {
     println "Executing yarn install..."
     executable "yarn"
