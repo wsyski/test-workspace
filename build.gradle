@@ -56,12 +56,17 @@ subprojects { subproject ->
                 url "${gradleRepositoryUrl}"
             }
             maven {
-                url "${liferayRepositoryUrl}"
+                url "${liferayRepositoryUrl0}"
+            }
+            maven {
+                url "${liferayRepositoryUrl1}"
             }
             maven {
                 url "http://" + "${repositoryHost}" + "${repositoryPath}" + '/' + "${repositoryAllRepoId}"
                 allowInsecureProtocol = true
             }
+            mavenCentral()
+            gradlePluginPortal()
         }
     }
 }
