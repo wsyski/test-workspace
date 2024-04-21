@@ -1,15 +1,6 @@
 {
   "extends": "nx/presets/npm.json",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": ["build", "build:libs", "test"],
-        "accessToken": "ZTNmNGJjZDktNzFlMC00NjExLWI4MjgtNDFkOGUyNmFmZmI4fHJlYWQtd3JpdGU="
-      }
-    }
-  },
   "targetDefaults": {
     "workspace-install": {
       "dependsOn": [
@@ -17,6 +8,8 @@
       ]
     },
     "build": {
+      "inputs": ["{projectRoot}/src/**/*", "{projectRoot}/assets/**/*", "!{projectRoot}/**/*.md"],
+      "outputs": ["{projectRoot}/dist","{projectRoot}/build"],
       "dependsOn": [
         "^build"
       ]
@@ -31,16 +24,25 @@
         "^deploy"
       ]
     },
-    "publish": {
-      "dependsOn": [
-        "^publish"
-      ]
-    },
     "test": {
       "dependsOn": [
         "^test"
       ]
     }
   },
-  "defaultBase": "main"
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheDirectory": "/tmp/nx-cache",
+        "cacheableOperations": [
+          "build",
+          "build:libs",
+          "test"
+        ],
+        "parallel": 1
+      }
+    }
+  },
+  "neverConnectToCloud": true
 }
