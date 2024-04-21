@@ -9,7 +9,7 @@
     "com.liferay.portlet.display-category": "category.sample",
     "com.liferay.portlet.header-portlet-css": "/css/styles.css",
     "com.liferay.portlet.instanceable": true,
-    "javax.portlet.name": "react_platform_portlet",
+    "javax.portlet.name": "reactplatformportlet",
     "javax.portlet.security-role-ref": "power-user,user",
     "javax.portlet.resource-bundle": "content.Language"
   },
