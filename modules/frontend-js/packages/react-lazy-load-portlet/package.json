@@ -19,6 +19,9 @@
     "@types/testing-library__react-hooks": "~3.4.1",
     "react-scripts": "^5.0.1"
   },
+  "resolutions": {
+    "eslint": "7.32.0"
+  },
   "portlet": {
     "com.liferay.portlet.display-category": "category.sample",
     "com.liferay.portlet.header-portlet-css": "/css/styles.css",
