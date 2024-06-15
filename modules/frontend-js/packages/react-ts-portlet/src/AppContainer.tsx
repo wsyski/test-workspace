@@ -1,3 +1,8 @@
+/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
 import {
 	ALERT_ORIGIN_DEFAULT,
 	Alert,
@@ -55,7 +60,7 @@ const AppContainer: React.FC<AppContainerProps> = ({
 				value={LiferayUtil.getClaySpritemap()}
 			>
 				<LiferayParamsContext.Provider value={liferayParams}>
-					<Suspense fallback={<React.Fragment />}>
+					<Suspense fallback={<></>}>
 						<AlertPanel ref={alertActionsRef} />
 
 						<ErrorBoundary>

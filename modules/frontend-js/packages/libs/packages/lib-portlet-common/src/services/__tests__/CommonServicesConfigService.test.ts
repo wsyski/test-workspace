@@ -1,13 +1,17 @@
+/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
 import {cleanup} from '@testing-library/react';
 import {AxiosResponse} from 'axios';
+const {default: Axios} = require('axios');
 
 import {CommonServicesConfig} from '../../index';
 import LiferayUtil from '../../utils/LiferayUtil';
+import ServiceUtil from "../../utils/ServiceUtil";
 import CommonServicesConfigService from '../CommonServicesConfigService';
 import commonServicesConfig from '../__mocks__/resources/commonServicesConfig.json';
-import ServiceUtil from "../../utils/ServiceUtil";
-
-const {default: Axios} = require('axios');
 
 jest.mock('axios');
 const axiosMock = Axios as jest.Mocked<typeof Axios>;

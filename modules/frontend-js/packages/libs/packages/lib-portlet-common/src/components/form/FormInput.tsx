@@ -1,3 +1,8 @@
+/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
 import ClayForm from '@clayui/form';
 import Select from '@clayui/form/lib/Select';
 import ClayIcon from '@clayui/icon';
@@ -18,7 +23,7 @@ const ErrorFeedback = ({
   const errors = error ? (Array.isArray(error) ? error : [error]) : [];
 
   return (
-    <React.Fragment>
+    <>
       {!!errors.length && (
         <ClayForm.FeedbackGroup id={getFieldFeedbackId(fieldId)}>
           {errors.map((error, index) => {
@@ -33,7 +38,7 @@ const ErrorFeedback = ({
           })}
         </ClayForm.FeedbackGroup>
       )}
-    </React.Fragment>
+    </>
   );
 };
 
@@ -52,19 +57,19 @@ const RequiredMark: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <React.Fragment>
+    <>
 			<span className="inline-item-after reference-mark text-warning">
 				<ClayIcon symbol="asterisk" />
 			</span>
 
       <span className="hide-accessible">{t('txtRequired')}</span>
-    </React.Fragment>
+    </>
   );
 };
 
 const SelectOptions: React.FC<{options: React.ComponentProps<typeof Select.Option>[]}> = ({options}: {options: React.ComponentProps<typeof Select.Option>[]}) => {
   return (
-    <React.Fragment>
+    <>
       {options.map((option, i) => {
         return (
           <option key={i} value={option.value}>
@@ -72,7 +77,7 @@ const SelectOptions: React.FC<{options: React.ComponentProps<typeof Select.Optio
           </option>
         );
       })}
-    </React.Fragment>
+    </>
   )
 }
 
