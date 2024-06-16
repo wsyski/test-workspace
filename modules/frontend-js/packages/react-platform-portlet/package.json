@@ -16,7 +16,6 @@
   "scripts": {
     "build": "liferay build",
     "clean": "liferay clean",
-    "test": "true",
-    "deploy": "gulp deploy"
+    "deploy": "liferay deploy"
   }
 }

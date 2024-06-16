@@ -15,10 +15,10 @@ import AppComponent from './AppComponent';
 export default function main(params) { 
 	 ReactDOM.render(
 		<AppComponent 
-			configuration={params.configuration} 
+			portletNamespace={params.portletNamespace} 
 			contextPath={params.contextPath}
 			portletElementId={params.portletElementId}
-			portletNamespace={params.portletNamespace}
+			configuration={params.configuration}
 		 />, 
 		document.getElementById(params.portletElementId)
 	);
