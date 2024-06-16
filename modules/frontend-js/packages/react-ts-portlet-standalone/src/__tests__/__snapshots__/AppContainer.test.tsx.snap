@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppContainer Component matches snapshot 1`] = `
+<div
+  data-test-id="appContainer"
+>
+  <ContextProvider
+    value="/theme/images/lexicon/icons.svg"
+  >
+    <ContextProvider
+      value={
+        Object {
+          "configuration": Object {
+            "portletInstance": Object {
+              "drink": "orange",
+            },
+            "system": Object {},
+          },
+          "contextPath": "",
+          "portletElementId": "js-portlet-_portlet_namespace_",
+          "portletNamespace": "_portlet_namespace_",
+        }
+      }
+    >
+      <App />
+    </ContextProvider>
+  </ContextProvider>
+</div>
+`;
