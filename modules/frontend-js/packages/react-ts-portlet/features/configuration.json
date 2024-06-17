@@ -31,6 +31,16 @@
         },
         "required": false,
         "type": "string"
+      },
+      "booleanTrue": {
+        "type": "boolean",
+        "name": "booleanTrue.label",
+        "default": "true"
+      },
+      "booleanFalse": {
+        "type": "boolean",
+        "name": "booleanFalse.label",
+        "default": "false"
       }
     }
   }
