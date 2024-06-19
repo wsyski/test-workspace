@@ -4,6 +4,7 @@
   "description": "React Portlet Typescript",
   "license": "UNLICENSED",
   "main": "index.js",
+  "private": true,
   "dependencies": {
     "@arena/lib-portlet-common": "*",
     "@arena/portal": "*",

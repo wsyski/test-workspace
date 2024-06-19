@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React Provider",
   "license": "UNLICENSED",
-
+  "private": true,
   "dependencies": {
     "@arena/lib-portlet-common": "*",
     "@arena/portal": "*",
