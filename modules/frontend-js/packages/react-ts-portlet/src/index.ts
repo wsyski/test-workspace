@@ -21,7 +21,8 @@ const index = (liferayParams: LiferayParams) => {
     const markup = React.createElement(I18nextProvider, { i18n: i18nInstance }, React.createElement(AppContainer, {
         liferayParams: liferayParamsWithDefaults,
     }));
-    ReactDOM.render(isPortal() ? React.createElement(React.Fragment, null, markup)  : React.createElement(React.StrictMode, null, markup), document.getElementById(liferayParamsWithDefaults.portletElementId));
+    const node= isPortal() ? React.createElement(React.Fragment, undefined, markup)  : React.createElement(React.StrictMode, undefined, markup);
+    ReactDOM.render(node, document.getElementById(liferayParamsWithDefaults.portletElementId));
 };
 
 if (!isPortal()) {

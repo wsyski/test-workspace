@@ -27,8 +27,8 @@
     },
     "workspaces": {
         "packages": [
-            "modules/frontend-js",
             "themes/js-theme",
+            "modules/frontend-js",
             "client-extensions/react-remote-portlet"
         ],
         "nohoist": [

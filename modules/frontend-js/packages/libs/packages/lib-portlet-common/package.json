@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "source": "src/index.ts",
   "engines": {
-    "node": ">=16",
+    "node": ">=20",
     "yarn": "1.x"
   },
   "dependencies": {
