@@ -3,6 +3,10 @@
   "description": "Target platform for Arena Portal",
   "license": "UNLICENSED",
   "private": true,
+  "main": "config.json",
+  "bin": {
+    "liferay": "./liferay.js"
+  },
   "dependencies": {
     "axios": "~0.27.2",
     "i18next": "~21.6.10",
@@ -19,10 +23,17 @@
   },
   "scripts": {
     "build": "true",
+    "ci": "cd ../.. && yarn ci",
+    "format": "cd ../.. && yarn format",
+    "format:check": "cd ../.. && yarn format:check",
+    "lint": "cd ../.. && yarn lint",
+    "lint:fix": "cd ../.. && yarn lint:fix",
+    "postversion": "npx liferay-js-publish",
+    "preversion": "yarn ci",
+    "test": "true",
     "clean": "true",
     "deploy": "true",
-    "publish": "true",
-    "test": "true"
+    "publish": "true"
   },
   "version": "1.0.0"
 }
