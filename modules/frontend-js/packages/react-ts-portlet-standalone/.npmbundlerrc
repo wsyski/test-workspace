@@ -1,0 +1,36 @@
+{
+  "config": {
+    "imports": {
+    }
+  },
+  "exclude": {
+    "*": ["**/__mocks__/**/*", "**/__tests__/**/*", "**/*.ts", "**/*.tsx"]
+  },
+  "rules": [
+    {
+      "test": "\\.json$",
+      "use": ["json-loader"]
+    },
+    {
+      "test": "\\.css$",
+      "use": ["css-loader"]
+    },
+    {
+      "test": "^assets/",
+      "exclude": ["node_modules","\\.scss$"],
+      "use": ["copy-loader"]
+    }
+  ],
+  "sources": ["out-tsc", "assets"],
+  "create-jar": {
+    "features": {
+      "js-extender": true,
+      "web-context": "/react-ts-portlet-standalone",
+      "localization": "features/localization/Language",
+      "configuration": "features/configuration.json"
+    }
+  },
+  "dump-report": true,
+  "max-parallel-files": 128,
+  "verbose": true
+}
