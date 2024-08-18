@@ -6,6 +6,7 @@ module.exports = {
 
 	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 	roots: ['<rootDir>/src'],
+	setupFiles: ['./jest.polyfills.js'],
 	setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
 	snapshotSerializers: ['enzyme-to-json/serializer'],
 	testEnvironment: 'jsdom',

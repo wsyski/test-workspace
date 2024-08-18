@@ -18,10 +18,8 @@
     "@liferay/portal-7.4": "*"
   },
   "scripts": {
-    "babel": "cross-env NODE_ENV=production babel --source-maps -d src src/*.jsx",
-    "build": "run-s babel && liferay build",
+    "build": "liferay build",
     "clean": "liferay clean",
-    "test": "true",
     "deploy": "liferay deploy",
     "start": "liferay start"
   }
