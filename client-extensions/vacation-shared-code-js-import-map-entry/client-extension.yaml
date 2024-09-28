@@ -1,0 +1,8 @@
+assemble:
+  - from: build/vite
+    into: static
+vacation-shared-code-js-import-maps-entry:
+  bareSpecifier: "@liferay/vacation-shared-code"
+  name: Vacation Shared Code JS Import Maps Entry
+  type: jsImportMapsEntry
+  url: /index.js
