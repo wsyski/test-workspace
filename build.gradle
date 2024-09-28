@@ -27,7 +27,6 @@ subprojects { subproject ->
                 testAnnotationProcessor "org.projectlombok:lombok:${rootProject.getProperty('org.projectlombok.lombok.version')}"
                 testImplementation group: "com.liferay.portal", name: "release.portal.api"
                 testImplementation group: "org.hamcrest", name: "hamcrest", version:  "${rootProject.getProperty('org.hamcrest.hamcrest.version')}"
-                testImplementation group: 'junit', name: 'junit'
             }
         }
 
