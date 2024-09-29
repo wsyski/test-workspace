@@ -1,5 +1,5 @@
 #!/bin/bash
-set -v -x
+#set -v -x
 set -u -e
 
 # Function to display the welcome message
@@ -258,7 +258,7 @@ main() {
     echo "Scope set to: $SCOPE"
     echo "Element name set to: $ELEMENT_NAME"
     PROJECT_PATH="$BASE_DIR/$PROJECT_NAME"
-    yarn create vite "$PROJECT_PATH" --template react
+    yarn create vite "$PROJECT_NAME" --template react
     update_package_json
     update_index_html
     overwrite_main_jsx

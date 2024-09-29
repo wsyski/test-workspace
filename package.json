@@ -20,7 +20,8 @@
             "themes/js-theme",
             "modules/frontend-js",
             "client-extensions/react-remote-portlet",
-            "client-extensions/vacation-shared-code-js-import-map-entry"
+            "client-extensions/vacation-shared-code-js-import-map-entry",
+            "client-extensions/vacation-test"
         ],
         "nohoist": [
             "**/frontend-js",
