@@ -1,4 +1,6 @@
 #!/bin/bash
+set -v -x
+set -u -e
 
 # Function to display the welcome message
 welcome() {

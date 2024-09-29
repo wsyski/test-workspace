@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#set -v -x
+set -u -e
+
 scriptDir=$(cd `dirname $0` && pwd)
 echo "scriptDir: ${scriptDir}"
 find ${scriptDir}/.. -name yarn.lock -exec rm {} \;
