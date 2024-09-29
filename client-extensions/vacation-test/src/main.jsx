@@ -17,7 +17,7 @@ class WebComponent extends HTMLElement {
   }
 }
 
-const ELEMENT_NAME = 'liferay';
+const ELEMENT_NAME = 'vacation-test-portlet-element';
 
 if (customElements.get(ELEMENT_NAME)) {
   // eslint-disable-next-line no-console

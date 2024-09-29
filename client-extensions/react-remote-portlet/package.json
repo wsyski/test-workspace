@@ -21,6 +21,7 @@
     "build": "liferay build",
     "clean": "liferay clean",
     "deploy": "liferay deploy",
-    "start": "liferay start"
+    "start": "liferay start",
+    "test": "true"
   }
 }
