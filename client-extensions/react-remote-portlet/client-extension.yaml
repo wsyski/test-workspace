@@ -7,7 +7,7 @@ assemble:
 react-remote-portlet:
     cssURLs:
         - css/styles.css
-    friendlyURLMapping: react-remote-portlet-element
+    friendlyURLMapping: react-remote-portlet
     htmlElementName: react-remote-portlet-element
     instanceable: false
     name: React remote portlet

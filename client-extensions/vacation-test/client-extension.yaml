@@ -2,7 +2,7 @@ assemble:
     - from: vite-build
       into: static
 liferay:
-    friendlyURLMapping: vacation-test-portlet-element
+    friendlyURLMapping: vacation-test-portlet
     htmlElementName: vacation-test-portlet-element
     instanceable: false
     name: Vacation test
