@@ -3,7 +3,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import terser from '@rollup/plugin-terser';
 import { readFile } from 'fs/promises';
 
-// import packageJson from './package.json' with { type: 'json' };
 const packageJson = JSON.parse(await readFile(new URL('./package.json', import.meta.url)));
 const outputOptions = {
     interop: 'auto',
