@@ -1,8 +1,10 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from "@rollup/plugin-commonjs";
 import terser from '@rollup/plugin-terser';
+import { readFile } from 'fs/promises';
 
-import packageJson from './package.json' assert { type: 'json' };
+// import packageJson from './package.json' with { type: 'json' };
+const packageJson = JSON.parse(await readFile(new URL('./package.json', import.meta.url)));
 const outputOptions = {
     interop: 'auto',
     sourcemap: true,
@@ -14,7 +16,7 @@ const outputOptions = {
  */`,
 };
 const input = 'out-tsc/index.js';
-const external = [...Object.keys(packageJson.dependencies || {}), ...Object.keys(packageJson.peerDependencies || {})];
+const external = ['node_modules', ...Object.keys(packageJson.dependencies || {}), ...Object.keys(packageJson.peerDependencies || {})];
 
 const getPlugins = (format = 'esm') => {
 
