@@ -21,8 +21,7 @@
             "modules/frontend-js",
             "client-extensions/react-remote-portlet",
             "client-extensions/vacation-shared-code-js-import-map-entry",
-            "client-extensions/vacation-test",
-            "client-extensions/liferay-partner-custom-element"
+            "client-extensions/vacation-test"
         ],
         "nohoist": [
             "**/frontend-js",
