@@ -1,2 +1,2 @@
-sdk default gradle 7.6.4
+sdk default gradle 8.5
 nvm alias default 20
