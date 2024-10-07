@@ -1,0 +1,13 @@
+assemble:
+    - from: vite-build
+      into: static
+liferay:
+    friendlyURLMapping: vacation-test-portlet
+    htmlElementName: vacation-test-portlet-element
+    instanceable: false
+    name: Vacation test
+    portletCategoryName: category.client-extensions
+    type: customElement
+    urls:
+        - assets/*.js
+    useESM: true

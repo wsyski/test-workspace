@@ -13,7 +13,7 @@ const Header = styled.h1`
 
 export default function AppComponent(liferayParams) {
 	/* eslint-disable no-console */
-	console.log('liferayParams', liferayParams, 'env', process.env);
+	// console.log('liferayParams', liferayParams, 'env', process.env);
 
 	return (
 		<div className="App">

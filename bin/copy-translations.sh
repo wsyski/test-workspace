@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#set -x -v
+#set -v -x
+set -u -e
 
 function copyFile {
     local fileAbsoluteName=$1

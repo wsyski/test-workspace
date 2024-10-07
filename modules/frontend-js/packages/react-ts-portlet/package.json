@@ -11,11 +11,10 @@
     "@liferay/portal-7.4": "*"
   },
   "devDependencies": {
-    "@types/enzyme": "~3.10.12",
-    "@types/enzyme-adapter-react-16": "~1.0.6",
     "@types/react-router-dom": "5.3.3",
     "@types/react-test-renderer": "~16.9.3",
-    "@types/testing-library__react-hooks": "~3.4.1"
+    "@types/testing-library__react-hooks": "~3.4.1",
+    "react-scripts": "~5.0.1"
   },
   "resolutions": {
   },

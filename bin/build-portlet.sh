@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#set -x -v
+#set -v -x
+set -u -e
 
 scriptDir=$(cd `dirname $0` && pwd)
 portlet=${1:-react-ts-portlet}

@@ -2,11 +2,11 @@ const LiferayUtil = function () {
     function LiferayUtil() {
     }
 
-    LiferayUtil.isPortal = function isPortal() {
+    LiferayUtil.isPortal = function() {
         return typeof window.Liferay?.FeatureFlags !== 'undefined';
     };
 
-    LiferayUtil.setLiferayParamsDefaults = function setLiferayParamsDefaults(
+    LiferayUtil.setLiferayParamsDefaults = function(
 		liferayParams,
 		portletInstance,
 		system
