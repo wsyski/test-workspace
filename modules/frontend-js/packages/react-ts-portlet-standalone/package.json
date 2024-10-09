@@ -40,7 +40,7 @@
     "clean": "rimraf out-tsc && liferay clean",
     "deploy": "gulp deploy",
     "tsc": "tsc -b tsconfig.prod.json",
-    "babel": "cross-env NODE_ENV=production babel --source-maps -d build out-tsc",
+    "babel": "cross-env NODE_ENV=production babel --config-file ../../babel.config.json --source-maps -d build out-tsc",
     "test": "jest --verbose",
     "start": "react-scripts start"
   },
