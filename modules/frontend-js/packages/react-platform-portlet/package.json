@@ -4,7 +4,6 @@
   "description": "React Platform Portlet",
   "private": true,
   "dependencies": {
-    "@babel/runtime": "~7.25.7",
     "@liferay/portal-7.4": "*"
   },
   "portlet": {
