@@ -15,8 +15,6 @@
     "@types/react-test-renderer": "~16.9.3",
     "@types/testing-library__react-hooks": "~3.4.1"
   },
-  "resolutions": {
-  },
   "portlet": {
     "com.liferay.portlet.display-category": "category.sample",
     "com.liferay.portlet.header-portlet-css": "/css/styles.css",
