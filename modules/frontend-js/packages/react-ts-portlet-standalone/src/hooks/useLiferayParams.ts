@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 import LiferayParamsContext from '../contexts/LiferayParamsContext';
-import ExtendedLiferayParamsImpl from '../models/ExtendedLiferayParamsImpl';
 import {ExtendedLiferayParams} from "../lib-portlet-common";
+import ExtendedLiferayParamsImpl from '../models/ExtendedLiferayParamsImpl';
 
 const useLiferayParams = (): ExtendedLiferayParams => {
 	const liferayParams = React.useContext(LiferayParamsContext);

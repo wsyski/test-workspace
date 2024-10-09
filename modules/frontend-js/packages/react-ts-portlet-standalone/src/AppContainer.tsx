@@ -2,10 +2,9 @@ import {ClayIconSpriteContext} from '@clayui/icon';
 import React from 'react';
 
 import App from './components/App';
+import LiferayParamsContext from './contexts/LiferayParamsContext';
 import {AppContainerProps} from "./lib-portlet-common";
 import LiferayUtil from "./utils/LiferayUtil";
-
-import LiferayParamsContext from './contexts/LiferayParamsContext';
 
 const AppContainer: React.FC<AppContainerProps> = ({
                                                        liferayParams,
