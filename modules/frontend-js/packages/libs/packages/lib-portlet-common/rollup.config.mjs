@@ -1,60 +1,46 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from "@rollup/plugin-commonjs";
 import terser from '@rollup/plugin-terser';
-import { readFile } from 'fs/promises';
+import {readFileSync} from "node:fs";
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
-const packageJson = JSON.parse(await readFile(new URL('./package.json', import.meta.url)));
+const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf-8'));
 const outputOptions = {
     interop: 'auto',
-    sourcemap: true,
-    banner: `/*
- * Arena portlet common library
- * {@link https://github.com/wsyski/test-workspace}
- * @copyright Wojciech Syski (@wsyski)
- * @license MIT
- */`,
+    sourcemap: true
 };
 const input = 'out-tsc/index.js';
 const external = ['node_modules', ...Object.keys(packageJson.dependencies || {}), ...Object.keys(packageJson.peerDependencies || {})];
 
-const getPlugins = (format = 'esm') => {
+const getPlugins = () => {
 
     return [
+        peerDepsExternal(),
         commonjs(),
-        babel({
-            babelHelpers: 'runtime',
-            exclude: /node_modules/,
-            plugins: [['@babel/plugin-transform-runtime'], ["@babel/plugin-proposal-nullish-coalescing-operator"], ["@babel/plugin-proposal-class-properties"]],
-            presets: [
-                ['@babel/preset-env'],
-                ['@babel/preset-react'],
-            ],
-        }),
+        babel(),
         (process.env.NODE_ENV === 'production' && terser())
     ];
 };
 
 const getOutput = (format = 'esm') => {
     return {
-        dir: 'dist/'+format,
+        dir: 'dist/' + format,
         format,
         ...outputOptions
     };
 }
 
 export default [
-    // cjs configuration
     {
+        external,
         input,
         output: getOutput('cjs'),
-        plugins: getPlugins('cjs'),
-        external,
+        plugins: getPlugins(),
     },
-    // esm configuration
     {
+        external,
         input,
         output: getOutput('esm'),
-        plugins: getPlugins('esm'),
-        external,
+        plugins: getPlugins(),
     }
 ];
