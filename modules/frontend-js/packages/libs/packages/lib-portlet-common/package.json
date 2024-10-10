@@ -4,9 +4,12 @@
   "description": "Portlet common library",
   "license": "UNLICENSED",
   "private": true,
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/cjs/bundle.js",
+  "module": "dist/esm/bundle.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "source": "src/index.ts",
   "engines": {
     "node": ">=20",
@@ -30,8 +33,5 @@
     "test": "jest --verbose",
     "tsc": "tsc -b tsconfig.json",
     "publish": "true"
-  },
-  "files": [
-    "dist"
-  ]
+  }
 }
