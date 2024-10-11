@@ -1,15 +1,10 @@
 import React from "react";
 import "./Input.scss";
-import { Input, InputProps } from "antd";
+import {ClayInput} from '@clayui/form';
 
-export interface InputTextProps extends InputProps {
-    /**
-     * 
-     */
-}
 
-const InputText:React.FC<InputTextProps> = (props: InputTextProps) => {
-  return <Input type="text" {...props} />;
+const InputText:React.FC<typeof ClayInput> = (props: typeof ClayInput) => {
+  return <ClayInput type="text" {...props} />;
 };
 
 export default InputText;

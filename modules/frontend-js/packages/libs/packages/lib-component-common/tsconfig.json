@@ -4,7 +4,7 @@
     "module": "esnext",
     "declaration": true,
     "declarationDir": "dist/esm/types",
-    "outDir": "out-tsc"
+    "outDir": "dist"
   },
   "include": [
     "src/**/*.ts",

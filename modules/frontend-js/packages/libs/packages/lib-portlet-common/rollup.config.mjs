@@ -15,7 +15,7 @@ const getPlugins = () => {
     return [
         peerDepsExternal(),
         commonjs(),
-        babel(),
+        babel({ babelHelpers: 'bundled' }),
         postcss(),
         (process.env.NODE_ENV === 'production' && terser())
     ];
