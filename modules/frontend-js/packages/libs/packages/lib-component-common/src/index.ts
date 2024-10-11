@@ -1,2 +1,5 @@
-export { default as Button } from "./components/Button";
-export { default as Input } from "./components/Input";
+
+import Button  from "./components/Button/Button";
+import Input from "./components/Input/Input";
+
+export { Button, Input };
