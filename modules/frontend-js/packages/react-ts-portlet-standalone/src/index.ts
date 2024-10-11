@@ -5,8 +5,8 @@ import { I18nextProvider } from 'react-i18next';
 import AppContainer from './AppContainer';
 import {LIFERAY_PARAMS_DEFAULT, PORTLET_INSTANCE_DEFAULT} from './constants/LiferayParamsConstants';
 import {LiferayParams} from "./lib-portlet-common";
-import LiferayUtil from "./utils/LiferayUtil";
 import I18nUtil from "./utils/I18nUtil";
+import LiferayUtil from "./utils/LiferayUtil";
 
 const isPortal = () => {
     return process.env.NODE_ENV !== 'development';

@@ -1,4 +1,4 @@
-import {shallow, ShallowWrapper} from 'enzyme';
+import {ShallowWrapper, shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 

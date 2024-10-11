@@ -1,4 +1,4 @@
-import {LiferayParams, Configuration} from "../lib-portlet-common";
+import {Configuration, LiferayParams} from "../lib-portlet-common";
 
 const RELATIVE_URL_PATTERN =
 	/^(\/\w{2}(?:[_-]\w{2})?)?(\/widget)?(?:(\/group|\/user|\/web)(\/[^/]+))?(\/.+)?$/;

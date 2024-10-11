@@ -4,9 +4,9 @@ import ChainedBackend from 'i18next-chained-backend';
 import LocalStorageBackend from 'i18next-localstorage-backend';
 import Backend from 'i18next-xhr-backend';
 import {initReactI18next} from 'react-i18next';
-import {LocalizationParams} from "../lib-portlet-common";
 
 import { LOCALIZATION_PARAMS_DEFAULT, PROJECT_VERSION } from "../constants/PortletCommonConstants";
+import {LocalizationParams} from "../lib-portlet-common";
 import {AxCurrencyAmount} from '../models/domain/ax/AxCurrencyAmount';
 import LiferayUtil from './LiferayUtil';
 import MiscUtil from './MiscUtil';

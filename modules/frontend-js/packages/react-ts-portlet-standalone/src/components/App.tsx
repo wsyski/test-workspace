@@ -1,4 +1,5 @@
 import React from 'react';
+
 import useLiferayParams from "../hooks/useLiferayParams";
 
 const App: React.FC<{}> = () => {

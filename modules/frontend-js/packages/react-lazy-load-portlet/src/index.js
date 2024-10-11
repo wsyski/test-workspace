@@ -20,7 +20,7 @@ export default function main(liferayParams) {
     const portletElement = document.getElementById(liferayParamsWithDefaults.portletElementId);
     const markup = React.createElement(AppComponent, {...liferayParamsWithDefaults});
     ReactDOM.render(LiferayUtil.isPortal() ? (
-            <React.Fragment>{markup}</React.Fragment>
+            <>{markup}</>
         ) : (
             <React.StrictMode>{markup}</React.StrictMode>
         ),

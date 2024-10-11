@@ -200,11 +200,11 @@ class Calendar extends Component {
         {this.renderMonthAndYear()}
 
         <Styled.CalendarGrid>
-          <Fragment>{Object.keys(WEEK_DAYS).map(this.renderDayLabel)}</Fragment>
+          <>{Object.keys(WEEK_DAYS).map(this.renderDayLabel)}</>
 
-          <Fragment>
+          <>
             {this.getCalendarDates().map(this.renderCalendarDate)}
-          </Fragment>
+          </>
         </Styled.CalendarGrid>
       </Styled.CalendarContainer>
     );

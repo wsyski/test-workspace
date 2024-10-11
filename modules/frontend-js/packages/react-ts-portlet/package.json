@@ -13,10 +13,7 @@
   "devDependencies": {
     "@types/react-router-dom": "5.3.3",
     "@types/react-test-renderer": "~16.9.3",
-    "@types/testing-library__react-hooks": "~3.4.1",
-    "react-scripts": "~5.0.1"
-  },
-  "resolutions": {
+    "@types/testing-library__react-hooks": "~3.4.1"
   },
   "portlet": {
     "com.liferay.portlet.display-category": "category.sample",
@@ -32,7 +29,7 @@
     "clean": "rimraf out-tsc && liferay clean",
     "deploy": "gulp deploy",
     "tsc": "tsc -b tsconfig.prod.json",
-    "babel": "cross-env NODE_ENV=production babel --source-maps -d build out-tsc",
+    "babel": "cross-env NODE_ENV=production babel --config-file ../../babel.config.json --source-maps -d build out-tsc",
     "test": "jest --verbose",
     "start": "react-scripts start"
   },
