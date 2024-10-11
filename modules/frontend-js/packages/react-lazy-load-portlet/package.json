@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "main": "index.js",
   "dependencies": {
+    "@arena/lib-component-common": "*",
     "@arena/lib-portlet-common": "*",
     "@liferay/portal-7.4": "*",
     "@arena/portal": "*",

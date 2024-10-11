@@ -5,6 +5,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@arena/lib-component-common": "*",
     "@arena/lib-portlet-common": "*",
     "@arena/portal": "*",
     "@liferay/portal-7.4": "*"

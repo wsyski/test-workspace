@@ -3,6 +3,7 @@
     "imports": {
       "react-provider": {
         "/": "*",
+        "@arena/lib-component-common": "*",
         "@arena/lib-portlet-common": "*",
         "@babel/runtime": "*",
         "axios": "*",
@@ -22,6 +23,7 @@
   },
   "exclude": {
     "*": ["**/__mocks__/**/*", "**/__tests__/**/*", "**/*.ts", "**/*.tsx"],
+    "@arena/lib-component-common": true,
     "@arena/lib-portlet-common": true,
     "@babel/runtime": true,
     "axios": true,

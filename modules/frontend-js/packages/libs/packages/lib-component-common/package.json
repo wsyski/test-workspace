@@ -1,7 +1,7 @@
 {
-  "name": "@arena/lib-portlet-common",
+  "name": "@arena/lib-component-common",
   "version": "1.0.0",
-  "description": "Portlet common library",
+  "description": "Component common library",
   "license": "UNLICENSED",
   "private": true,
   "main": "dist/cjs/bundle.js",
