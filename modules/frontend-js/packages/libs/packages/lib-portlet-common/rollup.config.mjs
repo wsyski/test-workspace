@@ -3,7 +3,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import terser from '@rollup/plugin-terser';
 import {readFileSync} from "node:fs";
 import dts from "rollup-plugin-dts";
-import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf-8'));
@@ -16,7 +15,6 @@ const getPlugins = () => {
         peerDepsExternal(),
         commonjs(),
         babel({ babelHelpers: 'bundled' }),
-        postcss(),
         (process.env.NODE_ENV === 'production' && terser())
     ];
 };
@@ -41,7 +39,6 @@ export default [
         plugins: getPlugins()
     },
     {
-        external: [/\.(css|less|scss)$/],
         input: "dist/esm/types/index.d.ts",
         output: [{file: "dist/index.d.ts", format: "esm"}],
         plugins: [dts()]

@@ -1,16 +1,16 @@
 import { render } from "@testing-library/react";
 import React from 'react';
 
-import Input from "../Input";
+import ExtendedInput from "../ExtendedInput";
 
 describe("Input", () => {
     it('is truthy', () => {
-      expect(Input).toBeTruthy()
+      expect(ExtendedInput).toBeTruthy()
     });
 });
 
 describe("Input render", () => {
     test("renders the Input component", () => {
-        render(<Input onChange={()=> {}} type="text"/>);
+        render(<ExtendedInput label="Input label"/>);
     });
 });

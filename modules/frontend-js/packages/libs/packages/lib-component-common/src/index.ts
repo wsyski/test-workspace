@@ -1,5 +1,5 @@
 
-import Button  from "./components/Button/Button";
-import Input from "./components/Input/Input";
+import ExtendedButton  from "./components/Button/ExtendedButton";
+import ExtendedInput from "./components/Input/ExtendedInput";
 
-export { Button, Input };
+export { ExtendedButton, ExtendedInput };
