@@ -45,8 +45,10 @@ module.exports = (function () {
 		const host = gradleProperties.get('repositoryHost');
 		const snapshotRepoId = gradleProperties.get('repositorySnapshotRepoId');
 		const releaseRepoId = gradleProperties.get('repositoryReleaseRepoId');
+		const repositoryProtocol = gradleProperties.get('repositoryProtocol');
 		const baseUrl =
-			'http://' +
+			repositoryProtocol +
+			'://' +
 			user +
 			':' +
 			password +

@@ -56,6 +56,7 @@
   ],
   "sources": ["out-tsc", "assets"],
   "create-jar": {
+    "output-filename": "react-ts-portlet.jar",
     "features": {
       "js-extender": true,
       "web-context": "/react-ts-portlet",

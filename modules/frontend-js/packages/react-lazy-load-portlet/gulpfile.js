@@ -1,8 +1,8 @@
 'use strict';
 
-var gulp = require('gulp');
+const gulp = require('gulp');
 
-var buildUtils = require('../../../../scripts/build-utils');
+const buildUtils = require('../../../../scripts/build-utils');
 
 gulp.task('publish', (cb) => {
 	buildUtils.publish();
@@ -12,3 +12,4 @@ gulp.task('deploy', (cb) => {
 	buildUtils.deploy();
 	cb();
 });
+
