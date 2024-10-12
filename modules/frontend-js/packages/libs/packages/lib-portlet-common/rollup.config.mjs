@@ -1,12 +1,12 @@
-import babel from '@rollup/plugin-babel';
 import commonjs from "@rollup/plugin-commonjs";
 import terser from '@rollup/plugin-terser';
 import {readFileSync} from "node:fs";
 import dts from "rollup-plugin-dts";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import typescript from "rollup-plugin-typescript2";
 
 const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf-8'));
-const input = 'out-tsc/index.js';
+const input = 'src/index.ts';
 const external = ['node_modules', ...Object.keys(packageJson.dependencies || {}), ...Object.keys(packageJson.peerDependencies || {})];
 
 const getPlugins = () => {
@@ -14,7 +14,7 @@ const getPlugins = () => {
     return [
         peerDepsExternal(),
         commonjs(),
-        babel({ babelHelpers: 'bundled' }),
+        typescript({ useTsconfigDeclarationDir: true }),
         (process.env.NODE_ENV === 'production' && terser())
     ];
 };
