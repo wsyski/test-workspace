@@ -12,6 +12,7 @@
     "@liferay/portal-7.4": "*"
   },
   "devDependencies": {
+    "@arena/lib-liferay-mock": "*",
     "@types/react-router-dom": "5.3.3",
     "@types/react-test-renderer": "~16.9.3",
     "@types/testing-library__react-hooks": "~3.4.1"
@@ -33,7 +34,8 @@
     "tsc": "tsc -b tsconfig.prod.json",
     "babel": "cross-env NODE_ENV=production babel --config-file ../../babel.config.json --source-maps -d build out-tsc",
     "test": "jest --verbose",
-    "start": "react-scripts start"
+    "copy-public": "cpx \"../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"./assets/css/**\" public/css && cpx \"./assets/locales/**\" public/locales",
+    "start": "run-s copy-public && react-scripts start"
   },
   "browserslist": {
     "production": [

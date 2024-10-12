@@ -8,16 +8,16 @@
   "dependencies": {
     "@arena/lib-component-common": "*",
     "@arena/lib-portlet-common": "*",
-    "@liferay/portal-7.4": "*",
     "@arena/portal": "*",
+    "@liferay/portal-7.4": "*",
     "react-feather": "^1.1.6",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
+    "@arena/lib-liferay-mock": "*",
     "@types/react-router-dom": "5.3.3",
     "@types/react-test-renderer": "~16.9.3",
-    "@types/testing-library__react-hooks": "~3.4.1",
-    "react-scripts": "~5.0.1"
+    "@types/testing-library__react-hooks": "~3.4.1"
   },
   "portlet": {
     "com.liferay.portlet.display-category": "category.sample",
@@ -34,7 +34,8 @@
     "clean": "liferay clean",
     "deploy": "gulp deploy",
     "publish": "gulp publish",
-    "start": "react-scripts start",
+    "copy-public": "cpx \"../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"./assets/css/**\" public/css && cpx \"./assets/locales/**\" public/locales",
+    "start": "run-s copy-public && react-scripts start",
     "test": "true"
   },
   "browserslist": {
