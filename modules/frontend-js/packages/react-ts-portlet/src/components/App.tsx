@@ -1,12 +1,10 @@
-/**
- * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
- * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
- */
-
+import {ExtendedButton} from "@arena/lib-component-common";
 import {useLiferayParams} from "@arena/lib-portlet-common";
 import React from 'react';
+import { useTranslation } from "react-i18next";
 
 const App: React.FC<{}> = () => {
+    const { t } = useTranslation();
     const liferayParams = useLiferayParams();
 
     return (
@@ -45,6 +43,10 @@ const App: React.FC<{}> = () => {
 				</span>
 
                 <span className="pre value">{JSON.stringify(liferayParams.configuration, null, 2)}</span>
+            </div>
+
+            <div>
+                <ExtendedButton label={t("extendedButtonLabel")}/>
             </div>
         </div>
     );
