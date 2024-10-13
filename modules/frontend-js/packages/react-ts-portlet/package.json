@@ -12,10 +12,7 @@
     "@liferay/portal-7.4": "*"
   },
   "devDependencies": {
-    "@arena/lib-liferay-mock": "*",
-    "@types/react-router-dom": "5.3.3",
-    "@types/react-test-renderer": "~16.9.3",
-    "@types/testing-library__react-hooks": "~3.4.1"
+    "@arena/lib-liferay-mock": "*"
   },
   "portlet": {
     "com.liferay.portlet.display-category": "category.sample",
