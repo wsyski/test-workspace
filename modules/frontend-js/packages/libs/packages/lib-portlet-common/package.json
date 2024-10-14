@@ -22,8 +22,8 @@
   "scripts": {
     "deploy": "true",
     "clean": "rimraf dist && rimraf out-tsc",
-    "build": "rollup --config rollup.config.mjs",
-    "build:prod": "cross-env NODE_ENV=production rollup --config rollup.config.mjs",
+    "build": "cpx \"../../../../../../scripts/rollup.config.mjs\" . && rollup --config rollup.config.mjs",
+    "build:prod": "cross-env NODE_ENV=production && run-s build",
     "test": "jest --verbose",
     "tsc": "tsc -b tsconfig.json",
     "publish": "true"
