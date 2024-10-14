@@ -6,15 +6,13 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from "rollup-plugin-typescript2";
 
 const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf-8'));
-const input = 'src/index.ts';
-const external = ['node_modules', ...Object.keys(packageJson.dependencies || {}), ...Object.keys(packageJson.peerDependencies || {})];
 
 const getPlugins = () => {
 
     return [
         peerDepsExternal(),
         commonjs(),
-        typescript({ useTsconfigDeclarationDir: true }),
+        typescript({useTsconfigDeclarationDir: true}),
         (process.env.NODE_ENV === 'production' && terser())
     ];
 };
@@ -22,8 +20,8 @@ const getPlugins = () => {
 
 export default [
     {
-        external,
-        input,
+        external: ['node_modules', ...Object.keys(packageJson.dependencies || {})],
+        input: 'src/index.ts',
         output: [
             {
                 file: packageJson.main,
