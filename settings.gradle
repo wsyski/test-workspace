@@ -1,6 +1,6 @@
 buildscript {
 	dependencies {
-		classpath group: "biz.aQute.bnd", name: "biz.aQute.bnd.gradle", version: "5.3.0"
+		classpath group: "biz.aQute.bnd", name: "biz.aQute.bnd.gradle", version: "${getProperty('biz.aQute.bnd.gradle.version')}"
 		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.workspace", version: "${getProperty('com.liferay.com.liferay.gradle.plugins.workspace.version')}"
 	}
 
