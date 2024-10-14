@@ -6,6 +6,7 @@ rm -rf ${scriptDir}/../node_modules_cache
 rm -rf ${scriptDir}/../modules/frontend-js/.nx
 find ${scriptDir}/.. -name .yarnrc -exec rm -rf {} \;
 find ${scriptDir}/.. -name build -exec rm -rf {} \;
+find ${scriptDir}/../modules/frontend-js/packages/libs -name rollup.config.mjs -exec rm -rf {} \;
 find ${scriptDir}/.. -name dist -exec rm -rf {} \;
 find ${scriptDir}/.. -name out -exec rm -rf {} \;
 find ${scriptDir}/.. -name out-tsc -exec rm -rf {} \;
