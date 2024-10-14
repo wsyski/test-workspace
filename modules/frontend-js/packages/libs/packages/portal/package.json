@@ -3,7 +3,6 @@
   "description": "Target platform for Arena Portal",
   "license": "UNLICENSED",
   "private": true,
-  "main": "config.json",
   "dependencies": {
     "axios": "~0.27.2",
     "i18next": "~21.6.16",
