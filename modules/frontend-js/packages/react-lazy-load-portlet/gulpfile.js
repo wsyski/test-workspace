@@ -5,7 +5,7 @@ const gulp = require('gulp');
 const buildUtils = require('../../../../tools/build-utils');
 
 gulp.task('publish', (cb) => {
-	buildUtils.publish();
+	buildUtils.publish(true);
 	cb();
 });
 gulp.task('deploy', (cb) => {

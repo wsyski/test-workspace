@@ -93,13 +93,13 @@ module.exports = (function () {
     );
   }
 
-	function publish() {
+	function publish(isVersion) {
 		var mavenRepository = getMavenRepository();
 		var cmdDeploy =
 			'mvn -B deploy:deploy-file -Dpackaging=' +
 			mavenPackaging +
 			' -Dfile=dist/' +
-			mavenArtifactName + '-' + projectVersion +
+			mavenArtifactName + (isVersion ? '-' + projectVersion : '') +
 			'.' +
 			mavenPackaging +
 			' -DgroupId=' +
@@ -118,7 +118,7 @@ module.exports = (function () {
 			'mvn -B install:install-file -Dpackaging=' +
 			mavenPackaging +
 			' -Dfile=dist/' +
-			mavenArtifactName + '-' + projectVersion +
+			mavenArtifactName + (isVersion ? '-' + projectVersion : '') +
 			'.' +
 			mavenPackaging +
 			' -DgroupId=' +
