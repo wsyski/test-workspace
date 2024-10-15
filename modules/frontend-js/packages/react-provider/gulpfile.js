@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 
-var buildUtils = require('../../../../scripts/build-utils');
+var buildUtils = require('../../../../tools/build-utils');
 
 gulp.task('publish', (cb) => {
 	buildUtils.publish();
