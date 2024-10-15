@@ -68,10 +68,8 @@
   ],
   "sources": ["src", "assets"],
   "create-jar": {
-    "output-filename": "react-lazy-load-portlet.jar",
     "features": {
       "js-extender": true,
-      "web-context": "/react-lazy-load-portlet",
       "localization": "features/localization/Language",
       "configuration": "features/configuration.json"
     }

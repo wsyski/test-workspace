@@ -1,9 +1,7 @@
 {
   "create-jar": {
-    "output-filename": "react-provider.jar",
     "features": {
-      "js-extender": false,
-      "web-context": "/react-provider"
+      "js-extender": false
     }
   },
   "dump-report": true,

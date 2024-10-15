@@ -15,6 +15,7 @@ module.exports = (function () {
 	const mavenGroup = gradleProperties.get('mavenGroup');
 	const mavenVersion = gradleProperties.get('mavenVersion');
 	const mavenPackaging = pkgProperties.mavenPackaging || 'jar';
+	const projectVersion = pkgProperties.version;
 	const liferayHomeDir = gradleProperties.get('liferay.workspace.home.dir');
 	const liferayHost = gradleProperties.get('liferayHost');
 	const liferayPort = gradleProperties.get('liferayPort');
@@ -98,7 +99,7 @@ module.exports = (function () {
 			'mvn -B deploy:deploy-file -Dpackaging=' +
 			mavenPackaging +
 			' -Dfile=dist/' +
-			mavenArtifactName +
+			mavenArtifactName + '-' + projectVersion +
 			'.' +
 			mavenPackaging +
 			' -DgroupId=' +
@@ -117,7 +118,7 @@ module.exports = (function () {
 			'mvn -B install:install-file -Dpackaging=' +
 			mavenPackaging +
 			' -Dfile=dist/' +
-			mavenArtifactName +
+			mavenArtifactName + '-' + projectVersion +
 			'.' +
 			mavenPackaging +
 			' -DgroupId=' +
