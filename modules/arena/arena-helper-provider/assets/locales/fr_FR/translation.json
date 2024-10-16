@@ -1,0 +1,151 @@
+{
+  "branchFilterSearch": {
+    "hereCopy": "Le titre est disponible ici :",
+    "holdingLabelPart1": "Sélectionner pour afficher les détails de contenu à",
+    "iframeTitle": "Filtre de recherche : sélectionner une bibliothèque",
+    "inBranch": "à",
+    "noFilter": "Sélectionner une bibliothèque",
+    "notInLib": "Le titre n’est pas disponible dans cette bibliothèque",
+    "saveFilter": "Sauvegarder",
+    "selectAll": "Tout",
+    "yesFilter": "Montrer"
+  },
+  "branchOpeningHours": {
+    "closedLabel": "Fermé",
+    "contactInformation": "Coordonnées",
+    "headerLabel": "Horaires d'ouverture",
+    "navigationBackLabel": "Retour",
+    "navigationNextLabel": "Prochain",
+    "navigationPreviousLabel": "Précédent",
+    "serviceTypeClosedLabel": "Fermé",
+    "serviceTypeSelfServiceLabel": "Libre service",
+    "serviceTypeStaffedLabel": "Doté en personnel",
+    "todayLabel": "Aujourd'hui",
+    "typeRegularLabel": "Régulier",
+    "typeSpecialLabel": "Spécial",
+    "viewAllLabel": "Afficher tous les horaires d’ouverture"
+  },
+  "cookieconsent": {
+    "3rdPartyCookiesDescription": "Les services tiers suivants sont utilisés. Tous les sites Web n’utilisent pas tous les services. Vous pouvez décider de désactiver les cookies tiers dans le navigateur Web.",
+    "3rdPartyCookiesTitle": "Cookies tiers",
+    "acceptAllButton": "Tout accepter",
+    "analyticsCookiesDescription": "Ce site Web utilise des scripts d'analyse pour évaluer l’interaction de l’utilisateur avec le contenu du site.",
+    "analyticsCookiesTitle": "Cookies de performance et d’analyse",
+    "arenacookieconsent": "Les préférences en matière de cookies définies par l’utilisateur. Si aucun élément n’est sélectionné, aucun cookie n’est créé.",
+    "blockedTitle": "Contenu non affiché car cookies non autorisés",
+    "cachestorageversion": "Utilisé par Facebook pour fournir une série de produits publicitaires d’annonceurs tiers.",
+    "cachestorageversiondomain": "Facebook.com",
+    "collect": "Utilisé pour envoyer des données sur l’appareil et le comportement de l’utilisateur. Suit l’utilisateur entre différents appareils et canaux de marketing.",
+    "collectdomain": "Google.com",
+    "contactUs": "contactez-nous",
+    "contactUsDescription": "Pour toute question liée à notre politique en matière de cookies ou à vos choix, veuillez nous contacter.",
+    "cookiesupport": "Indique au site Web si le navigateur Web de l’utilisateur accepte les cookies",
+    "description": "Ce site Web utilise des cookies essentiels pour assurer son bon fonctionnement, et des cookies de suivi pour comprendre la façon dont vous interagissez avec le site Web. Les cookies de suivi seront créés uniquement après votre accord.",
+    "dprwd": "Enregistre les informations concernant un utilisateur Facebook connecté, aux fins de recommandation publicitaire et de mise à jour du contenu. Le contenu des cookies est confirmé dans les conditions d’utilisation de Facebook.",
+    "dprwddomain": "Facebook.com",
+    "footerSettingsButton": "Paramètres des cookies",
+    "ga": "Crée un identifiant unique utilisé pour générer des statistiques sur l’utilisation du site Web par le visiteur.",
+    "gadomain": "Google.com",
+    "gads": "Permet la diffusion ou le reciblage publicitaire.",
+    "gadsdomain": "Google.com",
+    "gaid": "Utilisé pour assurer la continuité de la session.",
+    "gaiddomain": "Google.com",
+    "gat": "Utilisé pour réglementer le nombre de requêtes",
+    "gatdomain": "Google.com",
+    "geoip": "Aide Wikipédia à afficher des bannières et d’autres avis selon la région, en fonction des informations contenues dans une base de données GeoIP.",
+    "geoipdomain": "wikipedia.org",
+    "gid": "Utilisé pour différencier les utilisateurs.",
+    "giddomain": "Google.com",
+    "googtrans": "Stocke les paramètres de langue pour le plugin Google Translator.",
+    "googtransdomain": "Google.com",
+    "guestid": "Utilisé pour identifier les utilisateurs. X (Twitter) attribuera un code unique pour suivre votre visite sur le fil X (Twitter).",
+    "guestiddomain": "x/twitter.com",
+    "guestlanguageid": "Gère l’affichage de la langue sélectionnée",
+    "ide": "Utilisé par Google DoubleClick pour enregistrer et signaler les actions de l’utilisateur du site Web après avoir vu ou cliqué sur une publicité, dans le but de mesurer l’efficacité de la publicité et de pouvoir présenter une publicité ciblée à l’utilisateur.",
+    "idedomain": "doubleclick.net",
+    "ioam2018": "Utilisé par IVW (INFOnline) à des fins d’analyse.",
+    "iomconsent": "Utilisé par IVW (INFOnline) à des fins d’analyse.",
+    "jsessionid": "Cookie de préservation de la session",
+    "lastmsgfetch": "Affiche les messages du propriétaire du site Web",
+    "modalSaveButton": "Accepter la sélection",
+    "modalTitle": "Paramètres des cookies",
+    "moreInfo": "Plus d’informations",
+    "necessaryCookiesDescription": "Les cookies nécessaires vous permettent de parcourir le site Web et d’utiliser des fonctionnalités essentielles telles que les zones sécurisées et les listes médias. Ces cookies sont basés sur des sessions et ne recueillent aucune information vous concernant.",
+    "necessaryCookiesTitle": "Cookies nécessaires",
+    "nid": "Enregistre un identifiant unique qui identifie un utilisateur récurrent. L’identifiant est utilisé pour la publicité ciblée.",
+    "niddomain": "Google.com",
+    "pref": "Enregistre un identifiant unique que Google utilise pour créer des statistiques sur le comportement des utilisateurs sur différents sites Web.",
+    "prefdomain": "youtube.com",
+    "privacyPolicy": "Politique de confidentialité",
+    "readspeakersettings": "Mémorise les paramètres que vous avez sélectionnés (tels que la vitesse et la couleur).",
+    "rejectAllButton": "Accepter le nécessaire",
+    "rspkrloadcore": "S’assure que la fonction ReadSpeaker est chargée et fonctionne dès le départ.",
+    "samedomain": "Même domaine",
+    "selectedlocationvalue": "Le filtre des lieux d’événements préférés pour la page d’accueil, sélectionné par l’utilisateur. Si aucun élément n’est sélectionné, aucun cookie n’est créé.",
+    "settingsButton": "Paramètres des cookies",
+    "tableHeadersDescription": "Description",
+    "tableHeadersDomain": "Domaine",
+    "tableHeadersName": "Nom",
+    "tawkconnectiontime": "Se souvient de vous afin d’identifier les conversations précédentes pour améliorer le service.",
+    "title": "Ce site Web utilise des cookies pour stocker des informations sur votre ordinateur et pour vous garantir la meilleure expérience sur notre site.",
+    "twittersess": "Permet d’utiliser les fonctionnalités de X (Twitter) sans avoir à se connecter et contient des informations de suivi utilisées par X (Twitter) pour améliorer ses services.",
+    "twittersessdomain": "x/twitter.com",
+    "twkidmkey": "Une fonctionnalité de chat en direct utilise ce cookie pour se souvenir de vous et établir un lien avec les conversations précédentes.",
+    "usageDescription": "Nous utilisons des cookies pour assurer le fonctionnement de base du site Web et améliorer votre expérience en ligne. Pour plus d’informations concernant les cookies et les autres données sensibles, veuillez lire notre politique de confidentialité complète.",
+    "usageTitle": "Utilisation des cookies",
+    "visitorinfo1live": "Tente d’estimer la bande passante de l’utilisateur sur les pages où des vidéos YouTube sont intégrées.",
+    "visitorinfo1livedomain": "youtube.com",
+    "wmflastaccess": "Aide Wikipédia à calculer les appareils uniques qui envoient des demandes à son site Web.",
+    "wmflastaccessdomain": "wikipedia.org",
+    "ysc": "Enregistre un identifiant unique pour créer des statistiques sur les vidéos YouTube regardées par un utilisateur.",
+    "yscdomain": "youtube.com"
+  },
+  "cookieDisclaimer": {
+    "cookieApprove": "J’accepte",
+    "cookieMessage": "Ce site Web utilise des cookies pour stocker des informations sur votre ordinateur et pour vous garantir la meilleure expérience sur notre site.",
+    "cookiePolicy": "En savoir plus sur les cookies utilisés sur ce site."
+  },
+  "crd": {
+    "detailsViewLess": "Afficher moins",
+    "detailsViewMore": "Afficher plus"
+  },
+  "emediaOverdriveLinks": {
+    "accessExternal": "Cliquez pour accéder au titre numérique",
+    "sampleLinkText": "Échantillon"
+  },
+  "header": {
+    "joinTheLibraryLabel": "Rejoindre la bibliothèque",
+    "languageLabel": "Langue",
+    "myAccountLabel": "S'identifier ",
+    "myAccountLogoutLabel": "Se déconnecter",
+    "myAccountPagesLabel": "Mes pages",
+    "newToTheLibrary": "Nouveau à la bibliothèque?",
+    "openingsLabel": "Horaires d'ouverture",
+    "screenReaderLabel": "Écouter"
+  },
+  "mediaListSignedOut": {
+    "mediaList": "Liste de médias"
+  },
+  "modal": {
+    "searchLabelText": "Effectuez une recherche dans la collection de la bibliothèque",
+    "txtCloseModal": "Fermer"
+  },
+  "openingHoursShowMore": {
+    "label": "Afficher plus d’horaires d’ouverture pour {0}",
+    "title": "Afficher plus d’horaires d’ouverture pour {0}"
+  },
+  "qrCode": {
+    "qrCaption": "Voulez-vous accéder à ce titre ? Scanner le code à l'aide de votre smartphone pour le  réserver.",
+    "qrCaptionEmedia": "Êtes-vous intéressé par ce titre ? Scanner le code à l'aide de votre smartphone pour le télécharger et débuter votre lecture."
+  },
+  "readspeaker": {
+    "toolbarLabel": "Écouter",
+    "toolbarTitle": "Écouter le texte de la page avec ReadSpeaker"
+  },
+  "sessionTimer": {
+    "accessibleTimingOut": "Cette page expirera dans {{timeoutMinutes}} minutes. Déplacez le pointeur de votre souris ou appuyez sur n’importe quelle touche pour prolonger le délai de {{extendMinutes}} minutes.",
+    "reload": "Actualiser",
+    "timedOut": "The page has timed out and needs to be reloaded.",
+    "timingOut": "secondes jusqu’à ce que cette page expire et nécessite d’être actualisée. Déplacez le pointeur de votre souris ou appuyez sur n’importe quelle touche pour prolonger le délai de {{extendMinutes}} minutes."
+  }
+}

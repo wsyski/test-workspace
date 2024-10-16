@@ -1,0 +1,151 @@
+{
+  "branchFilterSearch": {
+    "hereCopy": "Tittelen er tilgjengelig her:",
+    "holdingLabelPart1": "Velg for å vise beholdningsinformasjon ved",
+    "iframeTitle": "Søkefilter: velg filial",
+    "inBranch": "ved",
+    "noFilter": "Velg filial",
+    "notInLib": "Tittelen er ikke tilgjengelig ved dette biblioteket",
+    "saveFilter": "Lagre",
+    "selectAll": "Alla",
+    "yesFilter": "Viser"
+  },
+  "branchOpeningHours": {
+    "closedLabel": "Stengt",
+    "contactInformation": "Kontaktinformasjon",
+    "headerLabel": "Åpningstider",
+    "navigationBackLabel": "Tilbake",
+    "navigationNextLabel": "Neste",
+    "navigationPreviousLabel": "Forrige",
+    "serviceTypeClosedLabel": "Stengt",
+    "serviceTypeSelfServiceLabel": "Selvbetjening",
+    "serviceTypeStaffedLabel": "Betjent",
+    "todayLabel": "I dag",
+    "typeRegularLabel": "Vanlig",
+    "typeSpecialLabel": "Spesiell",
+    "viewAllLabel": "Vis alle åpningstider"
+  },
+  "cookieconsent": {
+    "3rdPartyCookiesDescription": "Følgende tjenester fra tredjeparter brukes. Ikke alle nettsteder bruker alle tjenestene. Du kan velge å skru av informasjonskapsler fra tredjeparter i nettleseren.",
+    "3rdPartyCookiesTitle": "Tredjeparts informasjonskapsler",
+    "acceptAllButton": "Godta alle",
+    "analyticsCookiesDescription": "Dette nettstedet bruker analyseskript for å evaluere brukerinteraksjon med innholdet på nettstedet.Dette nettstedet bruker analyseskript for å evaluere brukerinteraksjon med innholdet.",
+    "analyticsCookiesTitle": "Informasjonskapsler for ytelse og analyse",
+    "arenacookieconsent": "De foretrukne informasjonskapslene som brukeren har valgt. Hvis ingenting velges, angis ingen informasjonskapsel.",
+    "blockedTitle": "Innholdet vises ikke fordi informasjonskapselen ikke ble godtatt",
+    "cachestorageversion": "Brukes av Facebook for å levere en rekke reklameprodukter fra tredjeparts reklameselskaper.",
+    "cachestorageversiondomain": "Facebook.com",
+    "collect": "Brukes til å sende data om brukerens enhet og atferd. Sporer brukeren over forskjellige enheter og markedsføringskanaler.",
+    "collectdomain": "Google.com",
+    "contactUs": "kontakt oss",
+    "contactUsDescription": "Hvis du har spørsmål angående våre retningslinjer for informasjonskapsler og valgene dine, kan du kontakte oss.",
+    "cookiesupport": "Informerer nettstedet om nettleseren til den gjeldende brukeren godtar informasjonskapsler",
+    "description": "Dette nettstedet bruker nødvendige informasjonskapsler for å sørge for at nettstedet fungerer som det skal og informasjonskapsler for sporing for å forstå hvordan du kommuniserer med nettstedet. Informasjonskapsler for sporing angis kun etter samtykke.",
+    "dprwd": "Lagrer informasjon om en innlogget Facebook-bruker med den hensikt å gi reklame-anbefalinger og oppdatere innholdet. Informasjonskapselens innhold bekreftes innenfor Facebook-brukens vilkår.",
+    "dprwddomain": "Facebook.com",
+    "footerSettingsButton": "Innstillinger for informasjonskapsler",
+    "ga": "Skaper en unik ID som brukes til å generere statistikk om hvordan brukeren bruker nettstedet.",
+    "gadomain": "Google.com",
+    "gads": "Tilbyr annonselevering eller re-targeting.",
+    "gadsdomain": "Google.com",
+    "gaid": "Brukes til å beholde øktstatus.",
+    "gaiddomain": "Google.com",
+    "gat": "Brukes til å regulere antall forespørsler",
+    "gatdomain": "Google.com",
+    "geoip": "Hjelper Wikipedia med å vise bannere og andre meldinger avhengig av region, basert på informasjon fra en GeoIP-database.",
+    "geoipdomain": "wikipedia.org",
+    "gid": "Brukes til å skille mellom brukere.",
+    "giddomain": "Google.com",
+    "googtrans": "Lagrer språkinnstillinger for Google Oversetter-plugin.",
+    "googtransdomain": "Google.com",
+    "guestid": "Brukes til å identifisere brukere. X (Twitter) vil tilordne en unik kode for å spore besøket ditt i X (Twitter)-feeden.",
+    "guestiddomain": "x/twitter.com",
+    "guestlanguageid": "Håndterer visning av valgt språk",
+    "ide": "Brukes av Google DoubleClick til å registrere og rapportere brukeratferd etter at brukeren har sett eller klikket på en annonse, for å måle annonsens effekt og for å være i stand til å presentere en målrettet reklame for brukeren.",
+    "idedomain": "doubleclick.net",
+    "ioam2018": "Brukes av IVW (INFOnline) for analytiske formål.",
+    "iomconsent": "Brukes av IVW (INFOnline) for analytiske formål.",
+    "jsessionid": "Informasjonskapsel for å opprettholde økten",
+    "lastmsgfetch": "Viser meldinger fra nettstedeieren",
+    "modalSaveButton": "Godta valgt",
+    "modalTitle": "Innstillinger for informasjonskapsler",
+    "moreInfo": "Mer informasjon",
+    "necessaryCookiesDescription": "Nødvendige informasjonskapsler lar deg navigere på nettstedet og bruke viktige funksjoner som sikre områder og medielister. Disse informasjonskapslene er økt-baserte og samler ikke inn informasjon om deg.",
+    "necessaryCookiesTitle": "Nødvendige informasjonskapsler",
+    "nid": "Registrerer en unik ID som identifiserer en tilbakevendende bruker. ID-en brukes til målrettet reklame.",
+    "niddomain": "Google.com",
+    "pref": "Registrerer en unik ID som Google bruker til å lage statistikk over brukeratferd på forskjellige nettsteder.",
+    "prefdomain": "youtube.com",
+    "privacyPolicy": "Retningslinjer for personvern",
+    "readspeakersettings": "Lagrer innstillingene du velger (for eksempel hastighet og farge).",
+    "rejectAllButton": "Godta nødvendige",
+    "rspkrloadcore": "Sikrer at ReadSpeaker-funksjonen lastes inn og fungerer fra starten av.",
+    "samedomain": "Samme domene",
+    "selectedlocationvalue": "Det foretrukne lokasjonsfilteret for startsiden, valgt av brukeren. Hvis ingenting velges, angis ingen informasjonskapsel.",
+    "settingsButton": "Innstillinger for informasjonskapsler",
+    "tableHeadersDescription": "Beskrivelse",
+    "tableHeadersDomain": "Domene",
+    "tableHeadersName": "Navn",
+    "tawkconnectiontime": "Husker deg slik at tidligere chattesamtaler kan identifiseres for å forbedre tjenesten.",
+    "title": "Denne nettsiden benytter informasjonskapsler for å lagre informasjon på datamaskinen din og for å sikre at du får den beste brukeropplevelsen på nettsiden vår.",
+    "twittersess": "Tillater bruk av X (Twitter)-funksjoner uten å måtte logge på, og inneholder noe sporingsinformasjon som X (Twitter) bruker til å forbedre tjenestene sine.",
+    "twittersessdomain": "x/twitter.com",
+    "twkidmkey": "En live-chatfunksjonalitet setter denne informasjonskapselen til å huske deg slik at tidligere chatter kan kobles sammen.",
+    "usageDescription": "Vi bruker informasjonskapsler til å sikre nettstedets grunnleggende funksjonalitet og for å forbedre opplevelsen din på nett. For mer informasjon om informasjonskapsler og andre sensitive data kan du lese de fullstendige retningslinjene for personvern her.",
+    "usageTitle": "Bruk av informasjonskapsler",
+    "visitorinfo1live": "Prøver å beregne brukerens internettkapasitet på sider med integrerte YouTube-videoer.",
+    "visitorinfo1livedomain": "youtube.com",
+    "wmflastaccess": "Hjelper Wikipedia med å kalkulere unike enheter som sender forespørsler til nettstedet deres.",
+    "wmflastaccessdomain": "wikipedia.org",
+    "ysc": "Registrerer en unik ID for å føre statistikk over hvilke YouTube-videoer brukeren har sett.",
+    "yscdomain": "youtube.com"
+  },
+  "cookieDisclaimer": {
+    "cookieApprove": "Jeg aksepterer",
+    "cookieMessage": "Denne nettsiden benytter informasjonskapsler for å lagre informasjon på datamaskinen din og for å sikre at du får den beste brukeropplevelsen på nettsiden vår.",
+    "cookiePolicy": "Les mer om informasjonskapslene som brukes på denne nettsiden."
+  },
+  "crd": {
+    "detailsViewLess": "Vis mindre",
+    "detailsViewMore": "Vis mer"
+  },
+  "emediaOverdriveLinks": {
+    "accessExternal": "Klikk for å få tilgang til digital tittel",
+    "sampleLinkText": "Eksempel"
+  },
+  "header": {
+    "joinTheLibraryLabel": "Få et lånekort",
+    "languageLabel": "Språk",
+    "myAccountLabel": "Logg på",
+    "myAccountLogoutLabel": "Logg ut",
+    "myAccountPagesLabel": "Mine sider",
+    "newToTheLibrary": "Ny på biblioteket?",
+    "openingsLabel": "Åpningstider",
+    "screenReaderLabel": "Lytte"
+  },
+  "mediaListSignedOut": {
+    "mediaList": "Huskeliste"
+  },
+  "modal": {
+    "searchLabelText": "Søk i biblioteksamlingen",
+    "txtCloseModal": "Lukk"
+  },
+  "openingHoursShowMore": {
+    "label": "Vis flere åpningstider for {0}",
+    "title": "Vis flere åpningstider for {0}"
+  },
+  "qrCode": {
+    "qrCaption": "Vil du ha denne tittelen? Skann koden med smarttelefonen din for å reservere den.",
+    "qrCaptionEmedia": "Er du interessert i denne tittelen? Skann koden med smarttelefonen din for å laste den ned og lese med en gang."
+  },
+  "readspeaker": {
+    "toolbarLabel": "Lytte",
+    "toolbarTitle": "Lytte til sidetekst med ReadSpeaker"
+  },
+  "sessionTimer": {
+    "accessibleTimingOut": "Denne siden vil lukkes om {{timeoutMinutes}} minutter. Flytt musepekeren eller trykk på en tast for å forlenge tiden med {{extendMinutes}} minutter.",
+    "reload": "Last inn på nytt",
+    "timedOut": "The page has timed out and needs to be reloaded.",
+    "timingOut": "sekunder til siden lukkes og må lastes inn på nytt. Flytt musepekeren eller trykk på en tast for å forlenge tiden med {{extendMinutes}} minutter."
+  }
+}

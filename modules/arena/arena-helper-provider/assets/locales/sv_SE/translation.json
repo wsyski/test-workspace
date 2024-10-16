@@ -1,0 +1,151 @@
+{
+  "branchFilterSearch": {
+    "hereCopy": "Titeln ‪finns här:",
+    "holdingLabelPart1": "Välj att visa detaljer om bestånd på",
+    "iframeTitle": "Sökfilter: välj enhet",
+    "inBranch": "på",
+    "noFilter": "Välj enhet",
+    "notInLib": "Titeln finns inte tillgänglig på detta bibliotek",
+    "saveFilter": "Spara",
+    "selectAll": "Alla",
+    "yesFilter": "Visar"
+  },
+  "branchOpeningHours": {
+    "closedLabel": "Stängt",
+    "contactInformation": "Kontaktinformation",
+    "headerLabel": "Öppettider",
+    "navigationBackLabel": "Tillbaka",
+    "navigationNextLabel": "Nästa",
+    "navigationPreviousLabel": "Föregående",
+    "serviceTypeClosedLabel": "Stängt",
+    "serviceTypeSelfServiceLabel": "Meröppet",
+    "serviceTypeStaffedLabel": "Bemannat",
+    "todayLabel": "Idag",
+    "typeRegularLabel": "Ordinarie",
+    "typeSpecialLabel": "Avvikande",
+    "viewAllLabel": "Visa alla öppettider"
+  },
+  "cookieconsent": {
+    "3rdPartyCookiesDescription": "Följande tjänster från tredje part används. Alla webbplatser använder inte alla tjänster. Du kan välja att stänga av cookies från tredje part i webbläsaren.",
+    "3rdPartyCookiesTitle": "Cookies från tredje part",
+    "acceptAllButton": "Acceptera alla",
+    "analyticsCookiesDescription": "Den här webbplatsen använder analysskript för att utvärdera användarnas interaktion med webbplatsens innehåll.",
+    "analyticsCookiesTitle": "Cookies för prestanda och analys",
+    "arenacookieconsent": "De föredragna cookies som användaren har valt. Om inget väljs ställs ingen cookie in.",
+    "blockedTitle": "Innehåll som inte visas på grund av att cookies inte är tillåtet",
+    "cachestorageversion": "Används av Facebook för att leverera en serie annonsprodukter från tredjepartsannonsörer.",
+    "cachestorageversiondomain": "Facebook.com",
+    "collect": "Används för att skicka data om användarens enhet och beteende. Spårar användaren mellan olika enheter och marknadsföringskanaler.",
+    "collectdomain": "Google.com",
+    "contactUs": "kontakta oss",
+    "contactUsDescription": "För frågor relaterade till vår cookiepolicy och dina val, vänligen kontakta oss.",
+    "cookiesupport": "Informerar webbplatsen om den aktuella användarens webbläsare accepterar cookies",
+    "description": "Denna webbplats använder nödvändiga cookies för att säkerställa att webbplatsen fungerar korrekt och spårar cookies för att förstå hur du interagerar med webbplatsen. Spårningscookies kommer endast att ställas in efter samtycke.",
+    "dprwd": "Sparar informationen om en inloggad Facebook-användare i syfte att annonsera rekommendation och uppdateringar av innehållet. Innehållet i cookien bekräftas inom villkoren för Facebook-användningen.",
+    "dprwddomain": "Facebook.com",
+    "footerSettingsButton": "Inställningar för cookies",
+    "ga": "Skapar ett unikt ID som används för att generera statistik om hur besökaren använder webbplatsen.",
+    "gadomain": "Google.com",
+    "gads": "Tillhandahåller annonsvisning eller återinriktning.",
+    "gadsdomain": "Google.com",
+    "gaid": "Används för att bevara sessionstillståndet.",
+    "gaiddomain": "Google.com",
+    "gat": "Används för att reglera antalet beställningar",
+    "gatdomain": "Google.com",
+    "geoip": "Hjälper Wikipedia att visa banners och andra meddelanden beroende på region, baserat på information i en GeoIP-databas.",
+    "geoipdomain": "wikipedia.org",
+    "gid": "Används för att särskilja användare.",
+    "giddomain": "Google.com",
+    "googtrans": "Lagrar språkinställningar för plugin-programmet Google translator.",
+    "googtransdomain": "Google.com",
+    "guestid": "Används för att identifiera användare. X (Twitter) tilldelar en unik kod för att spåra ditt besök i X (Twitter) -flödet.",
+    "guestiddomain": "x/twitter.com",
+    "guestlanguageid": "Hanterar visning av valt språk",
+    "ide": "Används av Google DoubleClick för att registrera och rapportera användarbeteende efter att ha sett eller klickat eller en annons, för att mäta effekten av annonsen och för att kunna presentera riktad annons för användaren.",
+    "idedomain": "doubleclick.net",
+    "ioam2018": "Används av IVW (INFOnline) för analytiska ändamål.",
+    "iomconsent": "Används av IVW (INFOnline) för analytiska ändamål.",
+    "jsessionid": "Cookies för att bevara sessionen",
+    "lastmsgfetch": "Visar meddelanden från webbplatsägaren",
+    "modalSaveButton": "Acceptera valda",
+    "modalTitle": "Cookie preferenser",
+    "moreInfo": "Mer information om",
+    "necessaryCookiesDescription": "Nödvändiga cookies låter dig flytta runt på webbplatsen och använda viktiga funktioner som säkra områden och medielistor. Dessa cookies är sessionsbaserade och samlar inte in någon information om dig.",
+    "necessaryCookiesTitle": "Nödvändiga cookies",
+    "nid": "Registrerar ett unikt ID som identifierar en återkommande användare. ID:t används för riktad annonsering.",
+    "niddomain": "Google.com",
+    "pref": "Registrerar ett unikt id som Google använder för att skapa statistik över användarbeteende på olika webbplatser.",
+    "prefdomain": "youtube.com",
+    "privacyPolicy": "Integritetspolicy",
+    "readspeakersettings": "Lagrar de inställningar du väljer (t.ex. hastighet och färg).",
+    "rejectAllButton": "Acceptera nödvändiga",
+    "rspkrloadcore": "Säkerställer att ReadSpeaker-funktionen laddas och fungerar från start.",
+    "samedomain": "Samma domän",
+    "selectedlocationvalue": "Det önskade händelseplatsfiltret för startsidan, valt av användaren. Om inget väljs ställs ingen cookie in.",
+    "settingsButton": "Inställningar för cookies",
+    "tableHeadersDescription": "Beskrivning",
+    "tableHeadersDomain": "Domän",
+    "tableHeadersName": "Namn",
+    "tawkconnectiontime": "Kommer ihåg dig så att tidigare chattkonversationer kan identifieras för att förbättra tjänsten.",
+    "title": "Denna webbplats använder cookies",
+    "twittersess": "Tillåter användning av X-funktioner (Twitter) utan att behöva logga in och innehåller viss spårningsinformation som X (Twitter) använder för att förbättra sina tjänster.",
+    "twittersessdomain": "x/twitter.com",
+    "twkidmkey": "En livechattfunktion ställer in denna cookie för att komma ihåg dig så att tidigare chattar kan länkas.",
+    "usageDescription": "Vi använder cookies för att säkerställa grundläggande funktionalitet på webbplatsen och för att förbättra din onlineupplevelse. För mer information om cookies och andra känsliga uppgifter, läs den fullständiga sekretesspolicyn.",
+    "usageTitle": "Användning av cookies",
+    "visitorinfo1live": "Försöker uppskatta användarbandbredden på sidor där YouTube-videor är integrerade.",
+    "visitorinfo1livedomain": "youtube.com",
+    "wmflastaccess": "Hjälper Wikipedia att beräkna unika enheter som skickar beställningar till deras webbplats.",
+    "wmflastaccessdomain": "wikipedia.org",
+    "ysc": "Registrerar ett unikt ID för att skapa statistik över vilka YouTube-videor som en användare har tittat på.",
+    "yscdomain": "youtube.com"
+  },
+  "cookieDisclaimer": {
+    "cookieApprove": "Jag accepterar",
+    "cookieMessage": "Den här webbplatsen använder cookies för att lagra information på din dator och för att säkerställa att du får bästa möjliga upplevelse på vår webbplats.",
+    "cookiePolicy": "Läs mer om de cookies som används på den här webbplatsen."
+  },
+  "crd": {
+    "detailsViewLess": "Visa mindre",
+    "detailsViewMore": "Visa mer"
+  },
+  "emediaOverdriveLinks": {
+    "accessExternal": "Klicka för att komma till digital titel",
+    "sampleLinkText": "Urval"
+  },
+  "header": {
+    "joinTheLibraryLabel": "Skaffa lånekort",
+    "languageLabel": "Språk",
+    "myAccountLabel": "Logga in",
+    "myAccountLogoutLabel": "Logga ut",
+    "myAccountPagesLabel": "Mina sidor",
+    "newToTheLibrary": "Ny på biblioteket?",
+    "openingsLabel": "Öppettider",
+    "screenReaderLabel": "Lyssna"
+  },
+  "mediaListSignedOut": {
+    "mediaList": "Minneslista"
+  },
+  "modal": {
+    "searchLabelText": "Sök i bibliotekets samlingar",
+    "txtCloseModal": "Stäng"
+  },
+  "openingHoursShowMore": {
+    "label": "Visa fler öppettider för {0}",
+    "title": "Visa fler öppettider för {0}"
+  },
+  "qrCode": {
+    "qrCaption": "Vill du ha den här titeln? Skanna koden med din smarta telefon för att reservera den.",
+    "qrCaptionEmedia": "Är du intresserad av den här titeln? Skanna koden med din smarta telefon för att ladda ner den och börja läsa direkt."
+  },
+  "readspeaker": {
+    "toolbarLabel": "Lyssna",
+    "toolbarTitle": "Lyssna på sidans text med ReadSpeaker"
+  },
+  "sessionTimer": {
+    "accessibleTimingOut": "{{timeoutMinutes}} minuter återstår tills sidan blir inaktuell. Gör sidan aktiv i ytterligare {{extendMinutes}} minuter genom att röra muspekaren eller trycka på en tangent.",
+    "reload": "Uppdatera",
+    "timedOut": "Sidan har blivit inaktuell och behöver uppdateras.",
+    "timingOut": "sekunder återstår tills sidan blir inaktuell. Gör sidan aktiv i ytterligare {{extendMinutes}} minuter genom att röra muspekaren eller trycka på en tangent."
+  }
+}

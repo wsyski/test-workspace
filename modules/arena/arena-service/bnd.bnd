@@ -1,0 +1,36 @@
+Bundle-Name: Arena Liferay Modules Arena Service
+Bundle-SymbolicName: com.axiell.arena.liferay.modules.arena.service
+Bundle-Version: 5.7.0
+Liferay-Require-SchemaVersion: 5.6.0
+Liferay-Service: true
+-dsannotations-options: inherit
+
+Import-Package: \
+    \
+	!bsh.*,\
+    !com.bea.*,\
+    !com.jamonapi.*,\
+	!com.sun.net.httpserver,\
+    !groovy.*,\
+    !io.reactivex.*,\
+    !javax.ejb.*,\
+	!javax.enterprise.*,\
+	!javax.money.*,\
+    !joptsimple.*,\
+    !kotlin.*,\
+    !kotlinx.*,\
+    !net.sf.cglib.*,\
+    !org.codehaus.groovy.*,\
+    !org.hibernate.*,\
+    !org.joda.*,\
+    !org.slf4j.impl,\
+    !reactor.blockhound.*,\
+    !reactor.core.*,\
+    !rx.*,\
+	\
+    *
+
+-check: EXPORTS
+-include: ../../common.bnd
+
+-fixupmessages "Classes found in the wrong directory"; restrict:=error; is:=warning

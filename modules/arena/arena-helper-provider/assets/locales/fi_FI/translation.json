@@ -1,0 +1,151 @@
+{
+  "branchFilterSearch": {
+    "hereCopy": "Nimeke on saatavilla täällä:",
+    "holdingLabelPart1": "Valitse nähdäksesi saatavuustiedot paikassa",
+    "iframeTitle": "Hakusuodatin: valitse yksikkö",
+    "inBranch": "paikassa",
+    "noFilter": "Valitse yksikkö",
+    "notInLib": "Nimeke ei ole saatavilla tässä kirjastossa",
+    "saveFilter": "Tallenna",
+    "selectAll": "Kaikki",
+    "yesFilter": "Näyttää"
+  },
+  "branchOpeningHours": {
+    "closedLabel": "Suljettu",
+    "contactInformation": "Yhteystiedot",
+    "headerLabel": "Aukioloajat",
+    "navigationBackLabel": "Takaisin",
+    "navigationNextLabel": "Seuraava",
+    "navigationPreviousLabel": "Edellinen",
+    "serviceTypeClosedLabel": "Suljettu",
+    "serviceTypeSelfServiceLabel": "Omatoimi",
+    "serviceTypeStaffedLabel": "Henkilökunta",
+    "todayLabel": "Tänään",
+    "typeRegularLabel": "Säännöllinen",
+    "typeSpecialLabel": "Mukautettu",
+    "viewAllLabel": "Näytä kaikki aukioloajat"
+  },
+  "cookieconsent": {
+    "3rdPartyCookiesDescription": "Seuraavia kolmannen osapuolen palveluita käytetään. Kaikki sivustot eivät käytä kaikkia palveluita. Voit päättää poistaa kolmannen osapuolen evästeet käytöstä verkkoselaimessa.",
+    "3rdPartyCookiesTitle": "Kolmannen osapuolen evästeet",
+    "acceptAllButton": "Hyväksy kaikki",
+    "analyticsCookiesDescription": "Verkkosivuston omistaja mittaa eri palveluiden avulla, miten käytät verkkosivuston sisältöä.",
+    "analyticsCookiesTitle": "Suorituskyky- ja analytiikkaevästeet",
+    "arenacookieconsent": "Ensisijaiset evästeet, jotka käyttäjä on valinnut. Jos mitään ei ole valittu, evästettä ei aseteta.",
+    "blockedTitle": "Sisältöä ei näytetä, eväste ei sallittu",
+    "cachestorageversion": "Facebook käyttää kolmannen osapuolen mainostajien mainostuotteiden toimittamiseen.",
+    "cachestorageversiondomain": "Facebook.com",
+    "collect": "Käytetään lähettämään tietoja laitteesta ja käyttäjän käyttäytymisestä. Seuraa käyttäjää eri laitteiden ja markkinointikanavien välillä.",
+    "collectdomain": "Google.com",
+    "contactUs": "ota meihin yhteyttä",
+    "contactUsDescription": "Jos sinulla on kysyttävää evästekäytännöstämme ja valinnoistasi, ota meihin yhteyttä.",
+    "cookiesupport": "Ilmoittaa verkkosivustolle, jos nykyisen käyttäjän verkkoselain hyväksyy evästeet",
+    "description": "Tämä verkkosivusto käyttää välttämättömiä evästeitä varmistaakseen, että verkkosivusto toimii oikein, ja seurantaevästeitä ymmärtääkseen, miten olet vuorovaikutuksessa verkkosivuston kanssa. Seurantaevästeet asetetaan vasta suostumuksen jälkeen.",
+    "dprwd": "Tallentaa kirjautuneen Facebook-käyttäjän tiedot mainossuositusta ja sisällön päivittämistä varten. Evästeen sisältö vahvistetaan Facebookin käytön ehtojen mukaisesti.",
+    "dprwddomain": "Facebook.com",
+    "footerSettingsButton": "Evästeasetukset",
+    "ga": "Luo yksilöllisen tunnuksen, jota käytetään tilastojen luomiseen siitä, miten kävijä käyttää verkkosivustoa.",
+    "gadomain": "Google.com",
+    "gads": "Tarjoaa mainosten jakelun tai uudelleenkohdistuksen.",
+    "gadsdomain": "Google.com",
+    "gaid": "Käytetään istunnon tilan pysyvään säilyttämiseen.",
+    "gaiddomain": "Google.com",
+    "gat": "Käytetään pyyntöjen määrän säätämiseen",
+    "gatdomain": "Google.com",
+    "geoip": "Auttaa Wikipediaa näyttämään bannereita ja muita ilmoituksia alueesta riippuen GeoIP-tietokannan tietojen perusteella.",
+    "geoipdomain": "wikipedia.org",
+    "gid": "Käytetään käyttäjien erottamiseen.",
+    "giddomain": "Google.com",
+    "googtrans": "Tallentaa Google-kääntäjälaajennuksen kieliasetukset.",
+    "googtransdomain": "Google.com",
+    "guestid": "Käytetään käyttäjien tunnistamiseen. X (Twitter) määrittää yksilöllisen koodin, jolla seurataan käyntiäsi X (Twitter) -syötteessä.",
+    "guestiddomain": "x/Twitter.com",
+    "guestlanguageid": "Käsittelee valitun kielen näyttöä",
+    "ide": "Google DoubleClick käyttää sitä rekisteröidäkseen ja raportoidakseen käyttäjän käyttäytymisestä mainoksen näkemisen tai napsauttamisen jälkeen, mitatakseen mainoksen vaikutusta ja voidakseen esittää kohdennettua mainosta käyttäjälle.",
+    "idedomain": "doubleclick.net",
+    "ioam2018": "IVW (INFOnline) käyttää analyyttisiin tarkoituksiin.",
+    "iomconsent": "IVW (INFOnline) käyttää analyyttisiin tarkoituksiin.",
+    "jsessionid": "Eväste istunnon säilyttämiseksi",
+    "lastmsgfetch": "Näyttää verkkosivuston omistajan lähettämät viestit",
+    "modalSaveButton": "Hyväksy valitut",
+    "modalTitle": "Evästeasetukset",
+    "moreInfo": "Lisätietoja",
+    "necessaryCookiesDescription": "Välttämättömien evästeiden avulla voit liikkua verkkosivustolla ja käyttää tärkeitä ominaisuuksia, kuten suojattuja alueita ja medialuetteloita. Nämä evästeet ovat istuntopohjaisia, eivätkä ne kerää mitään tietoja sinusta.",
+    "necessaryCookiesTitle": "Välttämättömät evästeet",
+    "nid": "Rekisteröi yksilöllisen tunnuksen, joka tunnistaa toistuvan käyttäjän. Tunnusta käytetään mainonnan kohdentamiseen.",
+    "niddomain": "Google.com",
+    "pref": "Rekisteröi yksilöllisen tunnuksen, jonka avulla Google luo tilastoja käyttäjien käyttäytymisestä eri verkkosivustoilla.",
+    "prefdomain": "youtube.com",
+    "privacyPolicy": "Tietosuojaperiaatteet",
+    "readspeakersettings": "Tallentaa valitsemasi asetukset (kuten nopeuden ja värin).",
+    "rejectAllButton": "Salli välttämättömät",
+    "rspkrloadcore": "Varmistaa, että ReadSpeaker-toiminto on ladattu ja toimii alusta alkaen.",
+    "samedomain": "Sama verkkotunnus",
+    "selectedlocationvalue": "Aloitussivun ensisijainen tapahtuman sijaintisuodatin, jonka käyttäjä on valinnut. Jos mitään ei ole valittu, evästettä ei aseteta.",
+    "settingsButton": "Evästeasetukset",
+    "tableHeadersDescription": "Kuvaus",
+    "tableHeadersDomain": "Toimialue",
+    "tableHeadersName": "Nimi",
+    "tawkconnectiontime": "Muistaa sinut, jotta aiemmat chat-keskustelut voidaan tunnistaa palvelun parantamiseksi.",
+    "title": "Tämä verkkosivusto käyttää evästeitä",
+    "twittersess": "Sallii X (Twitter) -ominaisuuksien käytön ilman kirjautumista ja sisältää joitakin seurantatietoja, joita X (Twitter) käyttää palvelujensa parantamiseen.",
+    "twittersessdomain": "x/Twitter.com",
+    "twkidmkey": "Live-chat -toiminto asettaa tämän evästeen muistamaan sinut, jotta aiemmat keskustelut voidaan linkittää.",
+    "usageDescription": "Käytämme evästeitä varmistaaksemme verkkosivuston perustoiminnot ja parantaaksemme verkkokokemustasi. Lisätietoja evästeistä ja muista arkaluonteisista tiedoista saat lukemalla koko tietosuojakäytännön.",
+    "usageTitle": "Evästeiden käyttö",
+    "visitorinfo1live": "Yrittää arvioida käyttäjän kaistanleveyttä sivuilla, joihin YouTube-videot on integroitu.",
+    "visitorinfo1livedomain": "youtube.com",
+    "wmflastaccess": "Auttaa Wikipediaa laskemaan laitteita, jotka lähettävät pyyntöjä heidän verkkosivustolleen.",
+    "wmflastaccessdomain": "wikipedia.org",
+    "ysc": "Rekisteröi yksilöllisen tunnuksen luodakseen tilastoja siitä, mitä YouTube-videoita käyttäjä on katsonut.",
+    "yscdomain": "youtube.com"
+  },
+  "cookieDisclaimer": {
+    "cookieApprove": "Hyväksyn",
+    "cookieMessage": "Tämä verkkosivu käyttää evästeitä tietojen tallentamiseksi tietokoneellesi ja verkkosivujemme parhaan mahdollisen käyttökokemuksen varmistamiseksi.",
+    "cookiePolicy": "Lue lisää sivustolla käytetyistä evästeistä."
+  },
+  "crd": {
+    "detailsViewLess": "Näytä vähemmän",
+    "detailsViewMore": "Näytä enemmän"
+  },
+  "emediaOverdriveLinks": {
+    "accessExternal": "Klikkaa siirtyäksesi digitaaliseen nimekkeeseen",
+    "sampleLinkText": "Näyte"
+  },
+  "header": {
+    "joinTheLibraryLabel": "Hanki kirjastokortti",
+    "languageLabel": "Kieli",
+    "myAccountLabel": "Kirjaudu",
+    "myAccountLogoutLabel": "Kirjaudu ulos",
+    "myAccountPagesLabel": "Omat sivut",
+    "newToTheLibrary": "Uusi kirjastossa?",
+    "openingsLabel": "Aukioloajat",
+    "screenReaderLabel": "Kuuntele"
+  },
+  "mediaListSignedOut": {
+    "mediaList": "Muistilista"
+  },
+  "modal": {
+    "searchLabelText": "Hae kirjaston kokoelmasta",
+    "txtCloseModal": "Sulje"
+  },
+  "openingHoursShowMore": {
+    "label": "Näytä yksikön {0} muut aukioloajat",
+    "title": "Näytä yksikön {0} muut aukioloajat"
+  },
+  "qrCode": {
+    "qrCaption": "Haluatko tämän nimikkeen? Lue koodi älypuhelimellasi varataksesi sen.",
+    "qrCaptionEmedia": "Oletko kiinnostunut tästä nimikkeestä? Lue koodi älypuhelimellasi ladataksesi sen ja aloita lukeminen heti."
+  },
+  "readspeaker": {
+    "toolbarLabel": "Kuuntele",
+    "toolbarTitle": "Kuuntele sivun tekstiä ReadSpeakerin avulla"
+  },
+  "sessionTimer": {
+    "accessibleTimingOut": "Tämä sivu aikakatkaistaan {{timeoutMinutes}} minuutin kuluttua. Liikuta hiiren osoitinta tai paina mitä tahansa näppäintä pidentääksesi aikaa {{extendMinutes}} minuuttia.",
+    "reload": "Lataa uudelleen",
+    "timedOut": "The page has timed out and needs to be reloaded.",
+    "timingOut": "sekuntia, kunnes tämä sivu aikakatkaistaan ja se on ladattava uudelleen. Liikuta hiiren osoitinta tai paina mitä tahansa näppäintä pidentääksesi aikaa {{extendMinutes}} minuuttia."
+  }
+}

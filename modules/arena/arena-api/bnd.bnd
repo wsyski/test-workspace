@@ -1,0 +1,20 @@
+Bundle-Name: Arena Liferay Modules Arena API
+Bundle-SymbolicName: com.axiell.arena.liferay.modules.arena.api
+Bundle-Version: 5.7.0
+Export-Package: \
+    com.axiell.arena.liferay.modules.arena.configuration,\
+    com.axiell.arena.liferay.modules.arena.constants,\
+    com.axiell.arena.liferay.modules.arena.error,\
+    com.axiell.arena.liferay.modules.arena.exception,\
+    com.axiell.arena.liferay.modules.arena.model,\
+    com.axiell.arena.liferay.modules.arena.service,\
+    com.axiell.arena.liferay.modules.arena.util
+
+Import-Package: \
+    \
+    *
+
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../arena-service/service.xml
+
+-include: ../../common.bnd

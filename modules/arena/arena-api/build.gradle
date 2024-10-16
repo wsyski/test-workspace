@@ -1,0 +1,38 @@
+dependencies {
+    compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
+    compileOnly group: "com.liferay.portal", name: "release.portal.api"
+
+    testImplementation group: "org.mockito", name: "mockito-core", version: "${rootProject.getProperty('org.mockito.mockito-core.version')}"
+    testImplementation group: "org.springframework", name: "spring-test", version: "${rootProject.getProperty('org.springframework.spring-core.version')}"
+    testImplementation group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId 'com.axiell.arena.liferay.modules.arena.api'
+            groupId "${mavenGroup}"
+            version "${mavenVersion}"
+            from components.java
+        }
+    }
+}
+
+compileJava {
+    dependsOn(":modules:arena:arena-service:buildService")
+}
+
+task deployConfigs(type: Copy)
+
+deploy {
+    finalizedBy deployConfigs
+}
+
+deployConfigs {
+    ext {
+        autoClean = false
+    }
+
+    from "configs"
+    into file("${rootProject.getProperty('liferay.workspace.home.dir')}/osgi/configs")
+}

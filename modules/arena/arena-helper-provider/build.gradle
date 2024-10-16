@@ -1,0 +1,10 @@
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId 'com.axiell.arena.liferay.modules.arena.helper-provider'
+            groupId "${mavenGroup}"
+            version "${mavenVersion}"
+            from components.java
+        }
+    }
+}

@@ -1,0 +1,76 @@
+{
+  "branchFilterSearch": {
+    "hereCopy": "Titul je dostupný zde:",
+    "holdingLabelPart1": "Vyberte pro zobrazení podrobností o inventáři v",
+    "iframeTitle": "Filtr vyhledávání: vyberte pobočku",
+    "inBranch": "v",
+    "noFilter": "Vybrat pobočku",
+    "notInLib": "Titul není v této knihovně dostupný.",
+    "saveFilter": "Uložit",
+    "selectAll": "Vše",
+    "yesFilter": "Zobrazeno"
+  },
+  "branchOpeningHours": {
+    "closedLabel": "Zavřeno",
+    "contactInformation": "Kontaktní informace",
+    "headerLabel": "Provozní doba",
+    "navigationBackLabel": "Zpět",
+    "navigationNextLabel": "Další",
+    "navigationPreviousLabel": "Předchozí",
+    "serviceTypeClosedLabel": "Zavřeno",
+    "serviceTypeSelfServiceLabel": "Samoobsluha",
+    "serviceTypeStaffedLabel": "S personálem",
+    "todayLabel": "Dnes",
+    "typeRegularLabel": "Pravidelný",
+    "typeSpecialLabel": "Zvláštní",
+    "viewAllLabel": "Zobrazit veškerou otevírací dobu"
+  },
+  "cookieDisclaimer": {
+    "cookieApprove": "Přijímám",
+    "cookieMessage": "Tato webová stránka používá soubory cookie k ukládání informací do vašeho počítače a k zajištění co nejlepší funkčnosti naší webové stránky.",
+    "cookiePolicy": "Přečtěte si více informací o souborech cookie, které jsou používány na této webové stránce."
+  },
+  "crd": {
+    "detailsViewLess": "Zobrazit méně",
+    "detailsViewMore": "Zobrazit více"
+  },
+  "emediaOverdriveLinks": {
+    "accessExternal": "Klikněte pro přístup k digitálnímu titulu",
+    "sampleLinkText": "Ukázka"
+  },
+  "header": {
+    "joinTheLibraryLabel": "Registrovat do knihovny",
+    "languageLabel": "Jazyk",
+    "myAccountLabel": "Přihlásit se",
+    "myAccountLogoutLabel": "Odhlásit se",
+    "myAccountPagesLabel": "Moje stránky",
+    "newToTheLibrary": "Jste v knihovně noví?",
+    "openingsLabel": "Provozní doba",
+    "screenReaderLabel": "Poslechnout"
+  },
+  "mediaListSignedOut": {
+    "mediaList": "Seznam médií"
+  },
+  "modal": {
+    "searchLabelText": "Vyhledat sbírku v knihovně",
+    "txtCloseModal": "Zavřít"
+  },
+  "openingHoursShowMore": {
+    "label": "Zobrazit další otvírací dobu pro {0}",
+    "title": "Zobrazit další otvírací dobu pro {0}"
+  },
+  "qrCode": {
+    "qrCaption": "Chcete tento titul? Rezervujte jej naskenováním kódu pomocí vašeho chytrého telefonu.",
+    "qrCaptionEmedia": "Máte zájem o tento titul? Naskenujte kód pomocí vašeho chytrého telefonu a můžete jej ihned stáhnout a začít číst."
+  },
+  "readspeaker": {
+    "toolbarLabel": "Poslechnout",
+    "toolbarTitle": "Poslouchejte text stránky pomocí ReadSpeaker"
+  },
+  "sessionTimer": {
+    "accessibleTimingOut": "Platnost této stránky vyprší za {{timeoutMinutes}} minut. Posunutím kurzoru myši nebo stiskem libovolné klávesy čas prodloužíte o {{extendMinutes}} minut.",
+    "reload": "Znovu načíst",
+    "timedOut": "The page has timed out and needs to be reloaded.",
+    "timingOut": "sekund, než platnost stránky vyprší a bude ji třeba znovu načíst. Posunutím kurzoru myši nebo stiskem libovolné klávesy čas prodloužíte o {{extendMinutes}} minut."
+  }
+}

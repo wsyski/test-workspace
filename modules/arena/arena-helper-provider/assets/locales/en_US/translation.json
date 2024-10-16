@@ -1,0 +1,151 @@
+{
+  "branchFilterSearch": {
+    "hereCopy": "The title is available here:",
+    "holdingLabelPart1": "Select to view holding details at",
+    "iframeTitle": "Search filter: select branch",
+    "inBranch": "at",
+    "noFilter": "Select branch",
+    "notInLib": "The title is not available in this library",
+    "saveFilter": "Save",
+    "selectAll": "All",
+    "yesFilter": "Showing"
+  },
+  "branchOpeningHours": {
+    "closedLabel": "Closed",
+    "contactInformation": "Contact information",
+    "headerLabel": "Opening hours",
+    "navigationBackLabel": "Back",
+    "navigationNextLabel": "Next",
+    "navigationPreviousLabel": "Previous",
+    "serviceTypeClosedLabel": "Closed",
+    "serviceTypeSelfServiceLabel": "Self-service",
+    "serviceTypeStaffedLabel": "Staffed",
+    "todayLabel": "Today",
+    "typeRegularLabel": "Regular",
+    "typeSpecialLabel": "Special",
+    "viewAllLabel": "Show all opening hours"
+  },
+  "cookieconsent": {
+    "3rdPartyCookiesDescription": "The following third-party services are used. Not all websites use all services. You can decide to turn off third-party cookies in the web browser.",
+    "3rdPartyCookiesTitle": "Third-party cookies",
+    "acceptAllButton": "Accept all",
+    "analyticsCookiesDescription": "This website utilizes analytics scripts to evaluate user interaction with the site content.",
+    "analyticsCookiesTitle": "Performance and analytics cookies",
+    "arenacookieconsent": "The preferred cookies that the user has selected. If nothing is selected, no cookie is set.",
+    "blockedTitle": "Content not displayed due to cookie not allowed",
+    "cachestorageversion": "Used by Facebook to deliver a series of advertisement products from third-party advertisers.",
+    "cachestorageversiondomain": "Facebook.com",
+    "collect": "Used to send data about the device and behavior of the user. Tracks the user between different devices and marketing channels.",
+    "collectdomain": "Google.com",
+    "contactUs": "contact us",
+    "contactUsDescription": "For any queries related to our cookie policy and your choices, please contact us.",
+    "cookiesupport": "Informs the website if the web browser of the current user accepts cookies",
+    "description": "This website uses essential cookies to ensure that the website operates properly and tracking cookies to understand how you interact with the website. Tracking cookies will be set only after consent.",
+    "dprwd": "Saves the information about a signed in Facebook user for the purpose of advertisement recommendation and updates of the content. The content of the cookie is confirmed within the conditions of the Facebook usage.",
+    "dprwddomain": "Facebook.com",
+    "footerSettingsButton": "Cookie settings",
+    "ga": "Creates a unique ID used to generate statistics about how the visitor uses the website.",
+    "gadomain": "Google.com",
+    "gads": "Provides ad delivery or re-targeting.",
+    "gadsdomain": "Google.com",
+    "gaid": "Used to persist session state.",
+    "gaiddomain": "Google.com",
+    "gat": "Used to regulate number of requests",
+    "gatdomain": "Google.com",
+    "geoip": "Helps Wikipedia to show banners and other notices depending on the region, based on information in a GeoIP database.",
+    "geoipdomain": "wikipedia.org",
+    "gid": "Used to distinguish users.",
+    "giddomain": "Google.com",
+    "googtrans": "Stores language settings for the Google translator plugin.",
+    "googtransdomain": "Google.com",
+    "guestid": "Used to identify users. X (Twitter) will assign a unique code to track your visit to the X (Twitter) feed.",
+    "guestiddomain": "x/twitter.com",
+    "guestlanguageid": "Handles display of selected language",
+    "ide": "Used by Google DoubleClick to register and report user behavior after having seen or clicked on an ad, to measure the effect of the advertisement, and to be able to present a targeted advertisement for the user.",
+    "idedomain": "doubleclick.net",
+    "ioam2018": "Used by IVW (INFOnline) for analytic purposes.",
+    "iomconsent": "Used by IVW (INFOnline) for analytic purposes.",
+    "jsessionid": "Cookie to preserve the session",
+    "lastmsgfetch": "Displays messages from the website owner",
+    "modalSaveButton": "Accept selected",
+    "modalTitle": "Cookie settings",
+    "moreInfo": "More information",
+    "necessaryCookiesDescription": "Necessary cookies let you move around on the website and use essential features like secure areas and media lists. These cookies are session-based and do not gather any information about you.",
+    "necessaryCookiesTitle": "Necessary cookies",
+    "nid": "Registers a unique ID that identifies a recurrent user. The ID is used for targeted advertisement.",
+    "niddomain": "Google.com",
+    "pref": "Registers a unique ID that Google uses to create statistics of user behavior on different websites.",
+    "prefdomain": "youtube.com",
+    "privacyPolicy": "Privacy policy",
+    "readspeakersettings": "Stores the settings you select (such as speed and color).",
+    "rejectAllButton": "Accept necessary",
+    "rspkrloadcore": "Ensures that the ReadSpeaker function is loaded and working from start.",
+    "samedomain": "Same domain",
+    "selectedlocationvalue": "The preferred event location filter for the start page, selected by the user. If nothing is selected, no cookie is set.",
+    "settingsButton": "Cookie settings",
+    "tableHeadersDescription": "Description",
+    "tableHeadersDomain": "Domain",
+    "tableHeadersName": "Name",
+    "tawkconnectiontime": "Remembers you so that previous chat conversations can be identified to improve the service.",
+    "title": "This website uses cookies to store information on your computer and to ensure that you get the best experience possible on our website.",
+    "twittersess": "Allows the use of X (Twitter) features without having to sign in, and contains some tracking information that X (Twitter) uses to improve their services.",
+    "twittersessdomain": "x/twitter.com",
+    "twkidmkey": "A live chat functionality sets this cookie to remember you so that previous chats can be linked.",
+    "usageDescription": "We use cookies to ensure basic functionality of the website and to enhance your online experience. For more details regarding cookies and other sensitive data, please read the full privacy policy.",
+    "usageTitle": "Cookie usage",
+    "visitorinfo1live": "Tries to estimate user bandwidth on pages where YouTube videos are integrated.",
+    "visitorinfo1livedomain": "youtube.com",
+    "wmflastaccess": "Helps Wikipedia to calculate unique devices that send requests to their website.",
+    "wmflastaccessdomain": "wikipedia.org",
+    "ysc": "Registers a unique ID to create statistics of which YouTube videos that a user has watched.",
+    "yscdomain": "youtube.com"
+  },
+  "cookieDisclaimer": {
+    "cookieApprove": "I accept",
+    "cookieMessage": "This website uses cookies to store information on your computer and to ensure that you get the best experience possible on our website.",
+    "cookiePolicy": "Read more about the cookies that are used on this site."
+  },
+  "crd": {
+    "detailsViewLess": "Show less",
+    "detailsViewMore": "Show more"
+  },
+  "emediaOverdriveLinks": {
+    "accessExternal": "Click to access digital title",
+    "sampleLinkText": "Sample"
+  },
+  "header": {
+    "joinTheLibraryLabel": "Join the library",
+    "languageLabel": "Language",
+    "myAccountLabel": "Sign in",
+    "myAccountLogoutLabel": "Sign out",
+    "myAccountPagesLabel": "My pages",
+    "newToTheLibrary": "New to the library?",
+    "openingsLabel": "Visit us",
+    "screenReaderLabel": "Listen"
+  },
+  "mediaListSignedOut": {
+    "mediaList": "Media list"
+  },
+  "modal": {
+    "searchLabelText": "Search the library collection",
+    "txtCloseModal": "Close"
+  },
+  "openingHoursShowMore": {
+    "label": "Show more opening hours for {0}",
+    "title": "Show more opening hours for {0}"
+  },
+  "qrCode": {
+    "qrCaption": "Do you want this title? Scan the code with your smartphone to reserve it.",
+    "qrCaptionEmedia": "Are you interested in this title? Scan the code with your smartphone to download it and start reading right away."
+  },
+  "readspeaker": {
+    "toolbarLabel": "Listen",
+    "toolbarTitle": "Listen to page text with ReadSpeaker"
+  },
+  "sessionTimer": {
+    "accessibleTimingOut": "This page will time out in {{timeoutMinutes}} minutes. Move your mouse pointer or press any key to extend the time with {{extendMinutes}} minutes.",
+    "reload": "Reload",
+    "timedOut": "The page has timed out and needs to be reloaded.",
+    "timingOut": "seconds until this page times out and needs to be reloaded. Move your mouse pointer or press any key to extend the time with {{extendMinutes}} minutes."
+  }
+}

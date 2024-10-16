@@ -1,0 +1,47 @@
+buildService {
+    apiDir = "../arena-api/src/main/java"
+    osgiModule = true
+    propsUtil = "com.axiell.arena.liferay.modules.arena.service.util.PropsUtil"
+    testDir = "src/java/test"
+}
+
+dependencies {
+    compileOnly project(":modules:arena:arena-api")
+    implementation group: "org.apache.cxf", name: "cxf-rt-transports-http", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    implementation group: "org.apache.cxf", name: "cxf-core", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    implementation group: "org.apache.cxf", name: "cxf-rt-frontend-jaxrs", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    implementation group: "org.apache.cxf", name: "cxf-rt-rs-client", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    implementation group: "org.apache.cxf", name: "cxf-rt-rs-extension-providers", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    compileInclude group: "com.fasterxml.jackson.jaxrs", name: "jackson-jaxrs-json-provider", version: "${rootProject.getProperty('com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider.version')}"
+    compileInclude group: "com.fasterxml.jackson.module", name: "jackson-module-parameter-names", version: "${rootProject.getProperty('com.fasterxml.jackson.module.jackson-module-parameter-names.version')}"
+    compileInclude group: "javax.activation", name: "javax.activation-api", version: "${rootProject.getProperty('javax.activation.javax.activation-api.version')}"
+    compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
+    compileInclude group: 'org.modelmapper', name: 'modelmapper', version: "${rootProject.getProperty('org.modelmapper.modelmapper.version')}"
+    compileInclude group: "com.axiell.authinfo", name: "authinfo", version: "${rootProject.getProperty('com.axiell.authinfo.authinfo.version')}", transitive: false
+    compileInclude group: "com.auth0", name: "java-jwt", version: "${rootProject.getProperty('com.auth0.java-jwt.version')}", transitive: false
+
+    testImplementation project(":modules:arena:arena-api")
+    testImplementation group: "org.apache.cxf", name: "cxf-rt-transports-http", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    testImplementation group: "org.apache.cxf", name: "cxf-core", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    testImplementation group: "org.apache.cxf", name: "cxf-rt-frontend-jaxrs", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    testImplementation group: "org.apache.cxf", name: "cxf-rt-rs-client", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    testImplementation group: "org.apache.cxf", name: "cxf-rt-rs-extension-providers", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    testImplementation group: "com.fasterxml.jackson.jaxrs", name: "jackson-jaxrs-json-provider", version: "${rootProject.getProperty('com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider.version')}"
+    testImplementation group: "com.auth0", name: "java-jwt", version: "${rootProject.getProperty('com.auth0.java-jwt.version')}", transitive: false
+    testImplementation group: "com.fasterxml.jackson.module", name: "jackson-module-parameter-names", version: "${rootProject.getProperty('com.fasterxml.jackson.module.jackson-module-parameter-names.version')}"
+    testImplementation group: 'org.modelmapper', name: 'modelmapper', version: "${rootProject.getProperty('org.modelmapper.modelmapper.version')}"
+    testImplementation group: "org.mockito", name: "mockito-core", version: "${rootProject.getProperty('org.mockito.mockito-core.version')}"
+}
+
+group = "com.axiell.arena.liferay.modules.arena"
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId 'com.axiell.arena.liferay.modules.arena.service'
+            groupId "${mavenGroup}"
+            version "${mavenVersion}"
+            from components.java
+        }
+    }
+}

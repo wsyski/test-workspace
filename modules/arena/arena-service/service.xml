@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder auto-import-default-references="false" auto-namespace-tables="false" dependency-injector="ds" package-path="com.axiell.arena.liferay.modules.arena">
+    <namespace>Arena</namespace>
+    <entity local-service="true" name="ArenaLocal" remote-service="false" uuid="false"/>
+    <entity local-service="true" name="ArenaCentral" remote-service="false" uuid="false"/>
+</service-builder>
