@@ -2,15 +2,15 @@
 	"name": "js-theme",
 	"version": "1.0.0",
 	"main": "package.json",
-	"keywords": ["liferay-theme"],
+	"keywords": ["js-theme"],
 	"liferayTheme": {
 		"baseTheme": "styled",
-		"distName": "classic-theme",
+		"distName": "js-theme",
 		"rubySass": false,
 		"sassOptions": {
 			"dartSass": true
 		},
-		"version": "7.1"
+		"version": "7.4"
 	},
 	"devDependencies": {
 		"compass-mixins": "~0.12.12",
