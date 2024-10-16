@@ -1,0 +1,32 @@
+Bundle-SymbolicName: com.axiell.arena.liferay.modules.overrides.dynamic-include-top_js
+Bundle-Name: Arena Liferay Modules Dynamic Include top_js
+Bundle-Version: 1.0.0
+
+Import-Package: \
+    \
+	!bsh.*,\
+    !com.bea.*,\
+    !com.jamonapi.*,\
+	!com.sun.net.httpserver,\
+    !groovy.*,\
+    !io.reactivex.*,\
+    !javax.ejb.*,\
+	!javax.enterprise.*,\
+	!javax.money.*,\
+    !joptsimple.*,\
+    !kotlin.*,\
+    !kotlinx.*,\
+    !net.sf.cglib.*,\
+    !org.codehaus.groovy.*,\
+    !org.hibernate.*,\
+    !org.joda.*,\
+    !org.slf4j.impl,\
+    !reactor.blockhound.*,\
+    !reactor.core.*,\
+    !rx.*,\
+	\
+    *
+
+-check: EXPORTS
+-include: ../../common.bnd
+

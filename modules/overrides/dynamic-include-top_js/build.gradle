@@ -1,0 +1,22 @@
+dependencies {
+    compileOnly project(":modules:arena:arena-api")
+    compileOnly group: "com.liferay.portal", name: "release.portal.api"
+    compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
+    compileInclude group: "org.aspectj", name: "aspectjweaver", version: "${rootProject.getProperty('org.aspectj.aspectjweaver.version')}"
+    compileInclude group: "org.apache.commons", name: "commons-pool2", version: "${rootProject.getProperty('org.apache.commons.commons-pool2.version')}"
+    compileInclude group: "org.reactivestreams", name: "reactive-streams", version: "${rootProject.getProperty('org.reactivestreams.reactive-streams.version')}"
+    compileInclude group: "org.yaml", name: "snakeyaml", version: "${rootProject.getProperty('org.yaml.snakeyaml.version')}"
+    compileInclude group: "org.springframework", name: "spring-instrument",  version: "${rootProject.getProperty('org.springframework.spring-core.version')}"
+    compileInclude group: "com.axiell.authinfo", name: "authinfo", version: "${rootProject.getProperty('com.axiell.authinfo.authinfo.version')}"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId 'com.axiell.arena.liferay.modules.overrides.dynamic-include-top_js'
+            groupId "${mavenGroup}"
+            version "${mavenVersion}"
+            from components.java
+        }
+    }
+}

@@ -1,0 +1,16 @@
+dependencies {
+    compileOnly group: "com.liferay.portal", name: "release.portal.api"
+    compileOnly group: "com.liferay", name: "biz.aQute.bnd.annotation", version: "${rootProject.getProperty('com.liferay.biz.aQute.bnd.annotation.version')}"
+    implementation group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId 'com.axiell.arena.liferay.modules.overrides.language'
+            groupId "${mavenGroup}"
+            version "${mavenVersion}"
+            from components.java
+        }
+    }
+}

@@ -1,0 +1,9 @@
+Bundle-SymbolicName: com.axiell.arena.liferay.modules.overrides.language
+Bundle-Name: Arena Liferay Modules Language Override
+Bundle-Version: 1.0.0
+
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"
+
+-include: ../../common.bnd
