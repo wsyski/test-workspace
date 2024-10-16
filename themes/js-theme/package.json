@@ -5,10 +5,12 @@
 	"keywords": ["liferay-theme"],
 	"liferayTheme": {
 		"baseTheme": "styled",
-		"fontAwesome": true,
-		"screenshot": "",
-		"templateLanguage": "ftl",
-		"version": "7.4"
+		"distName": "classic-theme",
+		"rubySass": false,
+		"sassOptions": {
+			"dartSass": true
+		},
+		"version": "7.1"
 	},
 	"devDependencies": {
 		"compass-mixins": "~0.12.12",
