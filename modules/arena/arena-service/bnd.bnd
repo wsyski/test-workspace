@@ -1,6 +1,6 @@
 Bundle-Name: Arena Liferay Modules Arena Service
 Bundle-SymbolicName: com.axiell.arena.liferay.modules.arena.service
-Bundle-Version: 5.7.0
+Bundle-Version: 1.0.0
 Liferay-Require-SchemaVersion: 5.6.0
 Liferay-Service: true
 -dsannotations-options: inherit

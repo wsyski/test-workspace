@@ -1,8 +1,8 @@
 (function(exports) {
     "use strict";
-    var PROJECT_VERSION = "5.7.0";
+    var PROJECT_VERSION = "1.0.0";
     var LIB_ANALYTICS_MODULE = "@react-provider$arena/lib-analytics@" + PROJECT_VERSION;
-    var I18NEXT_MODULE = "react-provider$i18next@21.6.10";
+    var I18NEXT_MODULE = "react-provider$i18next@21.6.16";
     var I18NEXT_CHAINED_BACKEND_MODULE =
       "react-provider$i18next-chained-backend@3.0.2";
     var I18NEXT_LOCALSTORAGE_BACKEND_MODULE =

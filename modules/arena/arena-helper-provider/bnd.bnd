@@ -1,6 +1,6 @@
 Bundle-Name: Arena Helper Provider
 Bundle-SymbolicName: com.axiell.arena.liferay.modules.arena.helper-provider
-Bundle-Version: 5.7.0
+Bundle-Version: 1.0.0
 Liferay-JS-Resources-Top-Head:\
    	/index.js
 Web-ContextPath: /helper-provider

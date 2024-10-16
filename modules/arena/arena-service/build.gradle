@@ -21,6 +21,7 @@ dependencies {
     compileInclude group: "com.auth0", name: "java-jwt", version: "${rootProject.getProperty('com.auth0.java-jwt.version')}", transitive: false
 
     testImplementation project(":modules:arena:arena-api")
+    testImplementation group: "org.junit.jupiter", name: "junit-jupiter-api", version: "${rootProject.getProperty('junit-jupiter-api.version')}"
     testImplementation group: "org.apache.cxf", name: "cxf-rt-transports-http", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
     testImplementation group: "org.apache.cxf", name: "cxf-core", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
     testImplementation group: "org.apache.cxf", name: "cxf-rt-frontend-jaxrs", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"

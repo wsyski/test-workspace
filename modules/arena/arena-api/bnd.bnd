@@ -1,6 +1,6 @@
 Bundle-Name: Arena Liferay Modules Arena API
 Bundle-SymbolicName: com.axiell.arena.liferay.modules.arena.api
-Bundle-Version: 5.7.0
+Bundle-Version: 1.0.0
 Export-Package: \
     com.axiell.arena.liferay.modules.arena.configuration,\
     com.axiell.arena.liferay.modules.arena.constants,\
