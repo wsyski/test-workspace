@@ -3,10 +3,15 @@ package com.axiell.arena.liferay.modules.overrides.k10_search_portlet.portlet.ac
 import com.axiell.arena.liferay.modules.overrides.k10_search_portlet.constants.K10SearchPortletKeys;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.model.Portlet;
 import com.liferay.portal.kernel.portlet.ConfigurationAction;
 import com.liferay.portal.kernel.portlet.DefaultConfigurationAction;
+import com.liferay.portal.kernel.portlet.PortletConfigFactoryUtil;
+import com.liferay.portal.kernel.service.PortletLocalServiceUtil;
 import com.liferay.portal.kernel.settings.ParameterMapSettings;
+import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.WebKeys;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -43,14 +48,13 @@ public class K10SearchPortletConfigurationAction extends DefaultConfigurationAct
         setPreference(actionRequest, K10SearchPortletKeys.KEY_COLLECTION, collections);
         super.processAction(portletConfig,actionRequest,actionResponse);
     }
-
     @Override
-    @Reference(
-            target = "(osgi.web.symbolicname=" + K10SearchPortletKeys.K10_SEARCH_PORTLET_BUNDLE_NAME + ")",
-            unbind = "-"
-    )
-    public void setServletContext(ServletContext servletContext) {
-        super.setServletContext(servletContext);
+    protected PortletConfig getSelPortletConfig(final HttpServletRequest httpServletRequest) {
+        ThemeDisplay themeDisplay = (ThemeDisplay)httpServletRequest.getAttribute(WebKeys.THEME_DISPLAY);
+        String portletResource = ParamUtil.getString(httpServletRequest, "portletResource");
+        Portlet selPortlet = PortletLocalServiceUtil.getPortletById(themeDisplay.getCompanyId(), portletResource);
+        // ServletContext servletContext = (ServletContext)httpServletRequest.getAttribute(WebKeys.CTX);
+        return PortletConfigFactoryUtil.create(selPortlet, servletContext);
     }
 
     @Modified
@@ -58,4 +62,10 @@ public class K10SearchPortletConfigurationAction extends DefaultConfigurationAct
     protected void activate(final BundleContext bundleContext, final Map<String, Object> properties) {
         _log.info(" activate: " + K10SearchPortletConfigurationAction.class.getName());
     }
+
+    @Reference(
+            target = "(osgi.web.symbolicname=" + K10SearchPortletKeys.K10_SEARCH_PORTLET_BUNDLE_NAME + ")",
+            unbind = "-"
+    )
+    private ServletContext servletContext;
 }

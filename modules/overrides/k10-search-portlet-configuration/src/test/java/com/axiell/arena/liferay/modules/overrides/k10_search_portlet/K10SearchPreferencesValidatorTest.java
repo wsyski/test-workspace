@@ -2,17 +2,16 @@ package com.axiell.arena.liferay.modules.overrides.k10_search_portlet;
 
 import com.axiell.arena.liferay.modules.overrides.k10_search_portlet.constants.K10SearchPortletKeys;
 import com.axiell.arena.liferay.modules.overrides.k10_search_portlet.portlet.action.K10SearchPreferencesValidator;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import com.liferay.petra.string.StringPool;
+import org.junit.jupiter.api.Test;
 import org.mockito.BDDMockito;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
-import com.liferay.petra.string.StringPool;
 
 import javax.portlet.PortletPreferences;
 import javax.portlet.ValidatorException;
 
-@RunWith(MockitoJUnitRunner.class)
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class K10SearchPreferencesValidatorTest {
     private final K10SearchPreferencesValidator underTest = new K10SearchPreferencesValidator();
 
@@ -25,16 +24,24 @@ public class K10SearchPreferencesValidatorTest {
         underTest.validate(portletPreferences);
     }
 
-    @Test(expected = ValidatorException.class)
-    public void invalidPageSizeValue() throws ValidatorException {
+    @Test
+    public void invalidPageSizeValue() {
         BDDMockito.given(portletPreferences.getValue(K10SearchPortletKeys.KEY_PAGE_SIZE, StringPool.BLANK)).willReturn("0");
-        underTest.validate(portletPreferences);
+        ValidatorException thrown = assertThrows(
+                ValidatorException.class,
+                () -> underTest.validate(portletPreferences),
+                "Expected ValidatorException to be thrown"
+        );
     }
 
-    @Test(expected = ValidatorException.class)
+    @Test
     public void nonNumericPageSizeValue() throws ValidatorException {
         BDDMockito.given(portletPreferences.getValue(K10SearchPortletKeys.KEY_PAGE_SIZE, StringPool.BLANK)).willReturn("string");
-        underTest.validate(portletPreferences);
+        ValidatorException thrown = assertThrows(
+                ValidatorException.class,
+                () -> underTest.validate(portletPreferences),
+                "Expected ValidatorException to be thrown"
+        );
     }
 
     @Test
@@ -44,10 +51,14 @@ public class K10SearchPreferencesValidatorTest {
         underTest.validate(portletPreferences);
     }
 
-    @Test(expected = ValidatorException.class)
-    public void invalidEventDetailPageValue() throws ValidatorException {
+    @Test
+    public void invalidEventDetailPageValue() {
         BDDMockito.given(portletPreferences.getValue(K10SearchPortletKeys.KEY_PAGE_SIZE, StringPool.BLANK)).willReturn("10");
         BDDMockito.given(portletPreferences.getValue(K10SearchPortletKeys.KEY_K10_SEARCH_PAGE, StringPool.BLANK)).willReturn("/event-detail");
-        underTest.validate(portletPreferences);
+        ValidatorException thrown = assertThrows(
+                ValidatorException.class,
+                () -> underTest.validate(portletPreferences),
+                "Expected ValidatorException to be thrown"
+        );
     }
 }

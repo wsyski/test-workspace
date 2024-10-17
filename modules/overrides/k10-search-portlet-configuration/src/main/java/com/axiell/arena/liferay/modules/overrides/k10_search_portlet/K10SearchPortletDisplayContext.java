@@ -2,8 +2,6 @@ package com.axiell.arena.liferay.modules.overrides.k10_search_portlet;
 
 import com.axiell.arena.liferay.modules.overrides.k10_search_portlet.constants.K10SearchPortletKeys;
 import com.liferay.petra.string.StringPool;
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.settings.ParameterMapSettings;
 import com.liferay.portal.kernel.util.Validator;
 
@@ -13,7 +11,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class K10SearchPortletDisplayContext {
-    private static final Log _log = LogFactoryUtil.getLog(K10SearchPortletDisplayContext.class);
     private static final String INPUT_NAME_PREFIX = "_com_liferay_portlet_configuration_web_portlet_PortletConfigurationPortlet_";
     private static final String ATTR_CHECKED = "checked";
 

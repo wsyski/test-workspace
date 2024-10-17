@@ -2,7 +2,7 @@ package com.axiell.arena.liferay.modules.overrides.k10_search_portlet.portlet.ac
 
 import com.axiell.arena.liferay.modules.overrides.k10_search_portlet.constants.K10SearchPortletKeys;
 import com.liferay.petra.string.StringPool;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 
