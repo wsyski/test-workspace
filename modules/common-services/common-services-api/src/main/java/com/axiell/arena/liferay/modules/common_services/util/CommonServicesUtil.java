@@ -5,7 +5,7 @@ import com.axiell.arena.liferay.modules.common_services.configuration.CommonServ
 import com.axiell.arena.liferay.modules.common_services.configuration.CommonServicesSystemConfiguration;
 import com.axiell.arena.liferay.modules.common_services.constants.CommonServicesConstants;
 import com.liferay.portal.kernel.module.configuration.ConfigurationException;
-import com.liferay.portal.kernel.module.configuration.ConfigurationProviderUtil;
+import com.liferay.portal.configuration.module.configuration.ConfigurationProviderUtil;
 import com.liferay.portal.kernel.settings.GroupServiceSettingsLocator;
 
 public class CommonServicesUtil {
