@@ -3,13 +3,11 @@ package com.axiell.arena.liferay.modules.linked_assets.linked_asset_list.web.por
 import com.axiell.arena.liferay.modules.arena.constants.ArenaPortletKeys;
 import com.axiell.arena.liferay.modules.linked_assets.linked_asset_list.web.configuration.LinkedAssetListPortletInstanceConfiguration;
 import com.axiell.arena.liferay.modules.linked_assets.linked_asset_list.web.constants.LinkedAssetListPortletKeys;
-import com.liferay.asset.kernel.model.AssetCategory;
 import com.liferay.asset.kernel.model.AssetEntry;
 import com.liferay.asset.kernel.service.AssetEntryLocalServiceUtil;
-import com.liferay.asset.kernel.service.AssetVocabularyServiceUtil;
 import com.liferay.asset.kernel.service.persistence.AssetEntryQuery;
 import com.liferay.journal.model.JournalArticle;
-import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.configuration.module.configuration.ConfigurationProviderUtil;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.module.configuration.ConfigurationException;
@@ -18,12 +16,15 @@ import com.liferay.portal.kernel.portlet.LiferayPortletResponse;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.search.Field;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
-import com.liferay.portal.kernel.util.*;
+import com.liferay.portal.kernel.util.WebKeys;
 import org.osgi.service.component.annotations.Component;
 
 import javax.portlet.*;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toSet;
@@ -74,7 +75,7 @@ public class LinkedAssetListPortlet extends MVCPortlet {
     private LinkedAssetListPortletInstanceConfiguration getPortletInstanceConfiguration(RenderRequest renderRequest) throws PortletException {
         ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
         try {
-            return themeDisplay.getPortletDisplay().getPortletInstanceConfiguration(LinkedAssetListPortletInstanceConfiguration.class);
+            return ConfigurationProviderUtil.getPortletInstanceConfiguration(LinkedAssetListPortletInstanceConfiguration.class, themeDisplay);
         } catch (ConfigurationException ex) {
             _log.error(ex.getMessage(), ex);
             throw new PortletException(ex);

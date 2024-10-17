@@ -6,7 +6,7 @@ import com.axiell.arena.liferay.modules.linked_assets.linked_asset_list.web.cons
 import com.liferay.asset.kernel.model.AssetEntry;
 import com.liferay.asset.kernel.model.AssetVocabulary;
 import com.liferay.asset.kernel.service.AssetVocabularyServiceUtil;
-import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.configuration.module.configuration.ConfigurationProviderUtil;
 import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
@@ -31,7 +31,7 @@ public class LinkedAssetListDisplayContext {
         this._portletRequest = portletRequest;
         themeDisplay = (ThemeDisplay) _portletRequest.getAttribute(WebKeys.THEME_DISPLAY);
         PortletDisplay portletDisplay = themeDisplay.getPortletDisplay();
-        _linkedAssetListPortletInstanceConfiguration = portletDisplay.getPortletInstanceConfiguration(LinkedAssetListPortletInstanceConfiguration.class);
+        _linkedAssetListPortletInstanceConfiguration = ConfigurationProviderUtil.getPortletInstanceConfiguration(LinkedAssetListPortletInstanceConfiguration.class, themeDisplay);
     }
 
     public Long getDisplayStyleGroupId() {
@@ -66,13 +66,7 @@ public class LinkedAssetListDisplayContext {
     }
 
     private List<AssetVocabulary> getAssetVocabularies() {
-        long[] groupIds;
-        try {
-            groupIds = PortalUtil.getCurrentAndAncestorSiteGroupIds(themeDisplay.getScopeGroupId());
-        } catch (PortalException pe) {
-            groupIds = new long[]{};
-            _log.error(pe.getMessage());
-        }
+        long[] groupIds = PortalUtil.getCurrentAndAncestorSiteGroupIds(themeDisplay.getScopeGroupId());
         return AssetVocabularyServiceUtil.getGroupVocabularies(groupIds);
     }
 
