@@ -1,12 +1,10 @@
 dependencies {
     compileOnly project(":modules:arena:arena-api")
     compileOnly group: "com.liferay.portal", name: "release.portal.api"
+    compileOnly group: "com.liferay", name: "org.springframework.tx", version: "5.3.33.LIFERAY-PATCHED-1"
+    compileOnly group: "org.slf4j", name: "slf4j-api", version: "${rootProject.getProperty('org.slf4j.slf4j-api.version')}"
     compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
-    compileInclude group: "org.aspectj", name: "aspectjweaver", version: "${rootProject.getProperty('org.aspectj.aspectjweaver.version')}"
     compileInclude group: "org.apache.commons", name: "commons-pool2", version: "${rootProject.getProperty('org.apache.commons.commons-pool2.version')}"
-    compileInclude group: "org.reactivestreams", name: "reactive-streams", version: "${rootProject.getProperty('org.reactivestreams.reactive-streams.version')}"
-    compileInclude group: "org.yaml", name: "snakeyaml", version: "${rootProject.getProperty('org.yaml.snakeyaml.version')}"
-    compileInclude group: "org.springframework", name: "spring-instrument",  version: "${rootProject.getProperty('org.springframework.spring-core.version')}"
     compileInclude group: "com.axiell.authinfo", name: "authinfo", version: "${rootProject.getProperty('com.axiell.authinfo.authinfo.version')}"
 }
 

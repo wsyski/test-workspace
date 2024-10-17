@@ -4,27 +4,27 @@ Bundle-Version: 1.0.0
 
 Import-Package: \
     \
-	!bsh.*,\
-    !com.bea.*,\
+    !bsh.*,\
     !com.jamonapi.*,\
-	!com.sun.net.httpserver,\
-    !groovy.*,\
     !io.reactivex.*,\
+    !io.smallrye.*,\
     !javax.ejb.*,\
-	!javax.enterprise.*,\
-	!javax.money.*,\
+    !javax.enterprise.concurrent,\
+    !javax.money.*,\
     !joptsimple.*,\
     !kotlin.*,\
     !kotlinx.*,\
-    !net.sf.cglib.*,\
-    !org.codehaus.groovy.*,\
-    !org.hibernate.*,\
-    !org.joda.*,\
-    !org.slf4j.impl,\
-    !reactor.blockhound.*,\
-    !reactor.core.*,\
+    !net.sf.cglib.proxy.*,\
+    !org.apache.tools.*,\
+    !org.aspectj.*,\
+    !org.hibernate.validator.*,\
+    !org.reactivestreams.*,\
+    !org.slf4j.impl.*,\
+    !org.springframework.instrument.*,\
+    !org.yaml.snakeyaml.*,\
+    !reactor.*,\
     !rx.*,\
-	\
+    \
     *
 
 -check: EXPORTS
