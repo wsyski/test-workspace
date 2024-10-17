@@ -1,0 +1,8 @@
+apiDir: "../common-services-api/src/main/java"
+apiPackagePath: "com.axiell.arena.liferay.modules.common_services"
+application:
+  baseURI: "/common-services"
+  className: "CommonServicesApplication"
+  name: "CommonServices"
+author: "Wojciech Syski"
+clientDir: "../common-services-client/src/main/java"

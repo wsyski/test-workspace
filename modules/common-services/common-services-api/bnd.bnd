@@ -1,0 +1,14 @@
+Bundle-Name: Arena Common Services API
+Bundle-SymbolicName: com.axiell.arena.liferay.modules.common_services.api
+Bundle-Version: 1.0.0
+Export-Package: \
+    com.axiell.arena.liferay.modules.common_services.configuration,\
+    com.axiell.arena.liferay.modules.common_services.constants,\
+    com.axiell.arena.liferay.modules.common_services.util,\
+    com.axiell.arena.liferay.modules.common_services.dto.v1_0,\
+    com.axiell.arena.liferay.modules.common_services.resource.v1_0
+
+-check: EXPORTS
+
+-include: ../../common.bnd
+

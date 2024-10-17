@@ -1,0 +1,35 @@
+dependencies {
+	compileOnly project(":modules:arena:arena-api")
+	implementation group: 'javax.annotation', name: 'javax.annotation-api', version: "${rootProject.getProperty('javax.annotation-api.version')}"
+	implementation group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: "${rootProject.getProperty('jaxb.version')}"
+}
+
+compileJava {
+	dependsOn(":modules:common-services:common-services-impl:buildREST")
+}
+
+task deployConfigs(type: Copy)
+
+deploy {
+	finalizedBy deployConfigs
+}
+
+deployConfigs {
+	ext {
+		autoClean = false
+	}
+
+	from "configs"
+	into file("${rootProject.getProperty('liferay.workspace.home.dir')}/osgi/configs")
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			artifactId 'com.axiell.arena.liferay.modules.common_services.api'
+			groupId "${mavenGroup}"
+			version "${mavenVersion}"
+			from components.java
+		}
+	}
+}

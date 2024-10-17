@@ -1,0 +1,84 @@
+info:
+  description: "Common Services REST API"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+  title: "Common Services"
+  version: v1.0
+openapi: 3.0.3
+components:
+  schemas:
+    GroupConfig:
+      description: Common Services Config.
+      properties:
+        calendarApiEndpoint:
+          description: Calendar Api endpoint.
+          type: string
+        calendarCustomerId:
+          description: Calendar customer id.
+          type: string
+        calendarLocationVocabularyId:
+          description: Calendar Location vocabulary id.
+          format: int64
+          type: integer
+        calendarTargetAudienceVocabularyId:
+          description: Calendar Target Audience vocabulary id.
+          format: int64
+          type: integer
+        calendarDefaultAllowedAttendees:
+          description: Calendar default allowed attendees.
+          format: int32
+          type: integer
+        coversApiEndpoint:
+          description: Covers Api endpoint.
+          type: string
+        coversCustomerId:
+          description: Covers customer id.
+          type: string
+        federatedSearchApiEndpoint:
+          description: Federated Search Api endpoint.
+          type: string
+        federatedSearchCustomerAlias:
+          description: Federated Search customer id.
+          type: string
+        federatedSearchSourceConfig:
+          description: Federated Search Source Config as JSON.
+          type: string
+        openingHoursApiEndpoint:
+          description: Opening Hours Api endpoint.
+          type: string
+        openingHoursCustomerId:
+          description: Opening Hours customer id.
+          type: string
+        transactionApiEndpoint:
+          description: Transaction Api endpoint.
+          type: string
+        transactionTenantId:
+          description: Transaction tenant id.
+          type: string
+        googleAnalyticsMeasurementId:
+          description: Google analytics measurement id.
+          type: string
+      type: object
+paths:
+  "/groups/{groupId}/config":
+    get:
+      operationId: getGroupConfig
+      tags: ["GroupConfig"]
+      description: Retrieves Common Services Group Config.
+      parameters:
+        - in: path
+          name: groupId
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: "Retrieves Common Services Group Config"
+          content:
+            application/json:
+              schema:
+                  $ref: "#/components/schemas/GroupConfig"
+            application/xml:
+              schema:
+                  $ref: "#/components/schemas/GroupConfig"

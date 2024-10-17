@@ -1,0 +1,9 @@
+Bundle-Name: Arena Common Services Implementation
+Bundle-SymbolicName: com.axiell.arena.liferay.modules.common_services.impl
+Bundle-Version: 1.0.0
+
+Import-Package: \
+    \
+    *
+
+-include: ../../common.bnd

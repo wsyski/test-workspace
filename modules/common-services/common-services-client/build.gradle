@@ -1,0 +1,16 @@
+dependencies {
+	compileOnly project(":modules:common-services:common-services-api")
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	implementation group: 'javax.annotation', name: 'javax.annotation-api', version: "${rootProject.getProperty('javax.annotation-api.version')}"
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			artifactId 'com.axiell.arena.liferay.modules.common_services.client'
+			groupId "${mavenGroup}"
+			version "${mavenVersion}"
+			from components.java
+		}
+	}
+}
