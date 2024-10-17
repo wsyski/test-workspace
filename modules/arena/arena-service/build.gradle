@@ -12,10 +12,10 @@ dependencies {
     compileOnly group: "org.apache.cxf", name: "cxf-rt-frontend-jaxrs", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
     compileOnly group: "org.apache.cxf", name: "cxf-rt-rs-client", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
     compileOnly group: "org.apache.cxf", name: "cxf-rt-rs-extension-providers", version: "${rootProject.getProperty('org.apache.cxf.cxf-core.version')}"
+    compileOnly group: "com.fasterxml.jackson.jaxrs", name: "jackson-jaxrs-json-provider", version: "${rootProject.getProperty('com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider.version')}"
 
-    compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
-    compileInclude group: "com.fasterxml.jackson.jaxrs", name: "jackson-jaxrs-json-provider", version: "${rootProject.getProperty('com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider.version')}"
     compileInclude group: "com.fasterxml.jackson.module", name: "jackson-module-parameter-names", version: "${rootProject.getProperty('com.fasterxml.jackson.module.jackson-module-parameter-names.version')}"
+    compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
     compileInclude group: "javax.activation", name: "javax.activation-api", version: "${rootProject.getProperty('javax.activation.javax.activation-api.version')}"
     compileInclude group: 'org.modelmapper', name: 'modelmapper', version: "${rootProject.getProperty('org.modelmapper.modelmapper.version')}"
     compileInclude group: "com.axiell.authinfo", name: "authinfo", version: "${rootProject.getProperty('com.axiell.authinfo.authinfo.version')}", transitive: false
