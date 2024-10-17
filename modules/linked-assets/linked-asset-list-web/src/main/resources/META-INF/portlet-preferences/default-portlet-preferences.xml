@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<portlet-preferences>
+	<preference>
+		<name>vocabularyId</name>
+		<value>0</value>
+	</preference>
+	<preference>
+		<name>displayStyle</name>
+		<value>ddmTemplate_ASSET-PUBLISHER-RICH-SUMMARY-FTL</value>
+	</preference>
+	<preference>
+		<name>socialBookmarksTypes</name>
+		<value>facebook</value>
+		<value>twitter</value>
+		<value>linkedin</value>
+	</preference>
+	<preference>
+		<name>socialBookmarksDisplayStyle</name>
+		<value>inline</value>
+	</preference>
+</portlet-preferences>

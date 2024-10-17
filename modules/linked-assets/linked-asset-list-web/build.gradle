@@ -1,0 +1,27 @@
+dependencies {
+	compileOnly project(":modules:arena:arena-api")
+	compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
+}
+
+jar {
+	dependsOn buildCSS
+
+	exclude('**/*.scss')
+
+	filesMatching("**/.sass-cache/") {
+		it.path = it.path.replace(".sass-cache/", "")
+	}
+
+	includeEmptyDirs = false
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			artifactId 'com.axiell.arena.liferay.modules.linked_assets.linked_asset_list.web'
+			groupId "${mavenGroup}"
+			version "${mavenVersion}"
+			from components.java
+		}
+	}
+}
