@@ -1,0 +1,31 @@
+dependencies {
+	compileOnly project(":modules:arena:arena-api")
+	compileOnly project(":modules:common-services:common-services-api")
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	compileOnly group: "javax.servlet", name: "javax.servlet-api", version: "${rootProject.getProperty('javax.servlet.javax.servlet-api.version')}"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations", version: "${rootProject.getProperty('org.osgi.service.component.annotations.version')}"
+	compileOnly group: "javax.portlet", name: "portlet-api", version: "${rootProject.getProperty('javax.portlet.portlet-api.version')}"
+	compileOnly group: "com.google.guava", name: "guava", version: "${rootProject.getProperty('com.google.guava.guava.version')}"
+	compileOnly group: 'org.apache.httpcomponents', name: 'httpclient', version: "${rootProject.getProperty('org.apache.httpcomponents.httpclient.version')}"
+	compileOnly group: 'com.liferay', name: 'com.liferay.journal.web', version: "${rootProject.getProperty('com.liferay.journal.web.version')}"
+	compileOnly group: "org.springframework", name: "spring-web", version:  "${rootProject.getProperty('org.springframework.spring-web.version')}"
+
+	compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
+
+	testImplementation group: "org.junit.jupiter", name: "junit-jupiter-api", version: "${rootProject.getProperty('junit-jupiter-api.version')}"
+	testImplementation group: "com.google.guava", name: "guava", version: "${rootProject.getProperty('com.google.guava.guava.version')}"
+	testImplementation group: 'org.hamcrest', name: 'hamcrest', version: "${rootProject.getProperty('org.hamcrest.hamcrest.version')}"
+	testImplementation group: 'org.mockito', name: 'mockito-core', version: "${rootProject.getProperty('org.mockito.mockito-core.version')}"
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			artifactId 'com.axiell.arena.liferay.modules.template_contexts'
+			groupId "${mavenGroup}"
+			version "${mavenVersion}"
+			from components.java
+		}
+	}
+}
+

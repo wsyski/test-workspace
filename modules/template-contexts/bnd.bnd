@@ -1,0 +1,19 @@
+Bundle-Name: Arena Liferay Modules Template Contexts
+Bundle-SymbolicName: com.axiell.arena.liferay.modules.template_contexts
+Bundle-Version: 1.0.0
+
+Import-Package: \
+    !lombok.*,\
+    !org.apache.avalon.*,\
+    !org.apache.log.*,\
+    !org.mozilla.*,\
+    !org.python.*,\
+    !org.relaxng.*,\
+    !com.liferay.asset.publisher.web.internal.util.*,\
+    !com.liferay.journal.web.internal.asset.model.*,\
+    \
+    *
+
+-include: ../common.bnd
+
+-fixupmessages "Classes found in the wrong directory"; restrict:=error; is:=warning
