@@ -1,0 +1,31 @@
+{
+  "btnBack": {
+    "label": "Hakutuloksesi",
+    "title": "Hakutuloksesi"
+  },
+  "lnkRecord": {
+    "title": "Näytä tietueen tiedot"
+  },
+  "lnkSearchResult": {
+    "label": "Näytä K10+-tulokset",
+    "title": "Näytä K10+-tulokset"
+  },
+  "record": {
+    "abstract": "Tiivistelmä",
+    "author": "Tekijä",
+    "author2": "Tekijät",
+    "collection": "Kokoelma",
+    "format": "Aineistolaji",
+    "illustrated": "Kuvitettu",
+    "issn": "ISSN",
+    "language": "Kieli",
+    "publishDate": "Vuosi"
+  },
+  "title": {
+    "empty": "Ei osumia luokassa K10+ hakukyselylle: {{query}}",
+    "nonempty": {
+      "BRIEF": "Luokassa K10+ on myös {{hitCount}} tulosta",
+      "FULL": "K10+-hakutulos ({{hitCount}})"
+    }
+  }
+}

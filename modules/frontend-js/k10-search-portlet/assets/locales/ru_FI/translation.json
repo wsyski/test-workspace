@@ -1,0 +1,31 @@
+{
+  "btnBack": {
+    "label": "Результат вашего поиска",
+    "title": "Результат вашего поиска"
+  },
+  "lnkRecord": {
+    "title": "Показать подробности записи"
+  },
+  "lnkSearchResult": {
+    "label": "Показать K10+ результаты",
+    "title": "Показать K10+ результаты"
+  },
+  "record": {
+    "abstract": "Резюме",
+    "author": "Автор",
+    "author2": "Авторы",
+    "collection": "Фонд",
+    "format": "Класс носителя",
+    "illustrated": "Иллюстрированный",
+    "issn": "ISSN",
+    "language": "язык",
+    "publishDate": "Год"
+  },
+  "title": {
+    "empty": "Нет совпадений в K10+ для запроса: {{query}}",
+    "nonempty": {
+      "BRIEF": "Также имеется {{hitCount}} результатов в K10+",
+      "FULL": "Результат поиска K10+ ({{hitCount}})"
+    }
+  }
+}

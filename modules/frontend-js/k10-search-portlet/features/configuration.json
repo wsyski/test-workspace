@@ -1,0 +1,56 @@
+{
+	"$schema": "https://raw.githubusercontent.com/liferay/liferay-js-toolkit/master/resources/schemas/configuration.schema.json",
+	"portletInstance": {
+		"fields": {
+			"viewMode": {
+				"type": "string",
+				"name": "viewMode.label",
+				"description": "viewMode.title",
+				"default": "FULL",
+				"options": {
+					"BRIEF": "viewMode.BRIEF.label",
+					"FULL": "viewMode.FULL.label"
+				}
+			},
+			"baseUrl": {
+				"type": "string",
+				"name": "baseUrl.label",
+				"description": "baseUrl.title",
+				"default": "https://bookit.axiell.com/k10/index/axiell"
+			},
+			"searchPage": {
+				"type": "string",
+				"name": "searchPage.label",
+				"description": "searchPage.title",
+				"default": "k10-search"
+			},
+			"searchQueryParameter": {
+				"type": "string",
+				"name": "searchQueryParameter.label",
+				"description": "searchQueryParameter.title",
+				"default": "p_r_p_arena_urn:arena_search_query"
+			},
+			"pageSize": {
+				"type": "number",
+				"name": "pageSize.label",
+				"description": "pageSize.title",
+				"default": "8"
+			},
+			"collection": {
+				"type": "string",
+				"name": "collection.label",
+				"description": "collection.title",
+				"repeatable": true,
+				"options": {
+					"medline": "collection.medline.label",
+					"NL": "collection.NL.label",
+					"JSTOR": "collection.JSTOR.label",
+					"springer": "collection.springer.label",
+					"DOAJ": "collection.DOAJ.label",
+					"elsevier": "collection.elsevier.label",
+					"CTG": "collection.CTG.label"
+				}
+			}
+		}
+	}
+}

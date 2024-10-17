@@ -1,0 +1,31 @@
+{
+  "btnBack": {
+    "label": "Ditt søkeresultat",
+    "title": "Ditt søkeresultat"
+  },
+  "lnkRecord": {
+    "title": "Vis postdetaljar"
+  },
+  "lnkSearchResult": {
+    "label": "Vis K10+ resultata",
+    "title": "Vis K10+ resultata"
+  },
+  "record": {
+    "abstract": "Samandrag",
+    "author": "Forfattar",
+    "author2": "Forfattarar",
+    "collection": "Samling",
+    "format": "Medieklasse",
+    "illustrated": "Illustrert",
+    "issn": "ISSN",
+    "language": "Språk",
+    "publishDate": "År"
+  },
+  "title": {
+    "empty": "Ingen treff i K10+ for søk: {{query}}",
+    "nonempty": {
+      "BRIEF": "Det er òg {{hitCount}} resultat i K10+",
+      "FULL": "K10+ søkeresultat ({{hitCount}})"
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "responseHeader": {
+    "zkConnected": true,
+    "status": 0,
+    "QTime": 229,
+    "params": {
+      "q": "google",
+      "fl": "id,title,abstract,url,format,language,publishDate,author2",
+      "start": "0",
+      "fq": [
+        "(collection:(JSTOR OR springer OR elsevier OR DOAJ OR OLC)) OR (collection_details:(ZDB-1-ANR OR ZDB-1-DJB OR ZDB-1-CUP OR ZDB-1-CEE OR ZDB-1-BEP OR ZDB-1-DHW OR ZDB-1-RWF OR ZDB-1-NEL ZDB-1-TEST OR ZDB-1-ELC OR ZDB-1-HBE OR ZDB-1-SDJ OR ZDB-1-EFD OR ZDB-1-AFU OR ZDB-1-GIS OR ZDB-1-IMF OR ZDB-1-KLU OR ZDB-1-OJD OR ZDB-1-PJOA OR ZDB-1-SAG OR ZDB-1-SOT OR ZDB-1-PEO OR ZDB-1-SOJ OR ZDB-1-TFB OR ZDB-1-TFO OR ZDB-1-EHA OR ZDB-1-TCE OR ZDB-1-EIOP OR ZDB-1-DGR OR ZDB-WIS OR ZDB-1-WBA OR ZDB-1-WBI OR ZDB-1-CUPSS OR ZDB-1-OJH OR ZDB-1-SAGH OR ZDB-1-CSA))",
+        "collection:(\"medline\" OR \"NL\" OR \"JSTOR\" OR \"springer\" OR \"DOAJ\" OR \"elsevier\" OR \"CTG\")"
+      ],
+      "rows": "5"
+    }
+  },
+  "response": {
+    "numFound": 17227,
+    "start": 0,
+    "maxScore": 15.5666275,
+    "docs": [
+      {
+        "publishDate": [
+          "2013"
+        ],
+        "language": [
+          "Spanish",
+          "Portuguese"
+        ],
+        "id": "DOAJ01959450X",
+        "format": [
+          "electronic Article"
+        ],
+        "title": [
+          "Comunicación y valorización del patrimonio cultural italiano por Google"
+        ],
+        "abstract": [
+          "Conducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture"
+        ],
+        "url": [
+          "https://doaj.org/article/61419d9baafc47b79e157aa4966a4c75",
+          "http://www.palabraclave.fahce.unlp.edu.ar/article/view/2197",
+          "https://doaj.org/toc/1853-9912"
+        ]
+      },
+      {
+        "publishDate": [
+          "2014"
+        ],
+        "language": [
+          "English"
+        ],
+        "id": "DOAJ032007825",
+        "format": [
+          "electronic Article"
+        ],
+        "title": [
+          "Google Patents: The global patent search engine"
+        ],
+        "abstract": [
+          "Google Patents (www.google.com/patents) includes over 8 million full-text patents. Google Patents works in the same way as the Google search engine. Google Patents is the global patent search engine that lets users search through patents from the USPTO (United States Patent and Trademark Office), EPO (European Patent Office), etc.  This study begins with an overview of how to use Google Patent and identifies advanced search techniques not well-documented by Google Patent. It makes several suggestions for improving Google Patents. This study also compares the citation counts provided by Google Patents for journals in the field of library and information science (LIS).  Finally, it concludes that Google Patents provides a free alternative or complement to other patent databases. It also addressed the advantages of Google Patents, for example, easy-use search interface and fast search engine; convenient access to patent images in PDF format; and fast downloads of PDF patent documents."
+        ],
+        "url": [
+          "https://doaj.org/article/d5194ed1579443468d2e9de96d8499b2",
+          "http://www.webology.org/2014/v11n1/a122.pdf",
+          "https://doaj.org/toc/1735-188X"
+        ],
+        "author2": [
+          "Mohammadhiwa Abdekhoda"
+        ]
+      },
+      {
+        "publishDate": [
+          "2005"
+        ],
+        "language": [
+          "English"
+        ],
+        "id": "SPR055978428",
+        "format": [
+          "electronic Article"
+        ],
+        "title": [
+          "The excitement of Google Scholar | , the worry of Google Print"
+        ],
+        "abstract": [
+          "In late 2004 Google announced two major projects, the unveiling of Google Scholar and a major expansion of the Google Print digitization program. Both projects have generated discussion within the library and research communities, and Google Print has received significant media attention. This commentary describes exciting educational possibilities stimulated by Google Scholar, and argues for caution regarding the Google Print project.",
+          "Open Access"
+        ],
+        "url": [
+          "http://dx.doi.org/10.1186/1742-5581-2-2"
+        ]
+      },
+      {
+        "publishDate": [
+          "2010"
+        ],
+        "language": [
+          "Catalan",
+          "English",
+          "Spanish",
+          "Italian",
+          "Portuguese"
+        ],
+        "id": "DOAJ037845705",
+        "format": [
+          "electronic Article"
+        ],
+        "title": [
+          "Anàlisi legal del projecte Google books des de la perspectiva dels drets de propietat intel·lectual"
+        ],
+        "abstract": [
+          "Objectiu. Descriure el projecte Google books i analitzar-lo des de la perspectiva legal, tenint en compte els tres agents principals implicats: Google, els titulars de drets de propietat intel·lectual i les biblioteques. -- Metodologia. Anàlisi legal comparada (legislacions dels Estats Units, de França i d'Espanya) de les implicacions del projecte Google books sobre els drets de propietat intel·lectual i el dret de la competència. Estudi de les demandes plantejades contra Google als Estats Units i a Europa, així com les possibles conseqüències de l'acord de conciliació adoptat per Google i les associacions d'autors i editors als Estats Units. -- Resultats. Google books ha suposat una infracció massiva de drets de propietat intel•lectual. Per determinar si els llibres d'una biblioteca han entrat en el domini públic o no, cal determinar prèviament quina llei nacional resulta aplicable a cada llibre. La posada a disposició a Google books d'obres descatalogades i tan sols fragments de llibres que es troben a la venda no pot dur-se a terme sense l'autorització dels titulars. En el cas de les obres òrfenes, l'explotació exigeix l'adopció de certes mesures prèvies per garantir els drets dels titulars, en cas que aquests arribin a conèixer-se. L'acord de conciliació adoptat als Estats Units entre Google i les associacions d'autors i editors pot implicar una posició de monopoli per part de Google en relació amb la venda dels llibres descatalogats i les obres òrfenes.Aim. To describe the Google books project and analyse it from a legal perspective, considering the three main agents involved: Google, holders of intellectual property rights, and libraries. -- Methodology. A comparative analysis of US, French and Spanish legislation regarding the implications of the Google books project for intellectual property rights and competition law; a study of the lawsuits filed against Google in the United States and Europe, and of the possible consequences of the settlement agreement adopted by Google and the authors’ and editors’ associations in the United States. -- Results. Google books is a massive infringement of intellectual property rights. To determine whether the books in a library have entered the public domain, the national law applicable to each book must first be determined. Google books has made available out-of-print works and excerpts from books that are in print, but this cannot be done without the authorization of copyright holders. In the case of orphan works, their exploitation requires certain previous measures to guarantee holder rights, if the holders of these rights ever come to be known. The settlement agreement adopted in the United States between Google and authors’ and editors’ associations may imply a position of monopoly for Google concerning out-of-print books and orphan works."
+        ],
+        "url": [
+          "http://dx.doi.org/10.1344/105.000001542",
+          "https://doaj.org/article/8f5c9a903da84216a4422d91d27193cf",
+          "http://bid.ub.edu/24/esteve1.htm",
+          "https://doaj.org/toc/1575-5886"
+        ]
+      },
+      {
+        "publishDate": [
+          "2018"
+        ],
+        "language": [
+          "English"
+        ],
+        "id": "ELV036147648",
+        "format": [
+          "electronic Article"
+        ],
+        "title": [
+          "Applications and impacts of Google Earth: A decadal review (2006–2016)"
+        ],
+        "abstract": [
+          "Since Google Earth was first released in 2005, it has attracted hundreds of millions of users worldwide and made a profound impact on both academia and industry. It can be said that Google Earth epitomized the first-generation of Digital Earth prototypes. The functionalities and merits that have sustained Google Earth’s lasting influence are worth a retrospective review. In this paper, we take the liberty to conduct a bibliometric study of the applications of Google Earth during 2006–2016. We aim first to quantify the multifaceted impacts, and then to develop a structured understanding of the influence and contribution associated with Google Earth. To accomplish these objectives, we analyzed a total of 2115 Scopus publication records using scientometric methods and then proceed to discussion with a selected set of applications. The findings and conclusions can be summarized as follows: (1) the impact of Google Earth has been profound and persistent over the past decade. Google Earth was mentioned in an average of 229 publications per year since 2009. (2) Broadly, the impact of Google Earth has touched upon most scientific disciplines. Specifically, during 2006–2016, Google Earth has been mentioned in 2115 publications covering all of Scopus’s 26 subject areas; (3) the influence of Google Earth has largely concentrated in GIScience, remote sensing and geosciences. The extended influence of Google Earth has reached a wider range of audiences with a concentration in fields such as human geography, geoscience education and archaeology."
+        ],
+        "url": [
+          "https://doi.org/10.1016/j.isprsjprs.2018.08.019"
+        ],
+        "author2": [
+          "Gong, Jianhua",
+          "Li, Wenhang"
+        ]
+      }
+    ]
+  }
+}

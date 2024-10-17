@@ -1,0 +1,18 @@
+dependencies {
+	implementation group: "commons-lang", name: "commons-lang"
+
+	testImplementation group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
+	testImplementation group: "org.mockito", name: "mockito-core", version: "${rootProject.getProperty('org.mockito.mockito-core.version')}"
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			artifactId 'com.axiell.arena.liferay.modules.overrides.k10_search_portlet.configuration'
+			groupId "${mavenGroup}"
+			version "${mavenVersion}"
+			from components.java
+		}
+	}
+}
+

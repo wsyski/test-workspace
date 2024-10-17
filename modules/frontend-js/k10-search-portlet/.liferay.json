@@ -1,0 +1,5 @@
+{
+  "deploy": {
+    "path": "/opt/liferay/deploy"
+  }
+}

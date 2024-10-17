@@ -1,0 +1,31 @@
+{
+  "btnBack": {
+    "label": "Your search result",
+    "title": "Your search result"
+  },
+  "lnkRecord": {
+    "title": "Show record details"
+  },
+  "lnkSearchResult": {
+    "label": "Show the K10+ results",
+    "title": "Show the K10+ results"
+  },
+  "record": {
+    "abstract": "Abstract",
+    "author": "Author",
+    "author2": "Authors",
+    "collection": "Collection",
+    "format": "Media class",
+    "illustrated": "Illustrated",
+    "issn": "ISSN",
+    "language": "Language",
+    "publishDate": "Year"
+  },
+  "title": {
+    "empty": "No hits in K10+ for query: {{query}}",
+    "nonempty": {
+      "BRIEF": "There are also {{hitCount}} results in K10+",
+      "FULL": "K10+ search result ({{hitCount}})"
+    }
+  }
+}

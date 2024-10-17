@@ -1,0 +1,31 @@
+{
+  "btnBack": {
+    "label": "Výsledek vašeho hledání",
+    "title": "Výsledek vašeho hledání"
+  },
+  "lnkRecord": {
+    "title": "Zobrazit podrobnosti záznamu"
+  },
+  "lnkSearchResult": {
+    "label": "Zobrazit výsledky K10+",
+    "title": "Zobrazit výsledky K10+"
+  },
+  "record": {
+    "abstract": "Abstrakt",
+    "author": "Autor",
+    "author2": "Autoři",
+    "collection": "Sbírka",
+    "format": "Třída médií",
+    "illustrated": "Ilustrováno",
+    "issn": "ISSN",
+    "language": "Jazyk",
+    "publishDate": "Rok"
+  },
+  "title": {
+    "empty": "Žádné shody v K10+ pro dotaz: {{query}}",
+    "nonempty": {
+      "BRIEF": "V K10+ je také {{hitCount}} výsledků",
+      "FULL": "Výsledek hledání K10+ ({{hitCount}})"
+    }
+  }
+}

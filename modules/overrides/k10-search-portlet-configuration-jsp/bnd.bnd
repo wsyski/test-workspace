@@ -1,0 +1,12 @@
+Bundle-Name: Arena K10 Search Portlet Configuration JSP
+Bundle-SymbolicName: com.axiell.arena.liferay.modules.overrides.k10_search_portlet.configuration.jsp
+Bundle-Version: 1.0.0
+Import-Package: \
+    \
+    *
+Fragment-Host: k10-search-portlet;bundle-version="1.0.0"
+
+-include: ../../common.bnd
+
+
+

@@ -1,0 +1,31 @@
+{
+  "btnBack": {
+    "label": "Ihr Suchergebnis",
+    "title": "Ihr Suchergebnis"
+  },
+  "lnkRecord": {
+    "title": "Datensatzdetails anzeigen"
+  },
+  "lnkSearchResult": {
+    "label": "Siehe die K10 + Ergebnisse",
+    "title": "Siehe die K10 + Ergebnisse"
+  },
+  "record": {
+    "abstract": "Zusammenfassung",
+    "author": "Autor/in",
+    "author2": "Autor/in",
+    "collection": "Sammlung",
+    "format": "Medienklasse",
+    "illustrated": "Illustriert",
+    "issn": "ISSN",
+    "language": "Sprache",
+    "publishDate": "Jahr"
+  },
+  "title": {
+    "empty": "Keine Treffer in K10 + für Abfrage: {{query}}",
+    "nonempty": {
+      "BRIEF": "K10+ suchergebnisse ({{hitCount}})",
+      "FULL": "10+ suchergebnisse ({{hitCount}})"
+    }
+  }
+}

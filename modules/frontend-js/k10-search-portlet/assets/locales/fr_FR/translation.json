@@ -1,0 +1,31 @@
+{
+  "btnBack": {
+    "label": "Résultat de votre recherche",
+    "title": "Résultat de votre recherche"
+  },
+  "lnkRecord": {
+    "title": "Afficher les détails relatifs à l’enregistrement"
+  },
+  "lnkSearchResult": {
+    "label": "Afficher les résultats de K10+",
+    "title": "Afficher les résultats de K10+"
+  },
+  "record": {
+    "abstract": "Extrait",
+    "author": "Auteur",
+    "author2": "Auteurs",
+    "collection": "Collection",
+    "format": "Catégorie de média",
+    "illustrated": "Illustré",
+    "issn": "ISSN",
+    "language": "Langue",
+    "publishDate": "Année"
+  },
+  "title": {
+    "empty": "Aucune réponse dans K10+ pour la demande suivante : {{query}}",
+    "nonempty": {
+      "BRIEF": "{{hitCount}} résultats trouvés dans K10+",
+      "FULL": "Résultats de la recherche dans K10+ : ({{hitCount}})"
+    }
+  }
+}

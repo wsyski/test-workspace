@@ -1,0 +1,172 @@
+{
+  "responseHeader": {
+    "zkConnected": true,
+    "status": 0,
+    "QTime": 200,
+    "params": {
+      "q": "id:DOAJ01959450X",
+      "start": "0",
+      "fq": [
+        "(collection:(JSTOR OR springer OR elsevier OR DOAJ OR OLC)) OR (collection_details:(ZDB-1-ANR OR ZDB-1-DJB OR ZDB-1-CUP OR ZDB-1-CEE OR ZDB-1-BEP OR ZDB-1-DHW OR ZDB-1-RWF OR ZDB-1-NEL ZDB-1-TEST OR ZDB-1-ELC OR ZDB-1-HBE OR ZDB-1-SDJ OR ZDB-1-EFD OR ZDB-1-AFU OR ZDB-1-GIS OR ZDB-1-IMF OR ZDB-1-KLU OR ZDB-1-OJD OR ZDB-1-PJOA OR ZDB-1-SAG OR ZDB-1-SOT OR ZDB-1-PEO OR ZDB-1-SOJ OR ZDB-1-TFB OR ZDB-1-TFO OR ZDB-1-EHA OR ZDB-1-TCE OR ZDB-1-EIOP OR ZDB-1-DGR OR ZDB-WIS OR ZDB-1-WBA OR ZDB-1-WBI OR ZDB-1-CUPSS OR ZDB-1-OJH OR ZDB-1-SAGH OR ZDB-1-CSA))",
+        "collection:(\"medline\" OR \"NL\" OR \"JSTOR\" OR \"springer\" OR \"DOAJ\" OR \"elsevier\" OR \"CTG\")"
+      ],
+      "rows": "1"
+    }
+  },
+  "response": {
+    "numFound": 1,
+    "start": 0,
+    "maxScore": 15.781098,
+    "docs": [
+      {
+        "author_variant": [
+          "e b eb"
+        ],
+        "matchkey_str": "article:16662938:2013----::ouiaiyaoiaidlarmnoutrl",
+        "publishDate": [
+          "2013"
+        ],
+        "allfields": "(DE-599)DOAJ61419d9baafc47b79e157aa4966a4c75 ger GBVCP spa por Elisa Bonacini verfasserin aut Comunicación y valorización del patrimonio cultural italiano por Google Elektronische Ressource Online-Ressource Conducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture In Palabra Clave [La Plata]  (01.04.2013) (DE-601)DOAJ000056480 1666-2938 DOAJ https://doaj.org/article/61419d9baafc47b79e157aa4966a4c75 http://www.palabraclave.fahce.unlp.edu.ar/article/view/2197 https://doaj.org/toc/1853-9912 GBV_DOAJ AR 2013 01 04",
+        "spelling": "(DE-599)DOAJ61419d9baafc47b79e157aa4966a4c75 ger GBVCP spa por Elisa Bonacini verfasserin aut Comunicación y valorización del patrimonio cultural italiano por Google Elektronische Ressource Online-Ressource Conducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture In Palabra Clave [La Plata]  (01.04.2013) (DE-601)DOAJ000056480 1666-2938 DOAJ https://doaj.org/article/61419d9baafc47b79e157aa4966a4c75 http://www.palabraclave.fahce.unlp.edu.ar/article/view/2197 https://doaj.org/toc/1853-9912 GBV_DOAJ AR 2013 01 04",
+        "allfields_unstemmed": "(DE-599)DOAJ61419d9baafc47b79e157aa4966a4c75 ger GBVCP spa por Elisa Bonacini verfasserin aut Comunicación y valorización del patrimonio cultural italiano por Google Elektronische Ressource Online-Ressource Conducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture In Palabra Clave [La Plata]  (01.04.2013) (DE-601)DOAJ000056480 1666-2938 DOAJ https://doaj.org/article/61419d9baafc47b79e157aa4966a4c75 http://www.palabraclave.fahce.unlp.edu.ar/article/view/2197 https://doaj.org/toc/1853-9912 GBV_DOAJ AR 2013 01 04",
+        "allfieldsGer": "(DE-599)DOAJ61419d9baafc47b79e157aa4966a4c75 ger GBVCP spa por Elisa Bonacini verfasserin aut Comunicación y valorización del patrimonio cultural italiano por Google Elektronische Ressource Online-Ressource Conducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture In Palabra Clave [La Plata]  (01.04.2013) (DE-601)DOAJ000056480 1666-2938 DOAJ https://doaj.org/article/61419d9baafc47b79e157aa4966a4c75 http://www.palabraclave.fahce.unlp.edu.ar/article/view/2197 https://doaj.org/toc/1853-9912 GBV_DOAJ AR 2013 01 04",
+        "allfieldsSound": "(DE-599)DOAJ61419d9baafc47b79e157aa4966a4c75 ger GBVCP spa por Elisa Bonacini verfasserin aut Comunicación y valorización del patrimonio cultural italiano por Google Elektronische Ressource Online-Ressource Conducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture In Palabra Clave [La Plata]  (01.04.2013) (DE-601)DOAJ000056480 1666-2938 DOAJ https://doaj.org/article/61419d9baafc47b79e157aa4966a4c75 http://www.palabraclave.fahce.unlp.edu.ar/article/view/2197 https://doaj.org/toc/1853-9912 GBV_DOAJ AR 2013 01 04",
+        "language": [
+          "Spanish",
+          "Portuguese"
+        ],
+        "format_phy_str_mv": [
+          "Article"
+        ],
+        "source": "In Palabra Clave [La Plata] (01.04.2013)",
+        "sourceStr": "In Palabra Clave [La Plata] (01.04.2013)",
+        "institution": [
+          "findex.gbv.de"
+        ],
+        "container_title": "Palabra Clave [La Plata]",
+        "isfreeaccess_bool": "false",
+        "authorswithroles_txt_mv": [
+          "Elisa Bonacini @@aut@@"
+        ],
+        "hierarchy_top_id": [
+          "DOAJ000056480"
+        ],
+        "id": "DOAJ01959450X",
+        "language_de": [
+          "spanisch",
+          "portugiesisch"
+        ],
+        "fullrecord_marcxml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><collection xmlns=\"http://www.loc.gov/MARC21/slim\"><record><leader>02211nma a2200253 c 4500</leader><controlfield tag=\"001\">DOAJ01959450X</controlfield><controlfield tag=\"003\">DE-601</controlfield><controlfield tag=\"005\">20190329080741.0</controlfield><controlfield tag=\"007\">cr uuu---uuuuu</controlfield><controlfield tag=\"008\">171226s2013                  000 0 spa d</controlfield><datafield tag=\"035\" ind1=\" \" ind2=\" \"><subfield code=\"a\">(DE-599)DOAJ61419d9baafc47b79e157aa4966a4c75</subfield></datafield><datafield tag=\"040\" ind1=\" \" ind2=\" \"><subfield code=\"b\">ger</subfield><subfield code=\"c\">GBVCP</subfield></datafield><datafield tag=\"041\" ind1=\"0\" ind2=\" \"><subfield code=\"a\">spa</subfield><subfield code=\"a\">por</subfield></datafield><datafield tag=\"100\" ind1=\"0\" ind2=\" \"><subfield code=\"a\">Elisa Bonacini</subfield><subfield code=\"e\">verfasserin</subfield><subfield code=\"4\">aut</subfield></datafield><datafield tag=\"245\" ind1=\"1\" ind2=\"0\"><subfield code=\"a\">Comunicación y valorización del patrimonio cultural italiano por Google</subfield><subfield code=\"h\">Elektronische Ressource</subfield></datafield><datafield tag=\"300\" ind1=\" \" ind2=\" \"><subfield code=\"a\">Online-Ressource</subfield></datafield><datafield tag=\"520\" ind1=\" \" ind2=\" \"><subfield code=\"a\">Conducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture</subfield></datafield><datafield tag=\"773\" ind1=\"0\" ind2=\"8\"><subfield code=\"i\">In</subfield><subfield code=\"t\">Palabra Clave [La Plata]</subfield><subfield code=\"g\"> (01.04.2013)</subfield><subfield code=\"w\">(DE-601)DOAJ000056480</subfield><subfield code=\"x\">1666-2938</subfield></datafield><datafield tag=\"856\" ind1=\"4\" ind2=\"0\"><subfield code=\"y\">DOAJ</subfield><subfield code=\"u\">https://doaj.org/article/61419d9baafc47b79e157aa4966a4c75</subfield></datafield><datafield tag=\"856\" ind1=\"4\" ind2=\"0\"><subfield code=\"u\">http://www.palabraclave.fahce.unlp.edu.ar/article/view/2197</subfield></datafield><datafield tag=\"856\" ind1=\"4\" ind2=\"0\"><subfield code=\"u\">https://doaj.org/toc/1853-9912</subfield></datafield><datafield tag=\"912\" ind1=\" \" ind2=\" \"><subfield code=\"a\">GBV_DOAJ</subfield></datafield><datafield tag=\"951\" ind1=\" \" ind2=\" \"><subfield code=\"a\">AR</subfield></datafield><datafield tag=\"952\" ind1=\" \" ind2=\" \"><subfield code=\"j\">2013</subfield><subfield code=\"b\">01</subfield><subfield code=\"c\">04</subfield></datafield></record></collection>\n",
+        "author": "Elisa Bonacini",
+        "spellingShingle": [
+          "Elisa Bonacini",
+          "Comunicación y valorización del patrimonio cultural italiano por Google"
+        ],
+        "authorStr": "Elisa Bonacini",
+        "format": [
+          "electronic Article"
+        ],
+        "delete_txt_mv": [
+          "keep"
+        ],
+        "author_role": [
+          "aut"
+        ],
+        "collection": [
+          "DOAJ"
+        ],
+        "remote_str": "true",
+        "illustrated": "Not Illustrated",
+        "issn": [
+          "1666-2938"
+        ],
+        "topic_title": [
+          "Comunicación y valorización del patrimonio cultural italiano por Google Elektronische Ressource"
+        ],
+        "format_facet": [
+          "Elektronische Aufsätze",
+          "Aufsätze",
+          "Elektronische Ressource"
+        ],
+        "hierarchy_parent_title": [
+          "Palabra Clave [La Plata]"
+        ],
+        "hierarchy_parent_id": [
+          "DOAJ000056480"
+        ],
+        "hierarchy_top_title": [
+          "Palabra Clave [La Plata]"
+        ],
+        "isfreeaccess_txt": "false",
+        "title": [
+          "Comunicación y valorización del patrimonio cultural italiano por Google"
+        ],
+        "ctrlnum": [
+          "(DE-599)DOAJ61419d9baafc47b79e157aa4966a4c75"
+        ],
+        "title_full": [
+          "Comunicación y valorización del patrimonio cultural italiano por Google Elektronische Ressource"
+        ],
+        "fullrecord": "02211nma a2200253 c 4500001001400000003000700014005001700021007001500038008004100053035004900094040001500143041001300158100003700171245010300208300002100311520133900332773008201671856006801753856006401821856003501885912001301920951000701933952001701940#30;DOAJ01959450X#30;DE-601#30;20190329080741.0#30;cr uuu---uuuuu#30;171226s2013                  000 0 spa d#30;  #31;a(DE-599)DOAJ61419d9baafc47b79e157aa4966a4c75#30;  #31;bger#31;cGBVCP#30;0 #31;aspa#31;apor#30;0 #31;aElisa Bonacini#31;everfasserin#31;4aut#30;10#31;aComunicación y valorización del patrimonio cultural italiano por Google#31;hElektronische Ressource#30;  #31;aOnline-Ressource#30;  #31;aConducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture#30;08#31;iIn#31;tPalabra Clave [La Plata]#31;g (01.04.2013)#31;w(DE-601)DOAJ000056480#31;x1666-2938#30;40#31;yDOAJ#31;uhttps://doaj.org/article/61419d9baafc47b79e157aa4966a4c75#30;40#31;uhttp://www.palabraclave.fahce.unlp.edu.ar/article/view/2197#30;40#31;uhttps://doaj.org/toc/1853-9912#30;  #31;aGBV_DOAJ#30;  #31;aAR#30;  #31;j2013#31;b01#31;c04#30;#29;",
+        "author_sort": "Elisa Bonacini",
+        "journal": [
+          "Palabra Clave [La Plata]"
+        ],
+        "journalStr": [
+          "Palabra Clave [La Plata]"
+        ],
+        "lang_code": [
+          "spa",
+          "por"
+        ],
+        "isOA_bool": "false",
+        "recordtype": "marc",
+        "publishDateSort": "2013",
+        "author_browse": [
+          "Elisa Bonacini"
+        ],
+        "physical": [
+          "Online-Ressource"
+        ],
+        "author-letter": [
+          "Elisa Bonacini"
+        ],
+        "format_se": [
+          "Elektronische Aufsätze"
+        ],
+        "title_sort": "comunicación y valorización del patrimonio cultural italiano por google",
+        "abstract": [
+          "Conducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture"
+        ],
+        "abstractGer": [
+          "Conducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture"
+        ],
+        "abstract_unstemmed": [
+          "Conducting its majority of business in research and indexing information, for nearly a decade, Google search engine has become an economic system that influences our contemporary world, contributing greatly to the transformation of our world into a single virtual globe. In recent years, Google has begun to provide global users with applications or software that are useful for our cultural heritage. This software is highlighted here in its potential, from an economic, cultural and touristic standpoint. Here we try to describe the most important of Google’s software (such as Google Maps, Google Street View, Google Earth, Google SketchUp, Google Books and Google Art Project), with the greatest and most evident impact on cultural and touristic sectors. This essay demonstrates Google’s digitalization and promotion of Italian cultural heritage through its specific software programs (for eg. Google Street View that has led to the use of remote three-dimensional views of some of the most important monuments and archaeological sites in Italy; the use of Google SketchUp has led to the design of three-dimensional reconstruction of the historic center of L'Aquila city, devastated after the earthquake in April 2009 and never reconstructed), and through several specific partnership programs with Italian Ministry of Culture"
+        ],
+        "title_auth": [
+          "Comunicación y valorización del patrimonio cultural italiano por Google"
+        ],
+        "title_short": [
+          "Comunicación y valorización del patrimonio cultural italiano por Google"
+        ],
+        "collection_details": [
+          "GBV_DOAJ"
+        ],
+        "url": [
+          "https://doaj.org/article/61419d9baafc47b79e157aa4966a4c75",
+          "http://www.palabraclave.fahce.unlp.edu.ar/article/view/2197",
+          "https://doaj.org/toc/1853-9912"
+        ],
+        "remote_bool": "true",
+        "ppnlink": [
+          "DOAJ000056480"
+        ],
+        "isOA_txt": "false",
+        "hochschulschrift_bool": "false",
+        "up_date": "2020-01-10T00:12:17.754Z",
+        "_version_": 1655297946684489728
+      }
+    ]
+  }
+}

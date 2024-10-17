@@ -1,0 +1,31 @@
+{
+  "btnBack": {
+    "label": "Ditt sökresultat",
+    "title": "Ditt sökresultat"
+  },
+  "lnkRecord": {
+    "title": "Visa information om posten"
+  },
+  "lnkSearchResult": {
+    "label": "Visa resultat från K10+ ",
+    "title": "Visa resultat från K10+ "
+  },
+  "record": {
+    "abstract": "Sammandrag",
+    "author": "Författare",
+    "author2": "Författare",
+    "collection": "Samling",
+    "format": "Mediaklass",
+    "illustrated": "Illustrerad",
+    "issn": "ISSN",
+    "language": "Språk",
+    "publishDate": "År"
+  },
+  "title": {
+    "empty": "Inga träffar i K10+ för denna sökfråga: {{query}}",
+    "nonempty": {
+      "BRIEF": "Det finns även {{hitCount}} träffar i K10+",
+      "FULL": "K10+ sökresultat ({{hitCount}})"
+    }
+  }
+}
