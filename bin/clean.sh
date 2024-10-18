@@ -2,7 +2,7 @@
 scriptDir="$(cd "$(dirname "$0")" && pwd)"
 echo "scriptDir: ${scriptDir}"
 find ${scriptDir}/.. -name yarn.lock -exec rm {} \;
-rm -rf /tmp/nx-cache
+rm -rf /tmp/nx-cache*
 rm -rf ${scriptDir}/../node_modules_cache
 rm -rf ${scriptDir}/../modules/frontend-js/.nx
 find ${scriptDir}/.. -name .yarnrc -exec rm -rf {} \;

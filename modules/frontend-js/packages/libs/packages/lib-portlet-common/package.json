@@ -22,9 +22,10 @@
   "scripts": {
     "deploy": "true",
     "clean": "rimraf dist && rimraf out-tsc",
-    "build": "cpx \"../../../../../../stage/react/ts/lib/{.*,**}\" . && rollup --config rollup.config.mjs",
+    "copy-build": "cpx \"../../../../../../stage/react/ts/lib/{.*,*}\" .",
+    "build": "run-s copy-build && rollup --config rollup.config.mjs",
     "build:prod": "cross-env NODE_ENV=production && run-s build",
-    "test": "jest --verbose",
+    "test": "run-s copy-build && jest --verbose",
     "tsc": "tsc -b tsconfig.json",
     "publish": "true"
   }

@@ -18,15 +18,16 @@
     "@arena/lib-portlet-test": "*"
   },
   "scripts": {
-    "sass": "sass assets/css/styles.scss assets/css/styles.css --source-map",
     "babel": "cross-env NODE_ENV=production babel --config-file ../../babel.config.json --source-maps -d build src",
-    "build": "cpx \"../../../../stage/react/js/main/{.*,**}\" . && run-s sass && run-s babel && cross-env NODE_ENV=production liferay-npm-bundler",
+    "build": "run-s copy-build && run-s sass && run-s babel && cross-env NODE_ENV=production liferay-npm-bundler",
     "clean": "liferay clean",
+    "copy-build": "cpx \"../../../../stage/react/js/main/{.*,*}\" .",
+    "copy-public": "cpx \"../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"./assets/css/**\" public/css && cpx \"./assets/locales/**\" public/locales",
     "deploy": "gulp deploy",
     "publish": "gulp publish",
-    "copy-public": "cpx \"../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"./assets/css/**\" public/css && cpx \"./assets/locales/**\" public/locales",
+    "sass": "sass assets/css/styles.scss assets/css/styles.css --source-map",
     "start": "run-s copy-public && react-scripts start",
-    "test": "jest --verbose"
+    "test": "run-s copy-build && jest --verbose"
   },
   "portlet": {
     "com.liferay.portlet.display-category": "category.axiell-arena",
