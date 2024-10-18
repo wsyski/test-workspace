@@ -18,13 +18,14 @@
     "@arena/lib-portlet-test": "*"
   },
   "scripts": {
-    "scss": "sass --load-path=node_modules/@clayui/css/src/scss ./assets/css/styles.scss ./assets/css/styles.css",
-    "build": "cross-env NODE_ENV=production babel --source-maps -d build src && run-s scss copy-assets && cross-env NODE_ENV=production liferay build",
-    "copy-assets": "cpx \"./assets/**\" build",
+    "sass": "sass assets/css/styles.scss assets/css/styles.css --source-map",
+    "babel": "cross-env NODE_ENV=production babel --config-file ../../babel.config.json --source-maps -d build src",
+    "build": "cpx \"../../../../stage/react/js/main/*\" . && run-s sass && run-s babel && cross-env NODE_ENV=production liferay-npm-bundler",
     "clean": "liferay clean",
     "deploy": "gulp deploy",
     "publish": "gulp publish",
-    "start": "run-s copy-assets && react-scripts start",
+    "copy-public": "cpx \"../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"./assets/css/**\" public/css && cpx \"./assets/locales/**\" public/locales",
+    "start": "run-s copy-public && react-scripts start",
     "test": "jest --verbose"
   },
   "portlet": {

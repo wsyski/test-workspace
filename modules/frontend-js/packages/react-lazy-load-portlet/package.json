@@ -27,7 +27,7 @@
   "scripts": {
     "sass": "sass assets/css/styles.scss assets/css/styles.css --source-map",
     "babel": "cross-env NODE_ENV=production babel --config-file ../../babel.config.json --source-maps -d build src",
-    "build": "run-s sass && run-s babel && cross-env NODE_ENV=production liferay-npm-bundler",
+    "build": "cpx \"../../../../stage/react/js/main/*\" . && run-s sass && run-s babel && cross-env NODE_ENV=production liferay-npm-bundler",
     "clean": "liferay clean",
     "deploy": "gulp deploy",
     "publish": "gulp publish",
