@@ -11,7 +11,7 @@ const index = (liferayParams) => {
 		liferayParams,
 		PORTLET_INSTANCE_DEFAULT
 	);
-	const i18nInstance = I18nUtil.init(liferayParamsWithDefaults.contextPath, liferayParamsWithDefaults.configuration.portletInstance[CUSTOM_TRANSLATION]);
+	const i18nInstance = I18nUtil.init(liferayParamsWithDefaults.contextPath);
 
 	const markup = React.createElement(
 		I18nextProvider,

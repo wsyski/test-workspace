@@ -4,7 +4,7 @@ module.exports = {
 		window: {},
 	},
 
-	moduleFileExtensions: ['ts', 'js', 'jsx', 'json', 'node'],
+	moduleFileExtensions: ['js', 'jsx', 'json', 'node'],
 	roots: ['<rootDir>/src'],
 	setupFiles: ['./jest.polyfills.js'],
 	setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
@@ -12,6 +12,6 @@ module.exports = {
 	testEnvironment: 'jsdom',
 	testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$',
 	transform: {
-		'^.+\\.tsx?$': ['ts-jest', {tsconfig: '<rootDir>/tsconfig.json'}]
-	},
+		"^.+\\.(js|jsx)$": ["babel-jest", { "rootMode": "upward" }],
+	}
 };

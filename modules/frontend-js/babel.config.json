@@ -12,9 +12,6 @@
     "@babel/plugin-transform-runtime"
   ],
   "ignore": [
-    "jest.config.js",
-    "src/setupTests.js",
-    "**/__mocks__/*",
-    "**/__tests__/*"
+    "node_modules"
   ]
 }
