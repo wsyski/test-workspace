@@ -1,4 +1,4 @@
-import {I18nUtil, LiferayUtil} from '@arena/lib-portlet-common';
+import {I18nUtil, LIFERAY_PARAMS_DEFAULT, LiferayUtil} from '@arena/lib-portlet-common';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {I18nextProvider} from 'react-i18next';
