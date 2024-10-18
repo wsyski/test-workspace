@@ -3,14 +3,41 @@
     "imports": {
       "react-provider": {
         "/": "*",
+        "@arena/portal": "*",
+        "@types/hoist-non-react-statics": "*",
+        "@types/prop-types": "*",
+        "@types/react": "*",
+        "@types/react-redux": "*",
         "@arena/lib-component-common": "*",
         "@arena/lib-portlet-common": "*",
         "@babel/runtime": "*",
+        "asynckit": "*",
         "axios": "*",
+        "combined-stream": "*",
+        "csstype": "*",
+        "delayed-stream": "*",
+        "dom-helpers": "*",
+        "event-source-polyfill": "*",
+        "fast-json-stable-stringify": "*",
+        "follow-redirects": "*",
+        "form-data": "*",
+        "history": "*",
+        "hoist-non-react-statics": "*",
+        "html-escaper": "*",
+        "html-parse-stringify": "*",
         "i18next": "*",
         "i18next-chained-backend": "*",
         "i18next-localstorage-backend": "*",
         "i18next-xhr-backend": "*",
+        "isarray": "*",
+        "js-tokens": "*",
+        "loose-envify": "*",
+        "mime-db": "*",
+        "mime-types": "*",
+        "mini-create-react-context": "*",
+        "object-assign": "*",
+        "path-to-regexp": "*",
+        "property-expr": "*",
         "react-fast-compare": "*",
         "react-i18next": "*",
         "react-is": "*",
@@ -21,22 +48,66 @@
         "redux-persist": "*",
         "redux-thunk": "*",
         "regenerator-runtime": "*",
+        "resolve-pathname": "*",
+        "rw": "*",
+        "safer-buffer": "*",
+        "tiny-case": "*",
+        "tiny-invariant": "*",
+        "tiny-warning": "*",
+        "tinycolor2": "*",
+        "toposort": "*",
         "tslib": "*",
+        "type-fest": "*",
+        "value-equal": "*",
+        "void-elements": "*",
         "warning": "*",
         "yup": "*"
       }
     }
   },
   "exclude": {
-    "*": ["**/__mocks__/**/*", "**/__tests__/**/*", "**/*.ts", "**/*.tsx"],
+    "*": [
+      "**/__mocks__/**/*",
+      "**/__tests__/**/*",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/setupTests.js"
+    ],
     "@arena/lib-component-common": true,
     "@arena/lib-portlet-common": true,
+    "@arena/portal": true,
     "@babel/runtime": true,
+    "@types/hoist-non-react-statics": true,
+    "@types/prop-types": true,
+    "@types/react": true,
+    "@types/react-redux": true,
+    "asynckit": true,
     "axios": true,
+    "combined-stream": true,
+    "csstype": true,
+    "delayed-stream": true,
+    "dom-helpers": true,
+    "event-source-polyfill": true,
+    "fast-json-stable-stringify": true,
+    "follow-redirects": true,
+    "form-data": true,
+    "history": true,
+    "hoist-non-react-statics": true,
+    "html-escaper": true,
+    "html-parse-stringify": true,
     "i18next": true,
     "i18next-chained-backend": true,
     "i18next-localstorage-backend": true,
     "i18next-xhr-backend": true,
+    "isarray": true,
+    "js-tokens": true,
+    "loose-envify": true,
+    "mime-db": true,
+    "mime-types": true,
+    "mini-create-react-context": true,
+    "object-assign": true,
+    "path-to-regexp": true,
+    "property-expr": true,
     "react-fast-compare": true,
     "react-i18next": true,
     "react-is": true,
@@ -47,26 +118,49 @@
     "redux-persist": true,
     "redux-thunk": true,
     "regenerator-runtime": true,
+    "resolve-pathname": true,
+    "rw": true,
+    "safer-buffer": true,
+    "tiny-case": true,
+    "tiny-invariant": true,
+    "tiny-warning": true,
+    "tinycolor2": true,
+    "toposort": true,
     "tslib": true,
+    "type-fest": true,
+    "value-equal": true,
+    "void-elements": true,
     "warning": true,
     "yup": true
   },
   "rules": [
     {
       "test": "\\.json$",
-      "use": ["json-loader"]
+      "use": [
+        "json-loader"
+      ]
     },
     {
       "test": "\\.css$",
-      "use": ["css-loader"]
+      "use": [
+        "css-loader"
+      ]
     },
     {
       "test": "^assets/",
-      "exclude": ["node_modules","\\.scss$"],
-      "use": ["copy-loader"]
+      "exclude": [
+        "node_modules",
+        "\\.scss$"
+      ],
+      "use": [
+        "copy-loader"
+      ]
     }
   ],
-  "sources": ["out-tsc", "assets"],
+  "sources": [
+    "out-tsc",
+    "assets"
+  ],
   "create-jar": {
     "features": {
       "js-extender": true,
