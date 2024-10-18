@@ -29,7 +29,7 @@
     "build": "run-s copy-build && run-s sass && run-s babel && cross-env NODE_ENV=production liferay-npm-bundler",
     "clean": "liferay clean",
     "copy-build": "cpx \"../../../../stage/react/js/main/{.*,*}\" .",
-    "copy-public": "cpx \"../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"./assets/css/**\" public/css && cpx \"./assets/locales/**\" public/locales",
+    "copy-public": "cpx \"../../node_modules/@arena/lib-liferay-mock/public/**\" public && cpx \"../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"./assets/css/**\" public/css && cpx \"./assets/locales/**\" public/locales",
     "deploy": "gulp deploy",
     "publish": "gulp publish",
     "sass": "sass assets/css/styles.scss assets/css/styles.css --source-map",
