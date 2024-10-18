@@ -37,7 +37,7 @@
     "javax.portlet.security-role-ref": "power-user,user",
     "javax.portlet.resource-bundle": "content.Language"
   },
-  "main": "main.js",
+  "main": "index.js",
   "browserslist": {
     "production": [
       ">0.2%",
