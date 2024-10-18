@@ -12,4 +12,3 @@ gulp.task('deploy', (cb) => {
 	buildUtils.deploy();
 	cb();
 });
-
