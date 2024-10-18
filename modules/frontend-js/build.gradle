@@ -2,6 +2,7 @@ tasks.register("publish") {
     doLast {
     }
 }
+
 packageRunBuildLibs {
     dependsOn([packageRunWorkspaceInstall])
 }
