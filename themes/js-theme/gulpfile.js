@@ -1,14 +1,19 @@
 'use strict';
 
 const gulp = require('gulp');
-const buildUtils = require('../../tools/build-utils');
+
+const process = require('node:process');
+
+const buildUtils = require('../../tools/BuildUtils');
+const BuildUtils = new buildUtils({modulePath: process.cwd()});
+
 const liferayThemeTasks = require('liferay-theme-tasks');
 
 liferayThemeTasks.registerTasks({
 	gulp,
 });
 
-gulp.task('publish', function (cb) {
-	buildUtils.publish(false);
-	cb();
+gulp.task('publish', function (callback) {
+	BuildUtils.publish(false);
+	callback();
 });

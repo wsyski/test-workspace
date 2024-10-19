@@ -27,7 +27,7 @@
 		"extend": "gulp extend",
 		"init": "gulp init",
 		"kickstart": "gulp kickstart",
-		"publish": "gulp publish",
+		"publish": "gulp --gulpfile gulpfile.js --cwd . publish",
 		"status": "gulp status",
 		"upgrade": "gulp upgrade",
 		"watch": "gulp watch"

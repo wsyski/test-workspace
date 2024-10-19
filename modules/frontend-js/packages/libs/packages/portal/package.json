@@ -2,8 +2,8 @@
   "name": "@arena/portal",
   "description": "Target platform for Arena Portal",
   "license": "UNLICENSED",
-  "private": true,
   "dependencies": {
+    "liferay-npm-bundler": "*",
     "axios": "~0.27.2",
     "dom-helpers": "5.2.1",
     "event-source-polyfill": "~1.0.31",
