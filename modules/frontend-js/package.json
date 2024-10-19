@@ -116,8 +116,6 @@
     "format": "eslint 'packages/**/{src,test/src}/**/*.{js,ts,tsx}' --fix",
     "publish": "yarn workspaces run publish",
     "reset:nx": "nx reset",
-    "copy-public": "cpx \"../../../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"../../../federated-search-input-portlet/assets/css/**\" public/css && cpx \"../../../federated-search-input-portlet/assets/locales/**\" public/locales",
-    "start": "run-s copy-public && react-scripts start",
     "test": "nx run-many -t test --verbose"
   },
   "workspaces": {
