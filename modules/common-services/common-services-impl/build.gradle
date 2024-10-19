@@ -13,6 +13,10 @@ buildREST {
 	dependsOn copyCSS, processResources
 }
 
+tasks.withType(GenerateMavenPom).configureEach {
+	dependsOn buildREST
+}
+
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
