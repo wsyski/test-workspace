@@ -1,3 +1,23 @@
+pluginManagement {
+	plugins {
+		id "com.github.jacobono.jaxb" version "1.3.5"
+		id "net.saliman.properties" version "1.5.2"
+		id "com.gradle.enterprise" version "3.18.1"
+	}
+	repositories {
+		mavenLocal()
+		maven {
+			url "https://repository-cdn.liferay.com/nexus/content/groups/public"
+		}
+
+		maven {
+			url "https://repository.liferay.com/nexus/content/groups/public"
+		}
+		mavenCentral()
+		gradlePluginPortal()
+	}
+}
+
 buildscript {
 	dependencies {
 		classpath group: "biz.aQute.bnd", name: "biz.aQute.bnd.gradle", version: "${getProperty('biz.aQute.bnd.gradle.version')}"
@@ -16,6 +36,11 @@ buildscript {
 		mavenCentral()
 		gradlePluginPortal()
 	}
+}
+
+plugins {
+	id "net.saliman.properties"
+	id "com.gradle.enterprise"
 }
 
 apply plugin: "com.liferay.workspace"
