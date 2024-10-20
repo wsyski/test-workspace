@@ -17,4 +17,4 @@ find ${scriptDir}/.. -name liferay-plugin.json -exec rm {} \;
 find ${scriptDir}/.. -name liferay-theme.json -exec rm {} \;
 find ${scriptDir}/.. -name liferay-npm-bundler-report.html -exec rm {} \;
 find ${scriptDir}/.. -name liferay-theme.json -exec rm {} \;
-find ${scriptDir}/.. -type d -name 'public' -exec rm -rf {}/o \;
+find ${scriptDir}/.. -type d -name 'public' \( -path "${scriptDir}/../modules/frontend-js/packages/libs/packages/lib-liferay-mock" -o -path "${scriptDir}/../node_modules" \) -prune -exec rm -rf {} \;
