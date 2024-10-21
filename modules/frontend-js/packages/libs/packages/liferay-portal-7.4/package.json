@@ -3,7 +3,7 @@
 		"liferay": "./liferay.js"
 	},
 	"dependencies": {
-		"@liferay/portal-base": "^1.0.0",
+		"@liferay/portal-base": "^1.9.2",
 		"liferay-npm-bundler": "*",
 		"@clayui/alert": "3.85.0",
 		"@clayui/autocomplete": "3.89.0",
@@ -183,14 +183,10 @@
 	"name": "@arena/liferay-portal-7.4",
 	"scripts": {
 		"build": "true",
-		"ci": "cd ../.. && yarn ci",
-		"format": "cd ../.. && yarn format",
-		"format:check": "cd ../.. && yarn format:check",
-		"lint": "cd ../.. && yarn lint",
-		"lint:fix": "cd ../.. && yarn lint:fix",
-		"postversion": "npx liferay-js-publish",
-		"preversion": "yarn ci",
-		"test": "cd ../.. && yarn test"
+		"clean": "true",
+		"deploy": "true",
+		"publish": "true",
+		"test": "true"
 	},
 	"version": "1.0.0"
 }

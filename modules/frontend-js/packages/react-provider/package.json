@@ -8,7 +8,7 @@
     "@arena/lib-component-common": "*",
     "@arena/lib-portlet-common": "*",
     "@arena/portal": "*",
-    "@liferay/portal-7.4": "*"
+    "@arena/liferay-portal-7.4": "*"
   },
   "scripts": {
     "build": "liferay build",
