@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "liferay build",
-    "build:prod": "cross-env NODE_ENV=production liferay build",
+    "build:prod": "cross-env NODE_ENV=production && run-s build",
     "clean": "liferay clean",
     "deploy": "gulp --gulpfile ../../node_modules/@arena/portal/gulpfile.js --cwd . deploy",
     "publish": "gulp --gulpfile ../../node_modules/@arena/portal/gulpfile.js --cwd . publish",
