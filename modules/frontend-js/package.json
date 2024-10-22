@@ -109,7 +109,7 @@
   "scripts": {
     "workspace-install": "yarn install",
     "build:all": "nx run-many -t build",
-    "build:libs": "nx run-many -t build -p @arena/lib-liferay-mock @arena/lib-portlet-test @arena/portal @arena/lib-component-common @arena/lib-portlet-common",
+    "build:libs": "nx run-many -t build -p @arena/lib-liferay-mock @arena/lib-portlet-test @arena/lib-portlet-common @arena/lib-component-common",
     "build": "run-s reset:nx && run-s build:all",
     "clean": "nx run-many -t clean",
     "deploy": "nx run-many -t deploy",

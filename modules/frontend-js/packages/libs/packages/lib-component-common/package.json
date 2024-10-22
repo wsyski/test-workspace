@@ -19,6 +19,9 @@
     "@arena/portal": "*",
     "@arena/liferay-portal-7.4": "*"
   },
+  "peerDependencies": {
+    "@arena/lib-portlet-common": "*"
+  },
   "scripts": {
     "deploy": "true",
     "clean": "rimraf dist && rimraf out-tsc",
