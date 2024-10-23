@@ -15,11 +15,9 @@
     "node": ">=20",
     "yarn": "1.x"
   },
-  "dependencies": {
-    "@arena/portal": "*",
-    "@arena/liferay-portal-7.4": "*"
-  },
   "peerDependencies": {
+    "@arena/portal": "*",
+    "@arena/liferay-portal-7.4": "*",
     "@arena/lib-portlet-common": "*"
   },
   "scripts": {
