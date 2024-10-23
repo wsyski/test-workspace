@@ -22,7 +22,7 @@ const getPlugins = () => {
 
 export default [
     {
-        external: ['node_modules', ...Object.keys(packageJson.dependencies || {})],
+        external: ['node_modules'],
         input: 'src/index.ts',
         output: [
             {

@@ -1702,7 +1702,6 @@
 "react-syntax-highlighter":"15.5.0",
 "react-test-renderer":"16.13.1",
 "react-text-mask":"5.4.3",
-"react-transition-group":"2.9.0",
 "react-transition-group":"4.4.1",
 "readable-stream":"1.0.34",
 "readable-stream":"1.1.14",
