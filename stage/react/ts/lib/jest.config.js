@@ -1,3 +1,5 @@
+const transformIgnoreModules = ['photoswipe', 'react-photoswipe-gallery'].join('|');
+
 module.exports = {
 	collectCoverage: false,
 	globals: {
@@ -12,6 +14,7 @@ module.exports = {
 	testEnvironment: 'jsdom',
 	testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
 	transform: {
-		'^.+\\.tsx?$': ['ts-jest', {tsconfig: '<rootDir>/tsconfig.json'}]
+		'^.+\\.[tj]sx?$': ['ts-jest', {tsconfig: '<rootDir>/tsconfig.json'}]
 	},
+	transformIgnorePatterns: [`/node_modules/(?!${transformIgnoreModules})`]
 };
