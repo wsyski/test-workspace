@@ -2,9 +2,9 @@
   "extends": "../../../../tsconfig.declarations.json",
   "compilerOptions": {
     "module": "esnext",
-    "declaration": true,
-    "declarationDir": "dist/esm/types",
-    "outDir": "dist"
+    "noEmit": true,
+    "outDir": "dist",
+    "declaration": true
   },
   "include": [
     "src/**/*.ts",

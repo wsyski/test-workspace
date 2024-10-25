@@ -14,7 +14,7 @@ const getPlugins = () => {
     return [
         peerDepsExternal(),
         commonjs(),
-        typescript({useTsconfigDeclarationDir: true}),
+        typescript({tsconfig: "./tsconfig.json"}),
         (process.env.NODE_ENV === 'production' && terser())
     ];
 };
@@ -39,7 +39,7 @@ export default [
         plugins: getPlugins()
     },
     {
-        input: "dist/esm/types/index.d.ts",
+        input: "dist/esm/index.d.ts",
         output: [{file: "dist/index.d.ts", format: "esm"}],
         plugins: [dts()]
     },
