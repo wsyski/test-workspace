@@ -1,7 +1,8 @@
-const process = require('node:process');
 const childProcess = require('child_process');
 const cpr = require('cpr');
 const fs = require('fs');
+const process = require('node:process');
+const root = require('package.root');
 const path = require('path');
 const propertiesReader = require('properties-reader');
 
@@ -26,7 +27,6 @@ class BuildUtils {
 
     constructor(options) {
         this.modulePath = options.modulePath;
-        const root = require('package.root');
         const rootPath = path.resolve(__dirname, root.deployPath, root.directory);
         const gradlePropertiesPath = path.resolve(__dirname, rootPath, 'gradle.properties');
         const gradleProperties = propertiesReader(gradlePropertiesPath);

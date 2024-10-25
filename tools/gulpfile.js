@@ -3,7 +3,7 @@
 const gulp = require('gulp');
 const process = require('node:process');
 
-const buildUtils = require('../../../../tools/BuildUtils');
+const buildUtils = require('./BuildUtils');
 const BuildUtils = new buildUtils({modulePath: process.cwd()});
 
 gulp.task('publish', (callback) => {

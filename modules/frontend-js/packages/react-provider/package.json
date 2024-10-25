@@ -14,8 +14,8 @@
     "build": "liferay build",
     "build:prod": "cross-env NODE_ENV=production && run-s build",
     "clean": "liferay clean",
-    "deploy": "gulp --gulpfile ../../node_modules/@arena/portal/gulpfile.js --cwd . deploy",
-    "publish": "gulp --gulpfile ../../node_modules/@arena/portal/gulpfile.js --cwd . publish",
+    "deploy": "gulp --gulpfile ../../../../tools/gulpfile.js --cwd . deploy",
+    "publish": "gulp --gulpfile ../../../../tools/gulpfile.js --cwd . publish",
     "test": "true"
   }
 }

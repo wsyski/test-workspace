@@ -22,14 +22,15 @@
 		"liferay-font-awesome": "^3.5.2"
 	},
 	"scripts": {
-		"build": "gulp build",
-		"deploy": "gulp deploy",
-		"extend": "gulp extend",
-		"init": "gulp init",
-		"kickstart": "gulp kickstart",
-		"publish": "gulp --gulpfile gulpfile.js --cwd . publish",
-		"status": "gulp status",
-		"upgrade": "gulp upgrade",
-		"watch": "gulp watch"
+		"init": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . init",
+		"build": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . build",
+		"deploy": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . deploy",
+		"extend": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . extend",
+		"kickstart": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . kickstart",
+		"status": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . status",
+		"upgrade": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . upgrade",
+		"watch": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . watch",
+		"publish": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . publish",
+		"liferayTheme": "gulp --gulpfile ../../tools/gulpfile.js --cwd . liferayTheme"
 	}
 }
