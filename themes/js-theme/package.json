@@ -21,16 +21,17 @@
 		"liferay-theme-tasks": "^11.5.4",
 		"liferay-font-awesome": "^3.5.2"
 	},
+	"mavenPackaging": "war",
 	"scripts": {
 		"init": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . init",
 		"build": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . build",
-		"deploy": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . deploy",
+		"deploy": "gulp --gulpfile ../../tools/gulpfile.js --cwd . deploy",
 		"extend": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . extend",
 		"kickstart": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . kickstart",
 		"status": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . status",
 		"upgrade": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . upgrade",
 		"watch": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . watch",
-		"publish": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . publish",
-		"liferayTheme": "gulp --gulpfile ../../tools/gulpfile.js --cwd . liferayTheme"
+		"publish": "gulp --gulpfile ../../tools/gulpfile.js --cwd . publish --version false",
+		"liferayTheme": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . liferayTheme"
 	}
 }
