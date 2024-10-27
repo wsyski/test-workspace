@@ -12,7 +12,7 @@ import AppContainer from './AppContainer';
 import { PORTLET_INSTANCE_DEFAULT } from './constants/LiferayParamsConstants';
 
 const isDevelopment = () => {
-    return process?.env?.NODE_ENV !== 'development';
+    return process?.env?.NODE_ENV === 'development';
 }
 
 const index = (liferayParams: LiferayParams) => {

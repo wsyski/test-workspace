@@ -11,7 +11,7 @@ const Header = styled.h1`
   margin: 100px auto;
 `;
 
-export default function AppComponent(_liferayParams) {
+export default function AppContainer(_liferayParams) {
 	/* eslint-disable no-console */
 	// console.log('liferayParams', liferayParams, 'env', process.env);
 
