@@ -1,10 +1,14 @@
 import {I18nUtil, LIFERAY_PARAMS_DEFAULT, LiferayUtil} from '@arena/lib-portlet-common';
-import React from 'react';
+import React, { StrictMode } from "react";
 import ReactDOM from 'react-dom';
 import {I18nextProvider} from 'react-i18next';
 
 import AppContainer from './AppContainer';
 import {PORTLET_INSTANCE_DEFAULT} from './constants/LiferayParamsConstants';
+
+const isDevelopment = () => {
+	return process?.env?.NODE_ENV === 'development';
+}
 
 const index = (liferayParams) => {
 	const liferayParamsWithDefaults = LiferayUtil.setLiferayParamsDefaults(
@@ -21,16 +25,12 @@ const index = (liferayParams) => {
 		})
 	);
 	ReactDOM.render(
-		process.env.NODE_ENV === 'development' ? (
-			<React.StrictMode>{markup}</React.StrictMode>
-		) : (
-			<React.Fragment>{markup}</React.Fragment>
-		),
+		isDevelopment() ? React.createElement(StrictMode, null, markup) : markup,
 		document.getElementById(liferayParamsWithDefaults.portletElementId)
 	);
 };
 
-if (process.env.NODE_ENV === 'development') {
+if (isDevelopment()) {
 	index(LIFERAY_PARAMS_DEFAULT);
 }
 

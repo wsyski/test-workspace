@@ -1,9 +1,9 @@
 info:
-  description: "Common Services REST API"
+  description: "Arena Common Services REST API"
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-  title: "Common Services"
+  title: "Arena Common Services"
   version: v1.0
 openapi: 3.0.3
 components:

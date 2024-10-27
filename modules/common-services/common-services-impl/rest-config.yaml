@@ -4,5 +4,12 @@ application:
   baseURI: "/common-services"
   className: "CommonServicesApplication"
   name: "CommonServices"
+  security:
+    basicAuth: false
+    guestAllowed: true
+    oAuth2: false
 author: "Wojciech Syski"
+generateBatch: false
+generateGraphQL: false
+forcePredictableOperationId: true
 clientDir: "../common-services-client/src/main/java"
