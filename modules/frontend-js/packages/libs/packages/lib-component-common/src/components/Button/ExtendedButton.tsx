@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React from 'react';
 
 export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>{
@@ -5,7 +6,7 @@ export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAtt
 }
 
 const ExtendedButton = ({label, ...others}: ButtonProps) => {
-  return <button {...others}>{label}</button>;
+  return <button className={classNames("extended-button")} {...others}>{label}</button>;
 };
 
 export default ExtendedButton;
