@@ -2,6 +2,7 @@ import {LiferayUtil, useLiferayParams} from '@arena/lib-portlet-common';
 import ClayCard from '@clayui/card';
 import ClayIcon from '@clayui/icon';
 import ClayPagination from '@clayui/pagination';
+import classNames from "classnames";
 import React, {useContext} from 'react';
 import {withTranslation} from 'react-i18next';
 import {useHistory} from 'react-router';
@@ -45,7 +46,7 @@ export const SearchResult = ({t}) => {
 
 	return (
 		<>
-			<div className="k10-search-result-container">
+			<div className={classNames("k10-search-result-container")}>
 				{searchContext.state.hits.map((record, i) => {
 					return (
 						<React.Fragment key={i}>

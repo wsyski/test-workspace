@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, { Suspense } from "react";
 import styled from "styled-components";
 
@@ -16,7 +17,7 @@ export default function AppContainer(_liferayParams) {
 	// console.log('liferayParams', liferayParams, 'env', process.env);
 
 	return (
-		<div className="App">
+		<div className={classNames("App")}>
 			<ErrorBoundary>
 				<Header>Calendar</Header>
 
