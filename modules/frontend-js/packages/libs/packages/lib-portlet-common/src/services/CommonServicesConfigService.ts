@@ -1,10 +1,4 @@
-/**
- * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
- * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
- */
-
-import {AxiosResponse} from "axios";
-const {default: Axios} = require('axios');
+import Axios, {AxiosResponse} from 'axios';
 
 import {COMMON_SERVICES_CONFIG_DEFAULT} from '../contexts/CommonServicesConfigContext';
 import {CommonServicesConfig} from '../index';
@@ -13,23 +7,33 @@ import MiscUtil from '../utils/MiscUtil';
 import ServiceUtil from '../utils/ServiceUtil';
 
 export default class CommonServicesConfigService {
-    static async getConfig(): Promise<CommonServicesConfig> {
-        const groupId = LiferayUtil.getScopeGroupId();
-        const url = `${LiferayUtil.getPortalURL()}/o/common-services/v1.0/groups/${groupId}/config`;
-        const response: AxiosResponse = await Axios.get(
-            url,
-            ServiceUtil.getRequestConfig({})
-        );
-        const data = response.data;
+	static async getConfig(): Promise<CommonServicesConfig> {
+		const groupId = LiferayUtil.getScopeGroupId();
+		const url = `${LiferayUtil.getPortalURL()}/o/common-services/v5.7/groups/${groupId}/config`;
+		const response: AxiosResponse = await Axios.get(
+			url,
+			ServiceUtil.getRequestConfig({})
+		);
+		const data = response.data;
 
-        return {
-            ...COMMON_SERVICES_CONFIG_DEFAULT,
-            ...data,
-            federatedSearchSourceConfig: MiscUtil.isEmpty(
-                data.federatedSearchSourceConfig
-            )
-                ? COMMON_SERVICES_CONFIG_DEFAULT.federatedSearchSourceConfig
-                : JSON.parse(data.federatedSearchSourceConfig),
-        } as CommonServicesConfig;
-    }
+		return {
+			...COMMON_SERVICES_CONFIG_DEFAULT,
+			...data,
+			federatedSearchSourceConfig: MiscUtil.isEmpty(
+				data.federatedSearchSourceConfig
+			)
+				? COMMON_SERVICES_CONFIG_DEFAULT.federatedSearchSourceConfig
+				: JSON.parse(data.federatedSearchSourceConfig),
+		} as CommonServicesConfig;
+	}
+
+	static getCoverUrl(identifier: Record<string, string[]> = {}, commonServicesConfig: CommonServicesConfig, size: string = 'SMALL'): string {
+		const urlSearchParams = new URLSearchParams();
+		urlSearchParams.append("size", size);
+		Object.entries(identifier).forEach(([, values]) => {
+			values.forEach(value => urlSearchParams.append("coverIds", value));
+		});
+
+		return `${commonServicesConfig.coversApiEndpoint}/covers/${commonServicesConfig.coversCustomerId}?${urlSearchParams.toString()}`;
+	}
 }

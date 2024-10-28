@@ -1,9 +1,8 @@
-/**
- * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
- * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
- */
+import React, {useCallback, useContext, useState} from 'react';
 
-import React, {useCallback, useState} from 'react';
+import AlertActionsContext from '../contexts/AlertActionsContext';
+import {AlertActions} from '../index';
+import AlertUtil from '../utils/AlertUtil';
 
 const useLocalStorage = <T>(
 	key: string,
@@ -18,16 +17,24 @@ const useLocalStorage = <T>(
 			return initialValue;
 		}
 	});
+	const alertActionsRef =
+		useContext<React.RefObject<AlertActions>>(AlertActionsContext);
 
 	const setValue: React.Dispatch<React.SetStateAction<T>> = useCallback(
 		(value) => {
+			try {
 				const valueToStore =
 					value instanceof Function ? value(storedValue) : value;
 				setStoredValue(valueToStore);
 				window.localStorage.setItem(key, JSON.stringify(valueToStore));
-
+			} catch (ex) {
+				alertActionsRef.current &&
+					alertActionsRef.current.addAlert(
+						AlertUtil.createAlert((ex as Error).message, 'danger')
+					);
+			}
 		},
-		[key, storedValue]
+		[alertActionsRef, key, storedValue]
 	);
 
 	return [storedValue, setValue];

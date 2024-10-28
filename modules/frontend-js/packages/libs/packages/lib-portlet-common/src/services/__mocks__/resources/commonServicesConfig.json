@@ -5,10 +5,10 @@
   "calendarDefaultAllowedAttendees" : 1,
   "calendarLocationVocabularyId" : 0,
   "calendarTargetAudienceVocabularyId" : 0,
-  "federatedSearchApiEndpoint" : "http://localhost:9599",
-  "federatedSearchCustomerId" : "5da0951785879d0dd1dd45e9",
+  "coversApiEndpoint": "https://test-api.axiell.com/cover/api",
+  "coversCustomerId" : "worldcat",
+  "federatedSearchCustomerAlias" : "test",
   "openingHoursApiEndpoint" : "https://test.axiell.io/api/openinghours/latest",
   "openingHoursCustomerId" : "613afbb7a6c817213ab35c63",
-  "transactionApiEndpoint" : "https://dev.axiell.io/api/transaction/latest",
   "transactionTenantId" : "61f16aa63915a60207f846ad"
 }

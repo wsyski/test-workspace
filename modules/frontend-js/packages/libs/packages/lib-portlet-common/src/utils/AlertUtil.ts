@@ -1,27 +1,23 @@
-/**
- * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
- * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
- */
-
-import {DisplayType} from '@clayui/alert';
 import {Dispatch, SetStateAction} from 'react';
 
 import {ALERT_ORIGIN_DEFAULT} from '../constants/PortletCommonConstants';
 import {Alert, AlertActions, AlertConfirmType} from '../index';
 
+import type {Status} from '@clayui/modal/lib/types';
+
 export default class AlertUtil {
 	static createAlert(
 		message: string,
-		displayType: DisplayType,
+		status: Status,
 		origin: string = ALERT_ORIGIN_DEFAULT,
 		confirmType: AlertConfirmType = 'ToastConfirm',
 		title?: string
 	): Alert {
 		return {
 			confirmType,
-			displayType,
 			message,
 			origin,
+			status,
 			title,
 		};
 	}

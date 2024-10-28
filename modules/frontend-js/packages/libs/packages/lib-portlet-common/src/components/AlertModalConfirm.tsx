@@ -1,8 +1,3 @@
-/**
- * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
- * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
- */
-
 import ClayButton from '@clayui/button';
 import ClayModal, {useModal} from '@clayui/modal';
 import React from 'react';
@@ -25,14 +20,14 @@ const AlertModalConfirmWithT: React.FC<Props> = ({
 	});
 	const title =
 		typeof alert.title === 'undefined'
-			? t(`lblAlert.${alert.displayType}`)
+			? t(`lblAlert.${alert.status}`)
 			: alert.title;
 
 	return (
 		<ClayModal
 			observer={observer}
 			spritemap={LiferayUtil.getClaySpritemap()}
-			status={alert.displayType === 'secondary' ? undefined : alert.displayType}
+			status={alert.status}
 		>
 			<ClayModal.Header aria-live="polite">{title}</ClayModal.Header>
 
@@ -40,7 +35,7 @@ const AlertModalConfirmWithT: React.FC<Props> = ({
 
 			<ClayModal.Footer
 				first={
-					<ClayButton onClick={onClose} title={t('btnOK.title')!}>
+					<ClayButton onClick={onClose} title={t('btnOK.title')}>
 						{t('btnOK.label')}
 					</ClayButton>
 				}

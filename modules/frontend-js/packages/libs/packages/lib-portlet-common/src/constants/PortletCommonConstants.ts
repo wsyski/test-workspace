@@ -1,8 +1,3 @@
-/**
- * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
- * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
- */
-
 import {LocalizationParams} from '../index';
 
 export const HTTP_STATUS_BAD_REQUEST = 400;
@@ -12,10 +7,15 @@ export const HEADER_AUTHORIZATION = 'Authorization';
 
 export const ALERT_ORIGIN_DEFAULT = 'global';
 export const ERRORS_PREFIX = 'errors.';
-export const PROJECT_VERSION = '1.0.0';
+export const PROJECT_VERSION = '5.7.0';
 
 export const LOCALIZATION_PARAMS_DEFAULT = {
-	dateFormat: 'yyyy-MM-dd',
+	dateFormat: {
+		DAYS: 'yyyy-MM-dd',
+		MONTHS: 'yyyy-MM',
+		SECONDS: 'yyyy-MM-dd HH:mm',
+		YEARS: 'yyyy',
+	},
 	firstDayOfWeek: 1,
 	months: [
 		'January',

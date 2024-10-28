@@ -1,50 +1,39 @@
-/**
- * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
- * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
- */
-
+import DOMPurify from "dompurify";
+import isEmpty from "lodash/isEmpty";
+import React from "react";
 import isEqual from "react-fast-compare";
 
 export default class MiscUtil {
   static isEmpty(
-    value:
-      | string
-      | number
-      | boolean
-      | (string | boolean | number)[]
-      | Date
-      | URLSearchParams
-      | null
-      | undefined
+    value: any
   ): boolean {
-    if (typeof value === "undefined") {
+    if (typeof value === "undefined" || value === null) {
       return true;
     }
-    if (value instanceof URLSearchParams) {
-      let isEmpty = true;
+
+    if (Array.isArray(value)) {
+      return (
+        !value.length ||
+        value.every((v) => MiscUtil.isEmpty(v))
+      );
+    } else if (value instanceof URLSearchParams) {
+      let result = true;
       value.forEach(() => {
-        isEmpty = false;
+        result = false;
       });
 
-      return isEmpty;
+      return result;
+    } else if (typeof value === "string") {
+      return value.trim() === "";
+    } else if (typeof value === "boolean") {
+      return false;
     } else {
-      if (Array.isArray(value)) {
-        return (
-          !value.length ||
-          value.every((v) => MiscUtil.isEmpty(v))
-        );
-      } else {
-        return (
-          typeof value === "undefined" ||
-          value === null ||
-          (typeof value === "string" && value.trim() === "")
-        );
-      }
+      return isEmpty(value);
     }
   }
 
   static createMarkup(html: string | undefined = ""): { __html: string } {
-    return { __html: html };
+    return { __html: MiscUtil.sanitize(html, {}) };
   }
 
   static appendAll(target: URLSearchParams, source: URLSearchParams): void {
@@ -53,18 +42,26 @@ export default class MiscUtil {
     });
   }
 
-  static recordValues(
-    record: Record<string, string[]>,
+  static recordValues<T = any>(
+    record: Record<string, T[]> | undefined,
     key?: string
-  ): string[] | undefined {
+  ): T[] {
     if (record) {
-      let values: string[] = [];
+      let values: T[] = [];
       Object.entries(record).forEach(([k, v]) => {
         values = !key || k === key ? values.concat(v) : values;
       });
 
       return values;
+    } else {
+      return [];
     }
+  }
+
+  static firstValue<T = any>(
+    values: T[] | undefined
+  ): T | undefined {
+    return (values && values.length) ? values[0] : undefined;
   }
 
   static template(pattern: string, parameters: any): string {
@@ -81,25 +78,33 @@ export default class MiscUtil {
       result = isEqual(object0, object1);
     }
 
-    // if (!result) {
-    //    console.log(`${object0} !== ${object1}`);
-    // }
-
     return result;
   }
 
-  static isHtml(s: string): boolean {
-    const a = document.createElement("div");
-    a.innerHTML = s;
+  static setDatePickerFocus(ref: React.RefObject<HTMLInputElement>) {
+    if (ref.current?.nextSibling?.childNodes?.item(0)) {
+      (ref.current.nextSibling.childNodes.item(0) as HTMLButtonElement).focus();
+    }
+  }
 
-    for (let c = a.childNodes, i = c.length; i--;) {
-      if (c[i].nodeType === 1) {
-        return true;
-      }
+  static isHtml(s: string | undefined): boolean {
+    if (s) {
+      const doc = new DOMParser().parseFromString(s, "text/html");
+
+      return [].slice.call(doc.body.childNodes).some(node => node["nodeType"] === 1);
     }
 
     return false;
   }
+
+  static getPostfix(s: string): string {
+    const pos = s.lastIndexOf(".");
+    if (pos === -1) {
+      return s;
+    } else {
+      return s.substring(pos + 1);
+    }
+  };
 
   static randomString(len: number = 10): string {
     const s = Array(len).fill(0).map(() => Math.random().toString(36)[2]).join("");
@@ -109,6 +114,14 @@ export default class MiscUtil {
 
   static normalize(s: string | undefined): string {
     return s ? s.normalize("NFD").replace(/[\u0300-\u036f]/g, "") : "";
+  }
+
+  static sanitize(s: string, config: object): string {
+    return DOMPurify.sanitize(s, config);
+  }
+
+  static isPositiveInteger(s: string | null): boolean {
+    return (s) ? /^\+?([1-9]\d*)$/.test(s) : false;
   }
 
   private static isArrayEqual<T = any>(

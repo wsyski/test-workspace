@@ -1,8 +1,3 @@
-/**
- * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
- * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
- */
-
 import ClayModal, {useModal} from '@clayui/modal';
 import React, {useState} from 'react';
 import {WithTranslation, withTranslation} from 'react-i18next';
@@ -26,7 +21,7 @@ const AlertModalConfirmCancelWithT: React.FC<Props> = ({
     });
     const title =
         typeof alert.title === 'undefined'
-            ? t(`lblAlert.${alert.displayType}`)
+            ? t(`lblAlert.${alert.status}`)
             : alert.title;
 
     const confirm = () => {
@@ -40,7 +35,7 @@ const AlertModalConfirmCancelWithT: React.FC<Props> = ({
                 className="modal-dialog-centered"
                 observer={observer}
                 spritemap={LiferayUtil.getClaySpritemap()}
-                status={alert.displayType === 'secondary' ? undefined : alert.displayType}
+                status={alert.status}
             >
 
                 <ClayModal.Header aria-live="polite">{title}</ClayModal.Header>

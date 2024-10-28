@@ -1,8 +1,3 @@
-/**
- * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
- * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
- */
-
 import { ClayButtonWithIcon } from "@clayui/button";
 import React, { HTMLAttributes, ReactElement, useCallback, useEffect, useRef, useState } from "react";
 
@@ -42,19 +37,18 @@ const Permalink: React.FC<Props> = ({labelCopied, labelCopy, renderAnchor }: Pro
   const label = copied ? labelCopied : labelCopy;
 
   return (
-    <>
+    <React.Fragment>
       {anchor}
 
       <ClayButtonWithIcon
-        aria-label={label ? label : ""}
+        aria-label={label!}
         displayType="unstyled"
         onClick={onClickCopy}
-        small={true}
         spritemap={LiferayUtil.getClaySpritemap()}
         symbol={icon}
         title={label}
       />
-    </>
+    </React.Fragment>
   );
 };
 
