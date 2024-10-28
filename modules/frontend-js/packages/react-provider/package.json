@@ -11,9 +11,9 @@
     "@arena/liferay-portal-7.4": "*"
   },
   "scripts": {
-    "build": "liferay build",
+    "build": "liferay-npm-bundler",
     "build:prod": "cross-env NODE_ENV=production && run-s build",
-    "clean": "liferay clean",
+    "clean": "rimraf dist && rimraf build",
     "deploy": "gulp --gulpfile ../../../../tools/gulpfile.js --cwd . deploy",
     "publish": "gulp --gulpfile ../../../../tools/gulpfile.js --cwd . publish",
     "test": "true"

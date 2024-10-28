@@ -25,7 +25,7 @@
   "scripts": {
     "babel": "cross-env NODE_ENV=production babel --config-file ../../babel.config.json --source-maps -d build out-tsc",
     "build": "run-s copy-build && run-p tsc scss && run-s babel && cross-env NODE_ENV=production liferay-npm-bundler -c ../../node_modules/@arena/portal/.npmbundlerrc",
-    "clean": "rimraf out-tsc && liferay clean",
+    "clean": "rimraf out-tsc && rimraf build && rimraf dist",
     "copy-build": "cpx \"../../../../stage/react/ts/main/{.*,*}\" .",
     "copy-public": "cpx \"../../node_modules/@arena/lib-liferay-mock/public/**\" public && cpx \"../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"./assets/css/**\" public/css && cpx \"./assets/locales/**\" public/locales",
     "deploy": "gulp --gulpfile ../../../../tools/gulpfile.js --cwd . deploy",
