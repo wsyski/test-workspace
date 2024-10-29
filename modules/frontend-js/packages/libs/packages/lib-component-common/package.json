@@ -22,7 +22,7 @@
   },
   "scripts": {
     "deploy": "true",
-    "clean": "rimraf dist && rimraf out-tsc",
+    "clean": "rimraf dist && rimraf build",
     "copy-build": "cpx \"../../../../../../stage/react/ts/lib/{.*,*}\" .",
     "build": "run-s copy-build && rollup --config rollup.config.mjs",
     "build:prod": "cross-env NODE_ENV=production && run-s build",
