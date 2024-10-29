@@ -1,26 +1,4 @@
 import Button from '@clayui/button';
-import DateNavigation from '@clayui/date-picker/lib/DateNavigation';
-import DayNumber from '@clayui/date-picker/lib/DayNumber';
-import DaysTable from '@clayui/date-picker/lib/DaysTable';
-import {
-	formatDate,
-	isValid,
-	parseDate,
-	range as createRange,
-	setDate,
-	setMonth,
-} from '@clayui/date-picker/lib/Helpers';
-import {
-	useCalendarNavigation,
-	useCurrentTime,
-	useDaysSelected,
-	useWeeks,
-} from '@clayui/date-picker/lib/Hooks';
-import InputDate from '@clayui/date-picker/lib/InputDate';
-import TimePicker from '@clayui/date-picker/lib/TimePicker';
-import Weekday from '@clayui/date-picker/lib/Weekday';
-import WeekdayHeader from '@clayui/date-picker/lib/WeekdayHeader';
-import {FirstDayOfWeek, IAriaLabels, IYears} from '@clayui/date-picker/lib/types';
 import DropDown from '@clayui/drop-down';
 import {ClayInput} from '@clayui/form';
 import Icon from '@clayui/icon';
@@ -32,8 +10,32 @@ import {
 } from '@clayui/shared';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import type {ISelectOption} from '@clayui/date-picker/lib/Select';
+import DateNavigation from './DateNavigation';
+import DayNumber from './DayNumber';
+import DaysTable from './DaysTable';
+import {
+	formatDate,
+	isValid,
+	parseDate,
+	range as createRange,
+	setDate,
+	setMonth,
+} from './Helpers';
+import {
+	useCalendarNavigation,
+	useCurrentTime,
+	useDaysSelected,
+	useWeeks,
+} from './Hooks';
+import InputDate from './InputDate';
+import TimePicker from './TimePicker';
+import Weekday from './Weekday';
+import WeekdayHeader from './WeekdayHeader';
+import {FirstDayOfWeek, IAriaLabels, IYears} from './types';
+
 import type {Input} from '@clayui/time-picker';
+
+import type {ISelectOption} from './Select';
 
 interface IProps
 	extends Omit<React.HTMLAttributes<HTMLInputElement>, 'onChange'> {
