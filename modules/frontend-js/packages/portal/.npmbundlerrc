@@ -87,6 +87,8 @@
       "**/__tests__/**/*",
       "**/*.ts",
       "**/*.tsx",
+      "**/jest.config.js",
+      "**/jest.polyfills.js",
       "**/setupTests.js"
     ],
     "@arena/lib-analytics": true,

@@ -21,8 +21,8 @@ const getPlugins = () => {
         typescript({tsconfig: "./tsconfig.json"}),
         // json(),
         peerDepsExternal(),
-        // resolve(),
         commonjs(),
+        resolve({resolveOnly: ['photoswipe', 'react-photoswipe-gallery']}),
         (process.env.NODE_ENV === 'production' && terser())
     ];
 };

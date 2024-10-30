@@ -4,6 +4,17 @@
       "js-extender": false
     }
   },
+  "exclude": {
+    "*": [
+      "**/__mocks__/**/*",
+      "**/__tests__/**/*",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/jest.config.js",
+      "**/jest.polyfills.js",
+      "**/setupTests.js"
+    ]
+  },
   "dump-report": true,
   "max-parallel-files": 128,
   "verbose": true
