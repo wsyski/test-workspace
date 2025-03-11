@@ -28,6 +28,7 @@
     var localhostProtocol = (new URL(localhostApiEndpoint)).protocol;
     var port = location.port;
     var hostname = location.hostname;
+    var isLocalhostApiEndpoint = localhostProtocol === 'https' || hostname === 'localhost';
     switch (port) {
       case undefined:
       case '':
@@ -38,7 +39,7 @@
       case '6080':
       case '8080':
       case '16519':
-        return localhostProtocol === 'https' ? localhostApiEndpoint : '//' + hostname + ':' + localhostPort + localhostPathname;
+        return isLocalhostApiEndpoint ? localhostApiEndpoint : '//' + hostname + ':' + localhostPort + localhostPathname;
       default:
         return localhostApiEndpoint;
     }

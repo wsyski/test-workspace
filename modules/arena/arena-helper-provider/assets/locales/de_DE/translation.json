@@ -113,6 +113,9 @@
     "accessExternal": "Für den Zugriff auf einen digitalen Titel klicken",
     "sampleLinkText": "Leseprobe"
   },
+  "footer": {
+    "accessibilityLink": "Erklärung zur Barrierefreiheit"
+  },
   "header": {
     "joinTheLibraryLabel": "Mitglied werden",
     "languageLabel": "Sprache",

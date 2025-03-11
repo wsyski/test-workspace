@@ -1,7 +1,7 @@
 dependencies {
-	compileOnly project(":modules:arena:arena-api")
-	compileOnly group: 'javax.annotation', name: 'javax.annotation-api', version: "${rootProject.getProperty('javax.annotation-api.version')}"
 	compileOnly group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: "${rootProject.getProperty('jaxb.version')}"
+	compileOnly group: 'javax.annotation', name: 'javax.annotation-api', version: "${rootProject.getProperty('javax.annotation-api.version')}"
+	compileOnly project(":modules:arena:arena-api")
 }
 
 compileJava {

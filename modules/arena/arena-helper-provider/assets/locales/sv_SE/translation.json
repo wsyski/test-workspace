@@ -113,6 +113,9 @@
     "accessExternal": "Klicka för att komma till digital titel",
     "sampleLinkText": "Urval"
   },
+  "footer": {
+    "accessibilityLink": "Tillgänglighetsrapport"
+  },
   "header": {
     "joinTheLibraryLabel": "Skaffa lånekort",
     "languageLabel": "Språk",

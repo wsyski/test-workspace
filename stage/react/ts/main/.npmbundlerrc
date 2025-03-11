@@ -131,7 +131,9 @@
     "value-equal": true,
     "void-elements": true,
     "warning": true,
-    "yup": true
+    "yup": true,
+    "photoswipe":  true,
+    "react-photoswipe-gallery": true
   },
   "rules": [
     {

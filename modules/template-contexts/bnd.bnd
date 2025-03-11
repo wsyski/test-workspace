@@ -3,12 +3,7 @@ Bundle-SymbolicName: com.axiell.arena.liferay.modules.template_contexts
 Bundle-Version: 1.0.0
 
 Import-Package: \
-    !lombok.*,\
-    !org.apache.avalon.*,\
-    !org.apache.log.*,\
-    !org.mozilla.*,\
-    !org.python.*,\
-    !org.relaxng.*,\
+    !org.slf4j.impl.*,\
     !com.liferay.asset.publisher.web.internal.util.*,\
     !com.liferay.journal.web.internal.asset.model.*,\
     \

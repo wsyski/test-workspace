@@ -1,7 +1,5 @@
-import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import dts from "rollup-plugin-dts";
-import json from '@rollup/plugin-json';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import replace from '@rollup/plugin-replace';
 import resolve from "@rollup/plugin-node-resolve";
@@ -10,20 +8,20 @@ import typescript from "rollup-plugin-typescript2";
 import {readFileSync} from "node:fs";
 
 const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf-8'));
+const isProduction = process.env.NODE_ENV === 'production';
 
 const getPlugins = () => {
 
     return [
         replace({
             preventAssignment: true,
-            'process.env.NODE_ENV': JSON.stringify('development'),
+            'process.env.NODE_ENV': JSON.stringify(isProduction ? 'production' : 'development'),
         }),
-        typescript({tsconfig: "./tsconfig.json"}),
-        // json(),
+        typescript({tsconfig: "./tsconfig.json",tsconfigDefaults: {inlineSources: true, sourceMap: true}}),
         peerDepsExternal(),
         commonjs(),
         resolve({resolveOnly: ['photoswipe', 'react-photoswipe-gallery']}),
-        (process.env.NODE_ENV === 'production' && terser())
+        (isProduction && terser())
     ];
 };
 

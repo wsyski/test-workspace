@@ -1,11 +1,10 @@
 dependencies {
-    compileOnly project(":modules:arena:arena-api")
-    compileOnly group: "com.liferay.portal", name: "release.portal.api"
-    compileOnly group: "com.liferay", name: "org.springframework.tx", version: "${rootProject.getProperty('com.liferay.org.springframework.tx.version')}"
-    compileOnly group: "org.slf4j", name: "slf4j-api", version: "${rootProject.getProperty('org.slf4j.slf4j-api.version')}"
+    compileInclude group: "com.axiell.authinfo", name: "authinfo", version: "${rootProject.getProperty('com.axiell.authinfo.authinfo.version')}"
     compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
     compileInclude group: "org.apache.commons", name: "commons-pool2", version: "${rootProject.getProperty('org.apache.commons.commons-pool2.version')}"
-    compileInclude group: "com.axiell.authinfo", name: "authinfo", version: "${rootProject.getProperty('com.axiell.authinfo.authinfo.version')}"
+    compileOnly group: "com.liferay", name: "org.springframework.tx", version: "${rootProject.getProperty('com.liferay.org.springframework.tx.version')}"
+    compileOnly group: "org.slf4j", name: "slf4j-api", version: "${rootProject.getProperty('org.slf4j.slf4j-api.version')}"
+    compileOnly project(":modules:arena:arena-api")
 }
 
 publishing {

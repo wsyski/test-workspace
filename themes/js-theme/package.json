@@ -2,27 +2,33 @@
 	"name": "js-theme",
 	"version": "1.0.0",
 	"main": "package.json",
-	"keywords": ["js-theme"],
+	"engines": {
+		"node": ">=20",
+		"yarn": "1.x"
+	},
+	"keywords": [
+		"js-theme"
+	],
 	"liferayTheme": {
 		"baseTheme": "styled",
-		"distName": "js-theme",
-		"rubySass": false,
-		"sassOptions": {
-			"dartSass": true
-		},
+		"fontAwesome": true,
+		"screenshot": "",
+		"templateLanguage": "ftl",
 		"version": "7.4"
 	},
 	"devDependencies": {
 		"compass-mixins": "~0.12.12",
 		"gulp": "~4.0.2",
 		"liferay-frontend-css-common": "^6.0.8",
-		"liferay-frontend-theme-styled": "^6.0.88",
-		"liferay-frontend-theme-unstyled": "^6.0.70",
+		"liferay-frontend-theme-styled": "^6.0.92",
+		"liferay-frontend-theme-unstyled": "^6.0.74",
 		"liferay-theme-tasks": "^11.5.4",
 		"liferay-font-awesome": "^3.5.2"
 	},
 	"mavenPackaging": "war",
 	"scripts": {
+		"clean": "rimraf dist && rimraf build",
+		"test": "true",
 		"init": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . init",
 		"build": "gulp --gulpfile ../../tools/gulpfile-theme.js --cwd . build",
 		"deploy": "gulp --gulpfile ../../tools/gulpfile.js --cwd . deploy",

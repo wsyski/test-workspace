@@ -1,20 +1,54 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+#set -v -x
+#set -u -e
+
+isBuildOnly=false
+
+OPTIND=1
+while getopts :b c
+do
+  case ${c} in
+  b)
+    isBuildOnly=true ;;
+  :)
+    echo "Invalid empty option ${OPTARG} argument"
+    exit 1 ;;
+  \?) # Invalid option
+    echo "Invalid option: ${OPTARG}"
+    exit 2 ;;
+  esac
+done
+shift $((OPTIND-1))
+if [ $# -ne 0 ]
+then
+  echo "Usage: clean.sh [-b]"
+  exit 4
+fi
+
 scriptDir="$(cd "$(dirname "$0")" && pwd)"
-echo "scriptDir: ${scriptDir}"
-find ${scriptDir}/.. -name yarn.lock -exec rm {} \;
-rm -rf /tmp/nx-cache*
-rm -rf ${scriptDir}/../node_modules_cache
-rm -rf ${scriptDir}/../modules/frontend-js/.nx
-find ${scriptDir}/.. -name .yarnrc -exec rm -rf {} \;
-find ${scriptDir}/.. -name build -exec rm -rf {} \;
-find ${scriptDir}/../modules/frontend-js/packages/libs -name rollup.config.mjs -exec rm -rf {} \;
-find ${scriptDir}/.. -name dist -exec rm -rf {} \;
-find ${scriptDir}/.. -name out -exec rm -rf {} \;
-find ${scriptDir}/.. -name out-tsc -exec rm -rf {} \;
-find ${scriptDir}/.. -name node_modules -exec rm -rf {} \;
-find ${scriptDir}/.. -name package-lock.json -exec rm {} \;
-find ${scriptDir}/.. -name liferay-plugin.json -exec rm {} \;
-find ${scriptDir}/.. -name liferay-theme.json -exec rm {} \;
-find ${scriptDir}/.. -name liferay-npm-bundler-report.html -exec rm {} \;
-find ${scriptDir}/.. -name liferay-theme.json -exec rm {} \;
-find ${scriptDir}/.. -type d -name 'public' \( -path "${scriptDir}/../modules/frontend-js/packages/libs/packages/lib-liferay-mock" -o -path "${scriptDir}/../node_modules" \) -prune -exec rm -rf {} \;
+baseDir="${scriptDir}"/..
+
+echo "baseDir: ${scriptDir} isBuildOnly: ${isBuildOnly}"
+find ${baseDir} -name "node_modules" -prune -o -type d -name build -exec rm -rf {} \;
+if [ ${isBuildOnly} = true ]
+then
+  exit 0
+fi
+find ${baseDir} -name package-lock.json -exec rm {} \;
+#find ${baseDir} -name yarn.lock -exec rm {} \;
+rm -rf ${baseDir}/node_modules_cache
+rm -rf ${baseDir}/modules/frontend-js/.nx
+find ${baseDir} -name .yarnrc -exec rm -rf {} \;
+find ${baseDir} -name '*.css.map' -exec rm {} \;
+find ${baseDir}/modules/frontend-js/packages/libs -name rollup.config.mjs -exec rm -rf {} \;
+find ${baseDir} -name dist -exec rm -rf {} \;
+find ${baseDir} -name out -exec rm -rf {} \;
+find ${baseDir} -name out-tsc -exec rm -rf {} \;
+find ${baseDir} -name node_modules -exec rm -rf {} \;
+find ${baseDir} -name package-lock.json -exec rm {} \;
+find ${baseDir} -name liferay-plugin.json -exec rm {} \;
+find ${baseDir} -name liferay-theme.json -exec rm {} \;
+find ${baseDir} -name liferay-npm-bundler-report.html -exec rm {} \;
+find ${baseDir} -name liferay-theme.json -exec rm {} \;
+find ${baseDir} -name node_modules -prune -o -path ${baseDir}/modules/frontend-js/packages/libs/packages/lib-liferay-mock -prune -o -type d -name public -exec rm -rf {} \;

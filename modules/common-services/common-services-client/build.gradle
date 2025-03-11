@@ -1,6 +1,5 @@
 dependencies {
 	compileOnly project(":modules:common-services:common-services-api")
-	compileOnly group: "com.liferay.portal", name: "release.portal.api"
 	compileOnly group: 'javax.annotation', name: 'javax.annotation-api', version: "${rootProject.getProperty('javax.annotation-api.version')}"
 }
 

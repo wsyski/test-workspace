@@ -12,21 +12,21 @@ public class GroupDTOModelMapper {
     public GroupDTOModelMapper() {
         dto2modelMapper = new ModelMapper();
         dto2modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-        dto2modelMapper.createTypeMap(com.axiell.arena.liferay.modules.arena.model.dto.GroupDTO.class, Group.class);
+        dto2modelMapper.createTypeMap(GroupDTO.class, Group.class);
         dto2modelMapper.validate();
 
         model2dtoMapper = new ModelMapper();
         model2dtoMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-        model2dtoMapper.createTypeMap(Group.class, com.axiell.arena.liferay.modules.arena.model.dto.GroupDTO.class);
+        model2dtoMapper.createTypeMap(Group.class, GroupDTO.class);
         model2dtoMapper.validate();
     }
 
-    public Group toModel(com.axiell.arena.liferay.modules.arena.model.dto.GroupDTO dto) {
+    public Group toModel(GroupDTO dto) {
         return dto2modelMapper.map(dto, Group.class);
     }
 
-    public com.axiell.arena.liferay.modules.arena.model.dto.GroupDTO toDto(Group model) {
-        return model2dtoMapper.map(model, com.axiell.arena.liferay.modules.arena.model.dto.GroupDTO.class);
+    public GroupDTO toDto(Group model) {
+        return model2dtoMapper.map(model, GroupDTO.class);
     }
 
 }

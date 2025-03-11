@@ -1,8 +1,6 @@
 dependencies {
-    compileOnly group: "com.liferay.portal", name: "release.portal.api"
-    compileOnly group: "com.liferay", name: "biz.aQute.bnd.annotation", version: "${rootProject.getProperty('com.liferay.biz.aQute.bnd.annotation.version')}"
-
     compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
+    compileOnly group: "com.liferay", name: "biz.aQute.bnd.annotation", version: "${rootProject.getProperty('com.liferay.biz.aQute.bnd.annotation.version')}"
 }
 
 publishing {

@@ -113,6 +113,9 @@
     "accessExternal": "Klikk for å få tilgang til digital tittel",
     "sampleLinkText": "Prøve"
   },
+  "footer": {
+    "accessibilityLink": "Erklæring om tilgjengelegheit"
+  },
   "header": {
     "joinTheLibraryLabel": "Få eit lånekort",
     "languageLabel": "Språk",

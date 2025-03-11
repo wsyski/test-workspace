@@ -113,6 +113,9 @@
     "accessExternal": "Click to access digital title",
     "sampleLinkText": "Sample"
   },
+  "footer": {
+    "accessibilityLink": "Accessibility statement"
+  },
   "header": {
     "joinTheLibraryLabel": "Join the library",
     "languageLabel": "Language",

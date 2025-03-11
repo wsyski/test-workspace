@@ -5,8 +5,8 @@ Export-Package: \
     com.axiell.arena.liferay.modules.common_services.configuration,\
     com.axiell.arena.liferay.modules.common_services.constants,\
     com.axiell.arena.liferay.modules.common_services.util,\
-    com.axiell.arena.liferay.modules.common_services.dto.v1_0,\
-    com.axiell.arena.liferay.modules.common_services.resource.v1_0
+    com.axiell.arena.liferay.modules.common_services.dto.v5_7,\
+    com.axiell.arena.liferay.modules.common_services.resource.v5_7
 
 -check: EXPORTS
 

@@ -9,7 +9,12 @@ import com.axiell.arena.liferay.modules.template_contexts.model.FedEventResponse
 import com.axiell.arena.liferay.modules.template_contexts.model.RecordsResponse;
 import com.axiell.arena.liferay.modules.template_contexts.model.SearchCriteriaDto;
 import com.axiell.arena.liferay.modules.template_contexts.model.central.CentralSettingsDto;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.CustomLog;
+import lombok.SneakyThrows;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.springframework.http.HttpEntity;
@@ -17,12 +22,14 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
@@ -41,32 +48,19 @@ public class FederatedSearchClientImpl implements FederatedSearchClient {
     private CentralSettingsCacheService centralSettingsCacheService;
     @Reference
     private StaticContextService staticContextService;
-    private final RestTemplate restTemplate;
-
-    public FederatedSearchClientImpl() {
-        this.restTemplate = new RestTemplate();
-    }
-
-    @Override
-    public RecordsResponse getRecords(Integer start, Integer size, String params) throws Exception {
-        return getRecords(null, start, size, params, null, null, null, null, null);
-    }
-
-    @Override
-    public RecordsResponse getRecords(String sourceId, Integer start, Integer size, String params) throws Exception {
-        return getRecords(sourceId, start, size, params, null, null, null, null, null);
-    }
+    @Reference
+    private TemplateContextConfig templateContextConfig;
 
     @Override
     public RecordsResponse getRecords(String sourceId,
                                       Integer start,
                                       Integer size,
-                                      String params,
                                       Integer facetSize,
-                                      Boolean nativeQuery,
                                       String q,
-                                      String c,
-                                      String sort) throws Exception {
+                                      List<String> c,
+                                      List<String> fc,
+                                      List<String> facetField,
+                                      List<String> sort) throws Exception {
         long groupId = staticContextService.getThemeDisplay().getScopeGroupId();
         CentralSettingsDto centralSettingsDto = centralSettingsCacheService.getCentralSettings(groupId);
         ArenaSystemConfiguration arenaSystemConfiguration = ArenaUtil.getArenaSystemConfiguration();
@@ -78,39 +72,60 @@ public class FederatedSearchClientImpl implements FederatedSearchClient {
         sourceId = (sourceId != null) ? sourceId : centralSettingsDto.getDefaultSourceId();
         size = (size != 0) ? size : 10;
         facetSize = (facetSize != null) ? facetSize : 0;
-        nativeQuery = (nativeQuery != null) ? nativeQuery : false;
         q = (q != null) ? q : "*";
-        sort = (sort != null) ? sort : String.format("\"field\":\"%s\",\"order\":\"desc\"", SCORE_SORT_FIELD);
+        sort = !CollectionUtils.isEmpty(sort) ? sort : List.of(String.format("\"field\":\"%s\",\"order\":\"desc\"", SCORE_SORT_FIELD));
 
         SearchCriteriaDto searchCriteria = SearchCriteriaDto.builder()
                 .sourceId(sourceId)
                 .size(size)
                 .start(start)
                 .facetSize(facetSize)
-                .nativeQuery(nativeQuery)
                 .q(q)
                 .c(c)
+                .facetField(facetField)
+                .fc(fc)
                 .sort(sort)
                 .build();
 
-        String url = buildUrl(federatedSearchApiEndpoint, customerId, searchCriteria, params);
+        String url = buildUrl(federatedSearchApiEndpoint, customerId, searchCriteria);
+        log.debug("Constructed URL: " + url);
         return RecordsResponse.builder()
                 .list(getFedEventResponses(url))
                 .build();
     }
 
-    private String buildUrl(String endpoint, String customerId, SearchCriteriaDto criteria, String params) {
-        StringBuilder urlBuilder = new StringBuilder();
-        urlBuilder.append(endpoint)
-                .append("/customers/")
-                .append(customerId)
-                .append("/search")
-                .append(criteria.toQueryString());
+    @Override
+    public RecordsResponse getRecords(
+            String sourceId,
+            Integer start,
+            Integer size,
+            Integer facetSize,
+            String q,
+            String c,
+            String fc,
+            String facetField,
+            String sort) throws Exception {
+        List<String> cList = convertToList(c);
+        List<String> fcList = convertToList(fc);
+        List<String> facetFieldList = convertToList(facetField);
+        List<String> sortList = convertToList(sort);
 
-        if (params != null && !params.isBlank()) {
-            urlBuilder.append("&").append(params);
+        return getRecords(sourceId, start, size, facetSize, q, cList, fcList, facetFieldList, sortList);
+    }
+
+    private List<String> convertToList(String value) {
+        if (value == null || value.trim().isEmpty()) {
+            return Collections.emptyList();
         }
-        return urlBuilder.toString();
+        return Collections.singletonList(value);
+    }
+
+    private String buildUrl(String endpoint, String customerId, SearchCriteriaDto criteria) {
+        return endpoint +
+                "/customers/" +
+                customerId +
+                "/search" +
+                criteria.toQueryString();
     }
 
     private List<FedEventResponse> getFedEventResponses(String url) {
@@ -120,7 +135,7 @@ public class FederatedSearchClientImpl implements FederatedSearchClient {
             headers.setAccept(Collections.singletonList(MediaType.TEXT_EVENT_STREAM));
             HttpEntity<String> entity = new HttpEntity<>(headers);
 
-            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+            ResponseEntity<String> response = templateContextConfig.restTemplate().exchange(url, HttpMethod.GET, entity, String.class);
 
             if (!response.getStatusCode().is2xxSuccessful()) {
                 log.error("Failed to get response from URL: " + url + ". Status code: " + response.getStatusCode());
@@ -159,16 +174,95 @@ public class FederatedSearchClientImpl implements FederatedSearchClient {
                                                     Integer start,
                                                     Integer size) throws Exception {
         LMSSearchResultResponse lmsSearchResultResponse = arenaLocalServiceClient.getLMSSearchResult(query, type, start, size);
-        String recordIds = lmsSearchResultResponse.getLmsList()
+        List<String> listIds = lmsSearchResultResponse.getLmsList()
                 .stream()
                 .map(LMSSearchResponse::getRecordId)
+                .filter(Objects::nonNull)
+                .collect(Collectors.toList());
+
+        return fetchAndProcessRecords(listIds, start, size, lmsSearchResultResponse.getTotal());
+    }
+
+    @Override
+    public RecordsResponse getRecordsByAlmaRecordIds(String query,
+                                                     Integer start,
+                                                     Integer size) {
+        List<String> listIds = Arrays.stream(query.split(","))
+                .map(String::trim)
+                .filter(id -> !id.isEmpty())
+                .collect(Collectors.toList());
+
+        return fetchAndProcessRecords(listIds, start, size, listIds.size());
+    }
+
+    @SneakyThrows
+    private RecordsResponse fetchAndProcessRecords(List<String> listIds, Integer start, Integer size, int total) {
+        if (listIds.isEmpty()) {
+            log.warn("No Alma IDs provided to fetch records.");
+            return new RecordsResponse(Collections.emptyList(), 0);
+        }
+
+        String recordIds = listIds.stream()
                 .map(id -> "\"" + id + "\"")
                 .collect(Collectors.joining(","));
         String c = String.format("\"field\":\"%s\",\"values\":[%s]", ALMA_ID_FIELD, recordIds);
 
-        RecordsResponse recordsResponse = getRecords(null, start, size, null, null, null, null, c, null);
-        recordsResponse.setTotal(lmsSearchResultResponse.getTotal());
+        RecordsResponse recordsResponse = getRecords(start, size, c);
+
+        List<FedEventResponse> sortedList = recordsResponse.getList().stream()
+                .map(eventResponse -> FedEventResponse.builder()
+                        .json(sortHitsByAlmaIdOrder(eventResponse.getJson(), listIds))
+                        .build())
+                .collect(Collectors.toList());
+
+        recordsResponse.setTotal(total);
+        recordsResponse.setList(sortedList);
         return recordsResponse;
+    }
+
+    @SneakyThrows
+    public String sortHitsByAlmaIdOrder(String jsonInput, List<String> orderedAlmaIds) {
+        ObjectMapper mapper = templateContextConfig.objectMapper();
+        JsonNode rootNode = mapper.readTree(jsonInput);
+        JsonNode hitsNode = rootNode.path("hits");
+
+        if (!hitsNode.isArray()) {
+            log.warn("The 'hits' node is not an array. Returning original JSON.");
+            return jsonInput;
+        }
+
+        Map<String, JsonNode> almaIdToHitMap = new HashMap<>();
+        for (JsonNode hit : hitsNode) {
+            JsonNode almaIdNode = hit.path("entity").path(ALMA_ID_FIELD);
+            if (!almaIdNode.isMissingNode() && almaIdNode.isTextual()) {
+                String almaId = almaIdNode.asText();
+                almaIdToHitMap.put(almaId, hit);
+            } else {
+                log.warn("Hit does not contain a valid Alma ID: " + hit);
+            }
+        }
+
+        ArrayNode sortedHitsArray = mapper.createArrayNode();
+        for (String almaId : orderedAlmaIds) {
+            JsonNode hit = almaIdToHitMap.get(almaId);
+            if (hit != null) {
+                sortedHitsArray.add(hit);
+            } else {
+                log.error("Warning: Alma ID '" + almaId + "' not found in the hits array.");
+            }
+        }
+
+        if (rootNode instanceof ObjectNode) {
+            ((ObjectNode) rootNode).set("hits", sortedHitsArray);
+            return mapper.writeValueAsString(rootNode);
+        } else {
+            log.warn("Root node is not an ObjectNode. Returning original JSON.");
+            return jsonInput;
+        }
+    }
+
+    private RecordsResponse getRecords(Integer start, Integer size, String c) throws Exception {
+        return getRecords(null, start, size, null, null, c, null, null, null);
     }
 
 }

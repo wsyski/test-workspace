@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<Configuration strict="true">
+	<Loggers>
+		<Logger level="INFO" name="com.axiell.arena.liferay.modules.template_contexts" />
+	</Loggers>
+</Configuration>

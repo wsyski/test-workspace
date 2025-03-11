@@ -113,6 +113,9 @@
     "accessExternal": "Klikkaa siirtyäksesi digitaaliseen nimekkeeseen",
     "sampleLinkText": "Näyte"
   },
+  "footer": {
+    "accessibilityLink": "Saavutettavuusseloste"
+  },
   "header": {
     "joinTheLibraryLabel": "Hanki kirjastokortti",
     "languageLabel": "Kieli",

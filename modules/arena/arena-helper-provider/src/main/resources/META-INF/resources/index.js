@@ -2,9 +2,9 @@
     "use strict";
     var PROJECT_VERSION = "1.0.0";
     var LIB_ANALYTICS_MODULE = "@react-provider$arena/lib-analytics@" + PROJECT_VERSION;
-    var I18NEXT_MODULE = "react-provider$i18next@21.6.16";
+    var I18NEXT_MODULE = "react-provider$i18next@21.10.0";
     var I18NEXT_CHAINED_BACKEND_MODULE =
-      "react-provider$i18next-chained-backend@3.0.2";
+      "react-provider$i18next-chained-backend@3.1.0";
     var I18NEXT_LOCALSTORAGE_BACKEND_MODULE =
       "react-provider$i18next-localstorage-backend@3.1.3";
     var I18NEXT_XHR_BACKEND_MODULE = "react-provider$i18next-xhr-backend@3.2.2";

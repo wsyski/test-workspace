@@ -1,4 +1,5 @@
 {
+    "license": "UNLICENSED",
     "engines": {
         "node": ">=20",
         "yarn": "1.x"
@@ -10,18 +11,17 @@
         "cpr": "^3.0.1",
         "fs": "^0.0.1-security",
         "package.root": "^1.0.3",
-        "gulp": "~4.0.2",
         "path": "^0.12.7",
         "properties-reader": "^2.2.0",
         "yargs": "^16.2.0"
     },
     "workspaces": {
         "packages": [
-            "modules/frontend-js",
             "themes/js-theme",
+            "modules/frontend-js",
             "client-extensions/react-remote-portlet",
-            "client-extensions/vacation-test",
-            "client-extensions/vacation-shared-code-js-import-map-entry"
+            "client-extensions/vacation-shared-code-js-import-map-entry",
+            "client-extensions/vacation-test"
         ],
         "nohoist": [
             "**/frontend-js",

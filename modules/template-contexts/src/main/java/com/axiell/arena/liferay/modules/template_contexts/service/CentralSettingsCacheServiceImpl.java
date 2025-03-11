@@ -13,6 +13,8 @@ import com.liferay.portal.kernel.service.GroupLocalService;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
@@ -48,7 +50,12 @@ public class CentralSettingsCacheServiceImpl implements CentralSettingsCacheServ
         if (portalURL == null) {
             throw new IllegalStateException("Portal URL is null");
         }
-        String virtualHostname = portalURL.replaceAll("https?://", "");
+        String virtualHostname;
+        try {
+            virtualHostname = (new URI(portalURL)).getHost();
+        } catch (URISyntaxException ex) {
+            throw new PortalException(ex);
+        }
         String friendlyUrl = groupLocalService.getGroup(groupId).getFriendlyURL();
 
         PortalSite portalSite = ArenaCentralLocalServiceUtil.getPortalSite(virtualHostname, friendlyUrl);

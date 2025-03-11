@@ -8,6 +8,7 @@ const propertiesReader = require('properties-reader');
 
 class BuildUtils {
     modulePath = null;
+    moduleName = null;
     mavenArtifactName = null;
     mavenGroup = null;
     mavenVersion = null;
@@ -31,6 +32,7 @@ class BuildUtils {
         const gradlePropertiesPath = path.resolve(__dirname, rootPath, 'gradle.properties');
         const gradleProperties = propertiesReader(gradlePropertiesPath);
         const pkgProperties = JSON.parse(fs.readFileSync(this.modulePath + '/package.json', 'utf-8'));
+        this.moduleName = pkgProperties.name;
         this.mavenArtifactName = pkgProperties.name.replace(/@.*\//, '');
         this.mavenGroup = gradleProperties.get('mavenGroup');
         this.mavenVersion = gradleProperties.get('mavenVersion');
@@ -157,7 +159,7 @@ class BuildUtils {
                     deployPath: this.liferayHomeDir + '/deploy',
                     deployed: false,
                     deploymentStrategy: 'LocalAppServer',
-                    pluginName: this.pkgProperties.name,
+                    pluginName: this.moduleName,
                     url: 'http://' + this.liferayHost + ':' + this.liferayPort,
                 },
             };
@@ -175,11 +177,11 @@ class BuildUtils {
                         this.liferayHomeDir +
                         this.liferayTomcatDir +
                         '/webapps/' +
-                        this.pkgProperties.name,
+                        this.moduleName,
                     deployPath: this.liferayHomeDir + '/deploy',
                     deployed: false,
                     deploymentStrategy: 'LocalAppServer',
-                    pluginName: this.pkgProperties.name,
+                    pluginName: this.moduleName,
                     url: 'http://' + this.liferayHost + ':' + this.liferayPort,
                 },
             };

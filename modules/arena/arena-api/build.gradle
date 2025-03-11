@@ -1,10 +1,5 @@
 dependencies {
-    compileOnly group: "com.liferay.portal", name: "release.portal.api"
-
     compileInclude group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
-
-    testImplementation group: "org.junit.jupiter", name: "junit-jupiter-api", version: "${rootProject.getProperty('junit-jupiter-api.version')}"
-    testImplementation group: "org.mockito", name: "mockito-core", version: "${rootProject.getProperty('org.mockito.mockito-core.version')}"
     testImplementation group: "org.apache.commons", name: "commons-lang3", version: "${rootProject.getProperty('org.apache.commons.lang3.version')}"
 }
 

@@ -147,5 +147,8 @@
     "reload": "Reload",
     "timedOut": "The page has timed out and needs to be reloaded.",
     "timingOut": "seconds until this page times out and needs to be reloaded. Move your mouse pointer or press any key to extend the time with {{extendMinutes}} minutes."
+  },
+  "footer": {
+    "accessibilityLink": "Accessibility statement"
   }
 }

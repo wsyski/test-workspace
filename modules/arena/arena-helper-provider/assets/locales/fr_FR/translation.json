@@ -113,6 +113,9 @@
     "accessExternal": "Cliquez pour accéder au titre numérique",
     "sampleLinkText": "Échantillon"
   },
+  "footer": {
+    "accessibilityLink": "Déclaration d’accessibilité"
+  },
   "header": {
     "joinTheLibraryLabel": "Rejoindre la bibliothèque",
     "languageLabel": "Langue",

@@ -2,8 +2,14 @@ package com.axiell.arena.liferay.modules.template_contexts.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.SneakyThrows;
 import lombok.Value;
+
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 @AllArgsConstructor
 @Builder
@@ -11,30 +17,48 @@ import lombok.Value;
 public class SearchCriteriaDto {
 
     String sourceId;
-    Boolean nativeQuery;
     String q;
     String queryString;
-    String facetField;
-    String c;
-    String fc;
+    List<String> facetField;
+    List<String> c;
+    List<String> fc;
     String termFilter;
-    String sort;
+    List<String> sort;
     Integer start;
     Integer size;
     Integer facetSize;
 
-    @SneakyThrows
     public String toQueryString() {
-        StringBuilder sb = new StringBuilder("?");
-        if (sourceId != null) sb.append("sourceId=").append(sourceId).append("&");
-        if (size != null) sb.append("size=").append(size).append("&");
-        if (start != null) sb.append("start=").append(start).append("&");
-        if (facetSize != null) sb.append("facetSize=").append(facetSize).append("&");
-        if (nativeQuery != null) sb.append("nativeQuery=").append(nativeQuery).append("&");
-        if (q != null) sb.append("q=").append(q).append("&");
-        if (c != null) sb.append("c=").append(c).append("&");
-        if (sort != null) sb.append("sort=").append(sort).append("&");
-        if (sb.charAt(sb.length() - 1) == '&') sb.deleteCharAt(sb.length() - 1);
-        return sb.toString();
+        Map<String, Object> queryParams = new LinkedHashMap<>();
+        queryParams.put("sourceId", sourceId);
+        queryParams.put("size", size);
+        queryParams.put("start", start);
+        queryParams.put("facetSize", facetSize);
+        queryParams.put("q", q);
+        queryParams.put("c", c);
+        queryParams.put("fc", fc);
+        queryParams.put("facetField", facetField);
+        queryParams.put("termFilter", termFilter);
+        queryParams.put("sort", sort);
+
+        String query = queryParams.entrySet().stream()
+                .filter(entry -> entry.getValue() != null)
+                .flatMap(entry -> toKeyValuePair(entry.getKey(), entry.getValue()))
+                .collect(Collectors.joining("&", "?", ""));
+
+        return query.equals("?") ? "" : query;
+    }
+
+    private Stream<String> toKeyValuePair(String key, Object value) {
+        if (value instanceof Iterable<?>) {
+            Iterable<?> iterable = (Iterable<?>) value;
+            return StreamSupport.stream(iterable.spliterator(), false)
+                    .map(item -> {
+                        String s = String.valueOf(item);
+                        return key + "=" + s;
+                    });
+        } else {
+            return Stream.of(key + "=" + value);
+        }
     }
 }

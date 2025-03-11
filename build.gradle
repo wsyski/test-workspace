@@ -4,6 +4,13 @@ allprojects {
         node.global = true
         node.useNpm = false
     }
+    develocity {
+        buildScan {
+            termsOfUseUrl = 'https://gradle.com/help/legal-terms-of-use'
+            termsOfUseAgree = 'yes'
+        }
+    }
+
 }
 
 subprojects { subproject ->
@@ -11,14 +18,15 @@ subprojects { subproject ->
         plugins.withId("java") {
             sourceCompatibility = "${javaSourceCompatibility}"
             dependencies {
-                compileOnly group: "org.projectlombok", name: "lombok", version: "${rootProject.getProperty('org.projectlombok.lombok.version')}"
                 annotationProcessor "org.projectlombok:lombok:${rootProject.getProperty('org.projectlombok.lombok.version')}"
                 compileOnly group: "com.liferay.portal", name: "release.portal.api"
-
-                testCompileOnly group: "org.projectlombok", name: "lombok", version: "${rootProject.getProperty('org.projectlombok.lombok.version')}"
+                compileOnly group: "org.projectlombok", name: "lombok", version: "${rootProject.getProperty('org.projectlombok.lombok.version')}"
                 testAnnotationProcessor "org.projectlombok:lombok:${rootProject.getProperty('org.projectlombok.lombok.version')}"
+                testCompileOnly group: "org.projectlombok", name: "lombok", version: "${rootProject.getProperty('org.projectlombok.lombok.version')}"
                 testImplementation group: "com.liferay.portal", name: "release.portal.api"
                 testImplementation group: "org.hamcrest", name: "hamcrest", version:  "${rootProject.getProperty('org.hamcrest.hamcrest.version')}"
+                testImplementation group: "org.junit.jupiter", name: "junit-jupiter-api", version: "${rootProject.getProperty('junit-jupiter-api.version')}"
+                testImplementation group: "org.mockito", name: "mockito-core", version: "${rootProject.getProperty('org.mockito.mockito-core.version')}"
             }
         }
 
@@ -64,7 +72,11 @@ subprojects { subproject ->
 
 task yarnInstallCmd(type: Exec) {
     println "Executing yarn install..."
-    executable "yarn"
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        executable "yarn.cmd"
+    } else {
+        executable "yarn"
+    }
     args "install"
     println "Done"
 }
