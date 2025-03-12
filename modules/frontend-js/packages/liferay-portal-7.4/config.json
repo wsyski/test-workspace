@@ -55,6 +55,9 @@
       "@liferay/amd-loader": {
         "/": "*"
       },
+      "@liferay/analytics-reports-js-components-web": {
+        "/": "*"
+      },
       "@liferay/asset-categories-item-selector-web": {
         "/": "*"
       },
@@ -88,6 +91,7 @@
       "@liferay/frontend-js-codemirror-web": {
         "/": "*"
       },
+
       "@liferay/frontend-js-dependencies-web": {
         "/": "*",
         "@liferay/js-api": "*",
@@ -132,6 +136,7 @@
         "text-mask-core": "*",
         "uuid": "*"
       },
+
       "@liferay/frontend-js-react-web": {
         "/": "*",
         "classnames": "*",
