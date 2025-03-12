@@ -10,6 +10,7 @@
     "@types/react": "16.9.56",
     "@types/react-redux": "7.1.34",
     "axios": "0.27.2",
+    "date-fns": "2.29.3",
     "dom-helpers": "5.2.1",
     "dompurify": "3.1.7",
     "event-source-polyfill": "~1.0.31",
