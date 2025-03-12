@@ -1,23 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArenaIcon renders 1`] = `
-<svg
-  className="lexicon-icon lexicon-icon-cool-icon"
-  role="presentation"
->
-  <use
-    xlinkHref="/path/to/some/resource.svg#cool-icon"
-  />
-</svg>
+<div>
+  <svg
+    class="lexicon-icon lexicon-icon-cool-icon"
+    role="presentation"
+  >
+    <use
+      xlink:href="/path/to/some/resource.svg#cool-icon"
+    />
+  </svg>
+</div>
 `;
 
 exports[`ArenaIcon renders with context spritemap 1`] = `
-<svg
-  className="lexicon-icon lexicon-icon-cool-icon"
-  role="presentation"
->
-  <use
-    xlinkHref="foo/bar.svg#cool-icon"
-  />
-</svg>
+<div>
+  <svg
+    class="lexicon-icon lexicon-icon-cool-icon"
+    role="presentation"
+  >
+    <use
+      xlink:href="foo/bar.svg#cool-icon"
+    />
+  </svg>
+</div>
 `;

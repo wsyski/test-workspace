@@ -9,7 +9,7 @@ import SearchResultWrapper from './components/SearchResultWrapper';
 
 const AppContainer = ({liferayParams}) => {
 	return (
-		<div data-test-id="appContainer">
+		<div data-testid="appContainer">
 			<ClayIconSpriteContext.Provider
 				value={LiferayUtil.getClaySpritemap()}
 			>

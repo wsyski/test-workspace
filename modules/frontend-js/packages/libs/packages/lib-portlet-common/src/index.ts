@@ -7,8 +7,6 @@ import ArenaIcon, { ARENA_ICON_SPRITEMAP, ArenaIconSpriteContext } from "./compo
 import ComponentWrapper from "./components/ComponentWrapper";
 import ErrorBoundary from "./components/ErrorBoundary";
 import FutureClayDatePicker from "./components/FutureClayDatePicker";
-import NewClayPaginationBarWithBasicItems from "./components/NewClayPaginationBarWithBasicItems";
-import NewClayPaginationWithBasicItems from "./components/NewClayPaginationWithBasicItems";
 import Permalink from "./components/Permalink";
 import ShowMoreList from "./components/ShowMoreList";
 import ShowMoreText from "./components/ShowMoreText";
@@ -146,8 +144,6 @@ export {
   CommonServicesConfigService,
   ComponentWrapper,
   EnabledDatesClayDatePicker,
-  NewClayPaginationBarWithBasicItems,
-  NewClayPaginationWithBasicItems,
   FutureClayDatePicker,
   ERRORS_PREFIX,
   ErrorBoundary,
