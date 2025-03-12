@@ -83,6 +83,7 @@
 		"lodash.groupby": "4.6.0",
 		"lodash.isequal": "4.5.0",
 		"liferay-npm-bundler": "*",
+		"liferay-npm-bundler-loader-css-loader": "*",
 		"moment": "2.29.4",
 		"numeral": "2.0.6",
 		"object-hash": "^2.0.1",
