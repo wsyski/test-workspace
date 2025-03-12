@@ -9,11 +9,11 @@ export const RecordField = ({id, t, value}) => {
 		<>
 			{value && (
 				<>
-					<span className="field-name" data-test-id="field-name">
+					<span className="field-name" data-testid="field-name">
 						{t(id)}
 					</span>
 					:&nbsp;
-					<span className="field-value" data-test-id="field-value">
+					<span className="field-value" data-testid="field-value">
 						{FormatUtil.formatFieldValueAsString(value)}
 					</span>
 					<br />

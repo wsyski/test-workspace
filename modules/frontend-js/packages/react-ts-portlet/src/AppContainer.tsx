@@ -55,7 +55,7 @@ const AppContainer: React.FC<AppContainerProps> = ({
 	const alertActionsRef = useRef<AlertActions>(null);
 
 	return (
-		<div data-test-id="appContainer">
+		<div data-testid="appContainer">
 			<ClayIconSpriteContext.Provider
 				value={LiferayUtil.getClaySpritemap()}
 			>

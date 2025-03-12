@@ -1,7 +1,6 @@
 import {LIFERAY_PARAMS_DEFAULT, LiferayUtil} from '@arena/lib-portlet-common';
 import {screen} from '@testing-library/dom';
 import {render} from '@testing-library/react';
-
 import React from 'react';
 
 import '@testing-library/jest-dom'

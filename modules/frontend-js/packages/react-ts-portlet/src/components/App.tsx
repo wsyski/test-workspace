@@ -12,8 +12,7 @@ const App: React.FC<{}> = () => {
         <div>
             <div>
 				<span className={classNames("tag")}>
-					{// @ts-ignore
-                        Liferay.Language.get('portlet-namespace')}:
+					{(window as any).Liferay.Language.get('portlet-namespace')}:
 				</span>
 
                 <span className="value">{liferayParams.portletNamespace}</span>
@@ -21,8 +20,7 @@ const App: React.FC<{}> = () => {
 
             <div>
 				<span className={classNames("tag")}>
-					{// @ts-ignore
-                        Liferay.Language.get('context-path')}:
+					{(window as any).Liferay.Language.get('context-path')}:
 				</span>
 
                 <span className="value">{liferayParams.contextPath}</span>
@@ -30,8 +28,7 @@ const App: React.FC<{}> = () => {
 
             <div>
 				<span className={classNames("tag")}>
-					{// @ts-ignore
-                        Liferay.Language.get('portlet-element-id')}:
+					{(window as any).Liferay.Language.get('portlet-element-id')}:
 				</span>
 
                 <span className="value">{liferayParams.portletElementId}</span>
@@ -39,8 +36,7 @@ const App: React.FC<{}> = () => {
 
             <div>
 				<span className={classNames("tag")}>
-					{// @ts-ignore
-                        Liferay.Language.get('configuration')}:
+					{(window as any).Liferay.Language.get('configuration')}:
 				</span>
 
                 <span className="pre value">{JSON.stringify(liferayParams.configuration, null, 2)}</span>

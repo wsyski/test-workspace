@@ -1,44 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppContainer Component matches snapshot 1`] = `
-<div
-  data-test-id="appContainer"
->
-  <ContextProvider
-    value="/theme/images/lexicon/icons.svg"
+exports[`AppContainer Component AppContainer should mount without errors 1`] = `
+<div>
+  <div
+    data-testid="appContainer"
   >
-    <ContextProvider
-      value={
-        Object {
-          "configuration": Object {
-            "portletInstance": Object {
-              "drink": "orange",
-            },
-            "system": Object {},
-          },
-          "contextPath": "",
-          "portletElementId": "js-portlet-_portlet_namespace_",
-          "portletNamespace": "_portlet_namespace_",
-        }
-      }
-    >
-      <Suspense
-        fallback={<React.Fragment />}
-      >
-        <ForwardRef />
-        <withI18nextTranslation(ErrorBoundaryWithT)>
-          <ContextProvider
-            value={
-              Object {
-                "current": null,
-              }
-            }
-          >
-            <App />
-          </ContextProvider>
-        </withI18nextTranslation(ErrorBoundaryWithT)>
-      </Suspense>
-    </ContextProvider>
-  </ContextProvider>
+    <div>
+      <div>
+        <span
+          class="tag"
+        >
+          portlet-namespace
+          :
+        </span>
+        <span
+          class="value"
+        >
+          _portlet_namespace_
+        </span>
+      </div>
+      <div>
+        <span
+          class="tag"
+        >
+          context-path
+          :
+        </span>
+        <span
+          class="value"
+        />
+      </div>
+      <div>
+        <span
+          class="tag"
+        >
+          portlet-element-id
+          :
+        </span>
+        <span
+          class="value"
+        >
+          js-portlet-_portlet_namespace_
+        </span>
+      </div>
+      <div>
+        <span
+          class="tag"
+        >
+          configuration
+          :
+        </span>
+        <span
+          class="pre value"
+        >
+          {
+  "portletInstance": {
+    "drink": "orange"
+  },
+  "system": {}
+}
+        </span>
+      </div>
+      <div>
+        <button
+          class="extended-button"
+        >
+          extendedButtonLabel
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;

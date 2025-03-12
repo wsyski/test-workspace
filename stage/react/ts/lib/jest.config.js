@@ -1,8 +1,11 @@
 const transformIgnoreModules = ['photoswipe', 'react-photoswipe-gallery'].join('|');
 
 module.exports = {
+	preset: 'ts-jest',
+	testEnvironment: 'jest-environment-jsdom',
 	collectCoverage: false,
 	globals: {
+		Liferay: {},
 		window: {},
 	},
 
@@ -10,8 +13,6 @@ module.exports = {
 	roots: ['<rootDir>/src'],
 	setupFiles: ['./jest.polyfills.js'],
 	setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-	snapshotSerializers: ['enzyme-to-json/serializer'],
-	testEnvironment: 'jsdom',
 	testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
 	transform: {
 		'^.+\\.[tj]sx?$': ['ts-jest', {tsconfig: '<rootDir>/tsconfig.json'}]
