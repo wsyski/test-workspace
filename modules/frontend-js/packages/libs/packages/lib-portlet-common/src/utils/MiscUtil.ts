@@ -81,6 +81,12 @@ export default class MiscUtil {
     return result;
   }
 
+  static isIOS = () => {
+    return (
+        /iPhone/.test(navigator.userAgent)
+    );
+  };
+
   static setDatePickerFocus(ref: React.RefObject<HTMLInputElement>) {
     if (ref.current?.nextSibling?.childNodes?.item(0)) {
       (ref.current.nextSibling.childNodes.item(0) as HTMLButtonElement).focus();
@@ -107,9 +113,7 @@ export default class MiscUtil {
   };
 
   static randomString(len: number = 10): string {
-    const s = Array(len).fill(0).map(() => Math.random().toString(36)[2]).join("");
-
-    return s;
+    return Array(len).fill(0).map(() => Math.random().toString(36)[2]).join("");
   }
 
   static normalize(s: string | undefined): string {
@@ -122,6 +126,13 @@ export default class MiscUtil {
 
   static isPositiveInteger(s: string | null): boolean {
     return (s) ? /^\+?([1-9]\d*)$/.test(s) : false;
+  }
+
+  static getByteByLength(s: string | undefined): number {
+    const textEncoder = new TextEncoder();
+    const byteArray = textEncoder.encode(s);
+
+    return s ? byteArray.length : 0;
   }
 
   private static isArrayEqual<T = any>(

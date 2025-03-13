@@ -53,11 +53,11 @@ const RequiredMark: React.FC = () => {
 
   return (
     <React.Fragment>
-			<span className="inline-item-after reference-mark text-warning">
-				<ClayIcon symbol="asterisk" />
-			</span>
+        <span className="inline-item-after reference-mark text-warning">
+            <ClayIcon symbol="asterisk" />
+        </span>
 
-      <span className="hide-accessible">{t('txtRequired')}</span>
+        <span className="sr-only">{t('txtRequired')}</span>
     </React.Fragment>
   );
 };

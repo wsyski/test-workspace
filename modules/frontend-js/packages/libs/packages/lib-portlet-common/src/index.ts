@@ -4,7 +4,6 @@ import { FormikValues } from "formik";
 
 import AlertMessages from "./components/AlertMessages";
 import ArenaIcon, { ARENA_ICON_SPRITEMAP, ArenaIconSpriteContext } from "./components/ArenaIcon";
-import ComponentWrapper from "./components/ComponentWrapper";
 import ErrorBoundary from "./components/ErrorBoundary";
 import FutureClayDatePicker from "./components/FutureClayDatePicker";
 import Permalink from "./components/Permalink";
@@ -142,7 +141,6 @@ export {
   COMMON_SERVICES_CONFIG_DEFAULT,
   CommonServicesConfigContext,
   CommonServicesConfigService,
-  ComponentWrapper,
   EnabledDatesClayDatePicker,
   FutureClayDatePicker,
   ERRORS_PREFIX,

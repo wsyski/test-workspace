@@ -1,4 +1,4 @@
-import Axios, {AxiosRequestConfig, CancelTokenSource} from 'axios';
+import Axios, { AxiosRequestConfig, CancelTokenSource, Canceler } from "axios";
 
 import {
 	HEADER_ACCEPT_LANGUAGE,
@@ -13,10 +13,21 @@ export default class ServiceUtil {
 		return TIMEOUT;
 	}
 
+	/*
 	static createCancelTokenSource(): CancelTokenSource {
 		const cancelToken = Axios.CancelToken;
 
 		return cancelToken.source();
+	}
+	 */
+
+	static createCancelTokenSource(): CancelTokenSource {
+		let canceler: Canceler = () => {};
+		const cancelToken = new Axios.CancelToken((c) => {
+			canceler = c;
+		});
+
+		return {cancel: canceler, token: cancelToken};
 	}
 
 	static cancel(cancelTokenSource: CancelTokenSource | undefined): void {

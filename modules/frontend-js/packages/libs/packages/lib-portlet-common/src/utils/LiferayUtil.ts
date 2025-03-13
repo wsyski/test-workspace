@@ -94,6 +94,10 @@ export default class LiferayUtil {
 		return `${LiferayUtil.getPathThemeImages()}/lexicon/icons.svg`;
 	}
 
+	static isLiferaySignedIn(): boolean {
+		return (window as any).Liferay.ThemeDisplay.isSignedIn();
+	}
+
 	static component: (id: string, value?: any, componentConfig?: any) => any =
 		(window as any).Liferay?.component;
 
@@ -121,4 +125,6 @@ export default class LiferayUtil {
 
 		return {...liferayParams, configuration: liferayParamsConfiguration};
 	}
+
+
 }

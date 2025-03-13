@@ -15,7 +15,6 @@ import MiscUtil from "./MiscUtil";
 const DEFAULT_LANGUAGE = "dev";
 const CACHE_EXPIRATION_TIME = 60 * 60 * 1000;
 
-
 export default class I18nUtil {
   static init(contextPath: string, customTranslation?: string): i18n {
     const i18nInstance = i18next.createInstance();
@@ -52,11 +51,10 @@ export default class I18nUtil {
         debug: false,
         defaultNS: "translation",
         fallbackLng: DEFAULT_LANGUAGE,
-        interpolation: {
-          escapeValue: false // not needed for react as it escapes by default
-        },
+        keySeparator: ".",
         lng: LiferayUtil.getLocale(),
-        ns: ["translation"]
+        ns: ["translation"],
+        nsSeparator: "|"
       });
 
     return i18nInstance;
