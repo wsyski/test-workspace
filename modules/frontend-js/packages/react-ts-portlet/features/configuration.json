@@ -20,6 +20,10 @@
   },
   "portletInstance": {
     "fields": {
+      "customTranslation": {
+        "type": "string",
+        "name": "customTranslation.label"
+      },
       "drink": {
         "default": "water",
         "description": "drink-help",

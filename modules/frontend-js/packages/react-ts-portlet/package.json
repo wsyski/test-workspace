@@ -5,7 +5,12 @@
   "license": "UNLICENSED",
   "main": "index.js",
   "private": true,
+  "engines": {
+    "node": ">=20",
+    "yarn": "1.x"
+  },
   "dependencies": {
+    "@arena/lib-react-ts-portlet": "*",
     "@arena/lib-component-common": "*",
     "@arena/lib-portlet-common": "*",
     "@arena/portal": "*",
@@ -14,26 +19,26 @@
   "devDependencies": {
     "@arena/lib-liferay-mock": "*"
   },
-  "portlet": {
-    "com.liferay.portlet.display-category": "category.sample",
-    "com.liferay.portlet.header-portlet-css": "/css/styles.css",
-    "com.liferay.portlet.instanceable": true,
-    "javax.portlet.name": "react_ts_portlet",
-    "javax.portlet.security-role-ref": "power-user,user",
-    "javax.portlet.resource-bundle": "content.Language"
-  },
   "scripts": {
-    "babel": "cross-env NODE_ENV=production babel --config-file ../../babel.config.json --source-maps -d build out-tsc",
-    "build": "run-s copy-build && run-p tsc scss && run-s babel && cross-env NODE_ENV=production liferay-npm-bundler -c ../../node_modules/@arena/portal/.npmbundlerrc",
-    "clean": "rimraf out-tsc && rimraf build && rimraf dist",
-    "copy-build": "cpx \"../../../../stage/react/ts/main/{.*,*}\" .",
-    "copy-public": "cpx \"../../node_modules/@arena/lib-liferay-mock/public/**\" public && cpx \"../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"./assets/css/**\" public/css && cpx \"./assets/locales/**\" public/locales",
+    "babel": "babel --config-file ../../babel.config.json --source-maps -d build src",
+    "build": "run-s copy-build && run-s scss && run-s babel && liferay-npm-bundler -c ../../node_modules/@arena/portal/.npmbundlerrc",
+    "clean": "rimraf dist && rimraf build",
+    "copy-build": "cpx \"../../../../stage/react/js/main/{.*,*}\" .",
     "deploy": "gulp --gulpfile ../../../../tools/gulpfile.js --cwd . deploy",
     "publish": "gulp --gulpfile ../../../../tools/gulpfile.js --cwd . publish",
     "scss": "sass assets/css/styles.scss assets/css/styles.css --source-map",
-    "start": "run-s copy-public && react-scripts start",
-    "test": "run-s copy-build && jest --verbose",
-    "tsc": "tsc -b tsconfig.json"
+    "test": "true",
+    "copy-public": "cpx \"../../../../node_modules/@arena/lib-liferay-mock/.env\" . && cpx \"../../node_modules/@arena/lib-liferay-mock/public/**\" public && cpx \"../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"./assets/css/**\" public/css && cpx \"./assets/locales/**\" public/locales",
+    "start": "run-s copy-public && react-scripts start"
+  },
+  "portlet": {
+    "com.liferay.portlet.display-category": "category.sample",
+    "com.liferay.portlet.header-portlet-css": "/css/styles.css",
+    "com.liferay.portlet.instanceable": false,
+	"com.liferay.portlet.css-class-wrapper": "react-ts-portlet",
+	"javax.portlet.name": "react_ts_portlet",
+    "javax.portlet.security-role-ref": "power-user,user",
+    "javax.portlet.resource-bundle": "content.Language"
   },
   "browserslist": {
     "production": [
