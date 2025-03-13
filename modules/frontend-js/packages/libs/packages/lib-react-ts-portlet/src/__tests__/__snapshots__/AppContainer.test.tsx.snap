@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppContainer Component AppContainer should mount without errors 1`] = `
+<div>
+  <div
+    data-testid="appContainer"
+  >
+    <div>
+      <div>
+        <span
+          class="tag"
+        >
+          portlet-namespace
+          :
+        </span>
+        <span
+          class="value"
+        >
+          _portlet_namespace_
+        </span>
+      </div>
+      <div>
+        <span
+          class="tag"
+        >
+          context-path
+          :
+        </span>
+        <span
+          class="value"
+        />
+      </div>
+      <div>
+        <span
+          class="tag"
+        >
+          portlet-element-id
+          :
+        </span>
+        <span
+          class="value"
+        >
+          js-portlet-_portlet_namespace_
+        </span>
+      </div>
+      <div>
+        <span
+          class="tag"
+        >
+          configuration
+          :
+        </span>
+        <span
+          class="pre value"
+        >
+          {
+  "portletInstance": {
+    "drink": "orange"
+  },
+  "system": {}
+}
+        </span>
+      </div>
+      <div>
+        <button
+          class="extended-button"
+        >
+          extendedButtonLabel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

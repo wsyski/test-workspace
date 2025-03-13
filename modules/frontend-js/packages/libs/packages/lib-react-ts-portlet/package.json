@@ -1,0 +1,47 @@
+{
+  "name": "@arena/lib-react-ts-portlet",
+  "version": "1.0.0",
+  "description": "React TS Portlet",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "source": "src/index.ts",
+  "engines": {
+    "node": ">=20",
+    "yarn": "1.x"
+  },
+  "peerDependencies": {
+    "@arena/portal": "*",
+    "@arena/liferay-portal-7.4": "*",
+    "@arena/lib-portlet-common": "*",
+    "@arena/lib-component-common": "*"
+  },
+  "scripts": {
+    "deploy": "true",
+    "clean": "rimraf dist && rimraf out-tsc",
+    "copy-build": "cpx \"../../../../../../stage/react/ts/lib/{.*,*}\" .",
+    "build": "run-s copy-build && rollup --config rollup.config.mjs",
+    "test": "run-s copy-build && jest --verbose",
+    "tsc": "tsc -b tsconfig.json",
+    "publish": "true",
+    "copy-public": "cpx \"../../../../node_modules/@arena/lib-liferay-mock/.env\" . && cpx \"../../../../node_modules/@arena/lib-liferay-mock/public/**\" public && cpx \"../../../../node_modules/@arena/lib-liferay-mock/o/**\" public/o && cpx \"../../../react-ts-portlet/assets/css/**\" public/css && cpx \"../../../react-ts-portlet/assets/locales/**\" public/locales && cpx \"../../../react-ts-portlet/assets/locales/custom-*.json\" public/locales",
+    "start": "run-s copy-public && react-scripts start"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
