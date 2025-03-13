@@ -11,39 +11,31 @@ const App: React.FC<{}> = () => {
     return (
         <div>
             <div>
-				<span className={classNames("tag")}>
-					{(window as any).Liferay.Language.get('portlet-namespace')}:
-				</span>
+				<span className={classNames("tag")}>{t('portletNamespace.label')}:</span>
 
                 <span className="value">{liferayParams.portletNamespace}</span>
             </div>
 
             <div>
-				<span className={classNames("tag")}>
-					{(window as any).Liferay.Language.get('context-path')}:
-				</span>
+				<span className={classNames("tag")}>{t('contextPath.label')}:</span>
 
                 <span className="value">{liferayParams.contextPath}</span>
             </div>
 
             <div>
-				<span className={classNames("tag")}>
-					{(window as any).Liferay.Language.get('portlet-element-id')}:
-				</span>
+				<span className={classNames("tag")}>{t('portletElementId.label')}:</span>
 
                 <span className="value">{liferayParams.portletElementId}</span>
             </div>
 
             <div>
-				<span className={classNames("tag")}>
-					{(window as any).Liferay.Language.get('configuration')}:
-				</span>
+				<span className={classNames("tag")}>{t('configuration.label')}:</span>
 
                 <span className="pre value">{JSON.stringify(liferayParams.configuration, null, 2)}</span>
             </div>
 
             <div>
-                <ExtendedButton label={t("extendedButtonLabel")}/>
+                <ExtendedButton label={t("extendedButton.label")}/>
             </div>
         </div>
     );

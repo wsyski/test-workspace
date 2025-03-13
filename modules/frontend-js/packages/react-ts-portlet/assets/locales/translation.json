@@ -1,3 +1,17 @@
 {
-  "extendedButtonLabel": "Extended Button"
+  "portletNamespace": {
+    "label": "Portlet namespace"
+  },
+  "extendedButton": {
+    "label": "Extended Button"
+  },
+  "contextPath": {
+    "label": "Context Path"
+  },
+  "portletElementId": {
+    "label": "Portlet Element Id"
+  },
+  "configuration": {
+    "label": "Configuration"
+  }
 }

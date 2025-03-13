@@ -10,7 +10,7 @@ exports[`AppContainer Component AppContainer should mount without errors 1`] = `
         <span
           class="tag"
         >
-          portlet-namespace
+          portletNamespace.label
           :
         </span>
         <span
@@ -23,7 +23,7 @@ exports[`AppContainer Component AppContainer should mount without errors 1`] = `
         <span
           class="tag"
         >
-          context-path
+          contextPath.label
           :
         </span>
         <span
@@ -34,7 +34,7 @@ exports[`AppContainer Component AppContainer should mount without errors 1`] = `
         <span
           class="tag"
         >
-          portlet-element-id
+          portletElementId.label
           :
         </span>
         <span
@@ -47,7 +47,7 @@ exports[`AppContainer Component AppContainer should mount without errors 1`] = `
         <span
           class="tag"
         >
-          configuration
+          configuration.label
           :
         </span>
         <span
@@ -65,7 +65,7 @@ exports[`AppContainer Component AppContainer should mount without errors 1`] = `
         <button
           class="extended-button"
         >
-          extendedButtonLabel
+          extendedButton.label
         </button>
       </div>
     </div>

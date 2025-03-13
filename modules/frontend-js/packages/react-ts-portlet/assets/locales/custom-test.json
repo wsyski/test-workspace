@@ -1,3 +1,5 @@
 {
-
+  "extendedButton": {
+    "label": "Extended Button Custom"
+  }
 }

@@ -1,3 +1,5 @@
 {
-  "extendedButtonLabel": "Extended Button en_US"
+  "extendedButton": {
+    "label": "Extended Button en_US"
+  }
 }
