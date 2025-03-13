@@ -45,7 +45,7 @@ export const ShowMoreTextWithT: React.FC<PropsWithChildren<Props>> = ({
     "aria-expanded": isShort ? undefined : isShowAll
   };
 
-  const containerRef = useCallback((element) => {
+  const containerRef = useCallback((element: HTMLElement) => {
     if (element) {
 
 

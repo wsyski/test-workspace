@@ -7,7 +7,7 @@ import AppContainer from '../AppContainer';
 import {PORTLET_INSTANCE_DEFAULT} from '../constants/LiferayParamsConstants';
 (function (exports) {
 	exports.Language = {
-		get(id, args) {
+		get(id: string, args: string[]) {
 			return args ? id + ' ' + args.join(',') : id;
 		},
 	};

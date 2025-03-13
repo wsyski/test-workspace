@@ -1,6 +1,6 @@
 import ClayButton from "@clayui/button";
 import classNames from "classnames";
-import React, { MouseEvent, PropsWithChildren, useCallback, useMemo, useState } from "react";
+import React, {MouseEvent, PropsWithChildren, useCallback, useMemo, useState} from "react";
 import { WithTranslation, withTranslation } from "react-i18next";
 
 import useLiferayParams from "../hooks/useLiferayParams";
@@ -42,7 +42,7 @@ export const ShowMoreListWithT: React.FC<PropsWithChildren<Props>> = ({
   };
   const [isScroll, setScroll] = useState(false);
 
-  const containerRef = useCallback((element) => {
+  const containerRef = useCallback((element: HTMLElement) => {
     if (element) {
       if (isScroll) {
         const elementTop = element.getBoundingClientRect().top + window.scrollY;
