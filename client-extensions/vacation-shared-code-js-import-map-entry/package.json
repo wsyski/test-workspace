@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/react": "16.9.56",
-    "@types/react-dom": "16.9.14",
+    "@types/react": "^18.2.19",
+    "@types/react-dom": "^18.2.12",
     "@vitejs/plugin-react": "^4.3.1",
     "vite": "^5.4.8"
   },
