@@ -17,6 +17,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockedStatic;
+import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -73,6 +74,7 @@ public class FederatedSearchClientImplTest {
 
     @BeforeEach
     public void setUp() throws Exception {
+        MockitoAnnotations.openMocks(this);
         centralSettingsDto = new CentralSettingsDto();
         centralSettingsDto.setDefaultSourceId("hnoc");
 

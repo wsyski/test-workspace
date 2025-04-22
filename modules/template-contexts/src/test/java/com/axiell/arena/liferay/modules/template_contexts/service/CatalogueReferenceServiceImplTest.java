@@ -8,9 +8,11 @@ import com.liferay.portal.kernel.json.JSONFactoryUtil;
 import com.liferay.portal.kernel.model.Group;
 import com.liferay.portal.kernel.service.GroupLocalService;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -51,6 +53,11 @@ public class CatalogueReferenceServiceImplTest {
 
     @Mock
     LoadingCache<Long, CentralSettingsDto> centralSettingsCache;
+
+    @BeforeEach
+    void openMocks() {
+        MockitoAnnotations.openMocks(this);
+    }
 
     @Test
     public void testCallCentral_success() throws IOException {
