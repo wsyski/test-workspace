@@ -26,7 +26,7 @@ public class AddressLocalSettingsServiceImplTest {
     Address addressMock;
 
     @BeforeEach
-    void openMocks() {
+    void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 

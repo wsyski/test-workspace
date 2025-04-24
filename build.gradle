@@ -25,12 +25,19 @@ subprojects { subproject ->
                 testCompileOnly group: "org.projectlombok", name: "lombok", version: "${rootProject.getProperty('org.projectlombok.lombok.version')}"
                 testImplementation group: "com.liferay.portal", name: "release.portal.api"
                 testImplementation group: "org.hamcrest", name: "hamcrest", version:  "${rootProject.getProperty('org.hamcrest.hamcrest.version')}"
+                testImplementation group: "org.assertj", name: "assertj-core", version:  "${rootProject.getProperty('org.assertj.assertj-core.version')}"
                 testImplementation group: "org.junit.jupiter", name: "junit-jupiter", version: "${rootProject.getProperty('junit-jupiter-api.version')}"
+                testImplementation group: "org.junit.jupiter", name: "junit-jupiter-params", version: "${rootProject.getProperty('junit-jupiter-api.version')}"
                 testRuntimeOnly group: "org.junit.platform", name: "junit-platform-launcher", version: "${rootProject.getProperty('org.junit.platform.junit-platform-launcher.version')}"
                 testImplementation group: "org.mockito", name: "mockito-core", version: "${rootProject.getProperty('org.mockito.mockito-core.version')}"
             }
             test {
                 useJUnitPlatform()
+            }
+            tasks.withType(Test).configureEach {
+                jvmArgs("--add-opens", "java.base/java.lang.invoke=ALL-UNNAMED")
+                jvmArgs("--add-opens", "java.base/java.lang.reflect=ALL-UNNAMED")
+                jvmArgs("--add-opens", "java.base/java.util=ALL-UNNAMED")
             }
         }
 

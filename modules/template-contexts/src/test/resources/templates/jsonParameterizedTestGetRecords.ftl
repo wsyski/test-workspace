@@ -4,7 +4,6 @@
     <#assign start = testCaseMap.start>
     <#assign size = testCaseMap.size>
     <#assign facetSize = testCaseMap.facetSize>
-    <#assign nativeQuery = testCaseMap.nativeQuery>
     <#assign q = testCaseMap.q>
     <#assign c = testCaseMap.c![]>
     <#assign fc = testCaseMap.fc![]>
@@ -16,7 +15,6 @@
     start,
     size,
     facetSize,
-    nativeQuery,
     q,
     c,
     fc,

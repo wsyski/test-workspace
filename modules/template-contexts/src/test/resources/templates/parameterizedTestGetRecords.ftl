@@ -3,7 +3,6 @@
     <#assign start = testCase.start>
     <#assign size = testCase.size>
     <#assign facetSize = testCase.facetSize>
-    <#assign nativeQuery = testCase.nativeQuery>
     <#assign q = testCase.q!''>
     <#assign c = testCase.c>
     <#assign fc = testCase.fc>
@@ -15,7 +14,6 @@
     start,
     size,
     facetSize,
-    nativeQuery,
     q,
     c,
     fc,
