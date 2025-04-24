@@ -36,19 +36,18 @@ then
   exit 0
 fi
 find ${baseDir} -name package-lock.json -exec rm {} \;
-find ${baseDir} -name yarn.lock -exec rm {} \;
+#find ${baseDir} -name yarn.lock -exec rm {} \;
 rm -rf ${baseDir}/node_modules_cache
 rm -rf ${baseDir}/modules/frontend-js/.nx
 find ${baseDir} -name .yarnrc -exec rm -rf {} \;
-find ${baseDir} -name '*.css.map' -exec rm {} \;
+find ${baseDir}/modules/frontend-js -name '*.css.map' -exec rm {} \;
 find ${baseDir}/modules/frontend-js/packages/libs -name rollup.config.mjs -exec rm -rf {} \;
-find ${baseDir} -name dist -exec rm -rf {} \;
-find ${baseDir} -name out -exec rm -rf {} \;
-find ${baseDir} -name out-tsc -exec rm -rf {} \;
+find ${baseDir}/modules/frontend-js -name dist -exec rm -rf {} \;
+find ${baseDir}/modules/frontend-js -name out -exec rm -rf {} \;
+find ${baseDir}/modules/frontend-js -name out-tsc -exec rm -rf {} \;
 find ${baseDir} -name node_modules -exec rm -rf {} \;
 find ${baseDir} -name package-lock.json -exec rm {} \;
 find ${baseDir} -name liferay-plugin.json -exec rm {} \;
 find ${baseDir} -name liferay-theme.json -exec rm {} \;
-find ${baseDir} -name liferay-npm-bundler-report.html -exec rm {} \;
-find ${baseDir} -name liferay-theme.json -exec rm {} \;
-find ${baseDir} -name node_modules -prune -o -path ${baseDir}/modules/frontend-js/packages/libs/packages/lib-liferay-mock -prune -o -type d -name public -exec rm -rf {} \;
+find ${baseDir}/modules/frontend-js -name liferay-npm-bundler-report.html -exec rm {} \;
+find ${baseDir}/modules/frontend-js -name node_modules -prune -o -path ${baseDir}/modules/frontend-js/packages/libs/packages/lib-liferay-mock -prune -o -type d -name public -exec rm -rf {} \;
