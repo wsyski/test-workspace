@@ -36,7 +36,7 @@ then
   exit 0
 fi
 find ${baseDir} -name package-lock.json -exec rm {} \;
-#find ${baseDir} -name yarn.lock -exec rm {} \;
+find ${baseDir} -name yarn.lock -exec rm {} \;
 rm -rf ${baseDir}/node_modules_cache
 rm -rf ${baseDir}/modules/frontend-js/.nx
 find ${baseDir} -name .yarnrc -exec rm -rf {} \;
