@@ -1,16 +1,14 @@
-allprojects {
-    plugins.withId("com.liferay.node") {
-        node.download = false
-        node.global = true
-        node.useNpm = false
-    }
-    develocity {
-        buildScan {
-            termsOfUseUrl = 'https://gradle.com/help/legal-terms-of-use'
-            termsOfUseAgree = 'yes'
-        }
-    }
+node {
+    download = false
+    global = true
+    useNpm = false
+}
 
+develocity {
+    buildScan {
+        termsOfUseUrl = 'https://gradle.com/help/legal-terms-of-use'
+        termsOfUseAgree = 'yes'
+    }
 }
 
 subprojects { subproject ->
@@ -66,10 +64,7 @@ subprojects { subproject ->
                 url "${gradleRepositoryUrl}"
             }
             maven {
-                url "${liferayRepositoryUrl0}"
-            }
-            maven {
-                url "${liferayRepositoryUrl1}"
+                url "${liferayRepositoryUrl}"
             }
             maven {
                 url "${repositoryProtocol}://" + "${repositoryHost}" + "${repositoryPath}" + '/' + "${repositoryAllRepoId}"

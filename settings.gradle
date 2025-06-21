@@ -7,11 +7,7 @@ pluginManagement {
 	repositories {
 		mavenLocal()
 		maven {
-			url "https://repository-cdn.liferay.com/nexus/content/groups/public"
-		}
-
-		maven {
-			url "https://repository.liferay.com/nexus/content/groups/public"
+			url "${getProperty('liferayRepositoryUrl')}"
 		}
 		mavenCentral()
 		gradlePluginPortal()
@@ -26,11 +22,7 @@ buildscript {
 	repositories {
 		mavenLocal()
 		maven {
-			url "https://repository-cdn.liferay.com/nexus/content/groups/public"
-		}
-
-		maven {
-			url "https://repository.liferay.com/nexus/content/groups/public"
+			url "${getProperty('liferayRepositoryUrl')}"
 		}
 		mavenCentral()
 		gradlePluginPortal()
